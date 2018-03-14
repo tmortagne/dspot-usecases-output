@@ -1,0 +1,33 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.controller.proxies.test.ReplanControllerProxyTest",
+      "timeInMs": 2492569
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.controller.proxies.test.ReplanControllerProxyTest",
+      "timeInMs": 764596
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.controller.proxies.test.ReplanControllerProxyTest",
+      "timeInMs": 970889
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.controller.proxies.test.ReplanControllerProxyTest",
+      "timeInMs": 1174636
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.controller.proxies.test.ReplanControllerProxyTest",
+      "timeInMs": 1089875
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.controller.proxies.test.ReplanControllerProxyTest",
+      "timeInMs": 1071416
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.controller.proxies.test.ReplanControllerProxyTest",
+      "timeInMs": 1081709
+    }
+  ],
+  "projectName": "."
+}
