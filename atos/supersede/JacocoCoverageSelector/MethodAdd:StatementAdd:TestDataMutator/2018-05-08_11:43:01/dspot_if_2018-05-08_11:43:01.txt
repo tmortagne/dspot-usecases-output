@@ -1,0 +1,73 @@
+Started DSpot: Tue  8 May 11:43:01 CEST 2018
+DSpot CMI configuration:  -i 3 -t eu.supersede.integration.api.adaptation.dashboard.proxies.test.* -a MethodAdd:StatementAdd:TestDataMutator -s JacocoCoverageSelector --verbose
+DSpot properties file:  ./dspot.properties
+nohup: ignoring input
+[0] INFO AutomaticBuilderFactory - Selected Maven automatic builder.
+[34] INFO MavenAutomaticBuilder - run maven clean test -DskipTests dependency:build-classpath -Dmdep.outputFile=target/dspot/classpath
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building eu.supersede.if.api 0.4.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[WARNING] The POM for org.wso2.carbon:org.wso2.carbon.um.ws.api.stub:jar:4.2.2 is missing, no dependency information available
+[WARNING] The POM for org.wso2.carbon:org.wso2.carbon.tenant.mgt.stub:jar:4.2.0 is missing, no dependency information available
+[WARNING] The POM for org.wso2.carbon:org.wso2.carbon.um.ws.api:jar:4.2.2 is missing, no dependency information available
+[WARNING] The POM for org.wso2.carbon:org.wso2.carbon.user.api:jar:4.2.0 is missing, no dependency information available
+[WARNING] The POM for org.wso2.carbon:org.wso2.carbon.user.core:jar:4.2.0 is missing, no dependency information available
+[WARNING] The POM for org.wso2.carbon:org.wso2.carbon.utils:jar:4.2.0 is missing, no dependency information available
+[WARNING] The POM for opensaml.wso2:opensaml2:jar:2.4.1.wso2v1 is missing, no dependency information available
+[WARNING] The POM for org.wso2.andes.wso2:andes-client:jar:3.1.1 is missing, no dependency information available
+[WARNING] The POM for org.apache.geronimo.specs.wso2:geronimo-jms_1.1_spec:jar:1.1.0.wso2v1 is missing, no dependency information available
+[WARNING] The POM for org.wso2.carbon:org.wso2.carbon.logging:jar:4.4.1 is missing, no dependency information available
+[WARNING] The POM for org.wso2.securevault:org.wso2.securevault:jar:1.0.0-wso2v2 is missing, no dependency information available
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ eu.supersede.if.api ---
+[INFO] Deleting /home/stamp/Git/Supersede/integration/IF/API/eu.supersede.if.api/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ eu.supersede.if.api ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ eu.supersede.if.api ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 265 source files to /home/stamp/Git/Supersede/integration/IF/API/eu.supersede.if.api/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.922 s
+[INFO] Finished at: 2018-05-08T11:43:05+02:00
+[INFO] Final Memory: 15M/479M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project eu.supersede.if.api: Compilation failure
+[ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Exception in thread "main" java.lang.RuntimeException: java.io.FileNotFoundException: ./target/dspot/classpath (No such file or directory)
+	at fr.inria.diversify.automaticbuilder.MavenAutomaticBuilder.compile(MavenAutomaticBuilder.java:77)
+	at fr.inria.diversify.utils.Initializer.initialize(Initializer.java:33)
+	at fr.inria.diversify.utils.Initializer.initialize(Initializer.java:27)
+	at fr.inria.diversify.dspot.DSpot.<init>(DSpot.java:91)
+	at fr.inria.stamp.Main.run(Main.java:58)
+	at fr.inria.stamp.Main.run(Main.java:88)
+	at fr.inria.stamp.Main.main(Main.java:41)
+Caused by: java.io.FileNotFoundException: ./target/dspot/classpath (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at fr.inria.diversify.automaticbuilder.MavenAutomaticBuilder.compile(MavenAutomaticBuilder.java:74)
+	... 6 more
+Ended DSpot: Tue  8 May 11:43:05 CEST 2018
