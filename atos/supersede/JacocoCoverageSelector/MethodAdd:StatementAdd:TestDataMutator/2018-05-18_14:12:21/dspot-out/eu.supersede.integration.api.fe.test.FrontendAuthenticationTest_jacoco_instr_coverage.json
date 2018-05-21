@@ -1,0 +1,11 @@
+{
+  "name": "eu.supersede.integration.api.fe.test.FrontendAuthenticationTest",
+  "nbOriginalTestCases": 1,
+  "initialInstructionCovered": 529,
+  "initialInstructionTotal": 33335,
+  "percentageinitialInstructionCovered": 1.5869206539673015,
+  "amplifiedInstructionCovered": 553,
+  "amplifiedInstructionTotal": 33335,
+  "percentageamplifiedInstructionCovered": 1.6589170541472926,
+  "testCases": []
+}

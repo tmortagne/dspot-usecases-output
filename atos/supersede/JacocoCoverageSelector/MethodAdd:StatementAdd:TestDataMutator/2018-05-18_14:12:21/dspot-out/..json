@@ -1,0 +1,29 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.adaptation.proxies.test.AdaptationConfigurationProxyTest",
+      "timeInMs": 126121
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.analysis.proxies.test.DataProviderProxyTest",
+      "timeInMs": 2032486
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.optimizer.proxies.test.ReplanOptimizerProxyTest",
+      "timeInMs": 24775454
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.optimizer.proxies.test.ReplanOptimizerV2ProxyTest",
+      "timeInMs": 22801120
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.dm.proxies.test.DecisionMakingSystemProxyTest",
+      "timeInMs": 16372954
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.fe.test.FrontendAuthenticationTest",
+      "timeInMs": 14626311
+    }
+  ],
+  "projectName": "."
+}
