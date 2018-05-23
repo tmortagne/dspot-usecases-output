@@ -1,0 +1,1799 @@
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses: 
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30445
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  3668
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17800
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  17789
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  18622
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  18622
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  18622
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  18622
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  18622
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  18622
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  18622
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  18622
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+subprocesses:  30956
+Linux 3.10.0-693.2.2.el7.x86_64 (supersede.es.atos.net) 	05/21/2018 	_x86_64_	(24 CPU)
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ    RSS   %MEM  Command
+ 1526909744  1006     29750    0.00    0.00    0.00    0.00    19      0.45      0.00 1594364 554212   1.69  java
+ 1526909744  1006     30956    0.00    0.00    0.00    0.00    18      0.45      0.00 1464744  92244   0.28  java
+
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Linux 3.10.0-693.2.2.el7.x86_64 (supersede.es.atos.net) 	05/21/2018 	_x86_64_	(24 CPU)
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ    RSS   %MEM  Command
+ 1526910297  1006     29750    0.03    0.03    0.00    0.07    19      0.40      0.00 1594364 554212   1.69  java
+ 1526910297  1006     30956    0.03    0.03    0.00    0.07    18      0.40      0.00 1466364  92668   0.28  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ    RSS   %MEM  Command
+ 1526910327  1006     29750    0.07    0.03    0.00    0.10    19      0.40      0.00 1594364 554212   1.69  java
+ 1526910327  1006     30956    0.07    0.03    0.00    0.10    18      0.40      0.00 1466364  92668   0.28  java
+
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+subprocesses:  30956
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30545
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  16613
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  13357
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14102
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26409
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  30950
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11688
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26814
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10271
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10271
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10271
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10271
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  22669
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10298
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10450
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  6509
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  6509
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10882
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32423
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  25746
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26279
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19879
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19879
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  27324
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  27324
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  736
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  32361
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  31164
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  1664
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19756
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  28244
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  28244
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5638
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  11233
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  26347
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17276
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19951
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19951
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19951
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19951
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19951
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19951
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19951
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19951
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  24055
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  19619
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3112
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  17916
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  14169
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  15946
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  5775
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  6539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  6539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  6539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  3483
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  8539
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
+Collecting statistics for pid:  29750 every 30 seconds
+record_stats.sh: subprocesses:  10318
