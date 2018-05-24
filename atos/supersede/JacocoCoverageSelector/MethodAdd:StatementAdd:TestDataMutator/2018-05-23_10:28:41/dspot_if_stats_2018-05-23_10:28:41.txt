@@ -1,0 +1,36 @@
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses: 
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  26834
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  31895
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  4667
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  9676
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses: 
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  19790
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  25195
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  30235
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  3037
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  8301
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  13159
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  18446
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  23673
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  28668
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  1319
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses:  6613
+record_stats_repeat.sh:Collecting statistics for pid:  21908 every 30 seconds
+record_stats.sh: subprocesses: 
