@@ -1,0 +1,30 @@
+{
+  "nbMutantKilledOriginally": 80,
+  "name": "org.xwiki.component.ProviderTest",
+  "nbOriginalTestCases": 2,
+  "testCases": [
+    {
+      "name": "loadAndInjectProviderWhenExceptionInInitialize",
+      "nbAssertionAdded": 20,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 3,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.EmptyObjectReturnValsMutator",
+          "lineNumber": 129,
+          "locationMethod": "getNamespace"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 319,
+          "locationMethod": "getComponentEventManager"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 129,
+          "locationMethod": "getNamespace"
+        }
+      ]
+    }
+  ]
+}
