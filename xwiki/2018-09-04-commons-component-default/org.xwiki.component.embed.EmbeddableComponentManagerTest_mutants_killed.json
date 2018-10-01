@@ -1,0 +1,43 @@
+{
+  "nbMutantKilledOriginally": 318,
+  "name": "org.xwiki.component.embed.EmbeddableComponentManagerTest",
+  "nbOriginalTestCases": 24,
+  "testCases": [
+    {
+      "name": "testHasComponent",
+      "nbAssertionAdded": 18,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 3,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.EmptyObjectReturnValsMutator",
+          "lineNumber": 129,
+          "locationMethod": "getNamespace"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 319,
+          "locationMethod": "getComponentEventManager"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 129,
+          "locationMethod": "getNamespace"
+        }
+      ]
+    },
+    {
+      "name": "testRelease",
+      "nbAssertionAdded": 10,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 1,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF",
+          "lineNumber": 518,
+          "locationMethod": "release"
+        }
+      ]
+    }
+  ]
+}

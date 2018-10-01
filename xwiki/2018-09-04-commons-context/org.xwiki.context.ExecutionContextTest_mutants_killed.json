@@ -1,0 +1,30 @@
+{
+  "nbMutantKilledOriginally": 101,
+  "name": "org.xwiki.context.ExecutionContextTest",
+  "nbOriginalTestCases": 6,
+  "testCases": [
+    {
+      "name": "illegalInheritance_failAssert0",
+      "nbAssertionAdded": 1,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 3,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 195,
+          "locationMethod": "checkIfInheritedPropertyMayBeIgnored"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 193,
+          "locationMethod": "checkIfInheritedPropertyMayBeIgnored"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator",
+          "lineNumber": 193,
+          "locationMethod": "checkIfInheritedPropertyMayBeIgnored"
+        }
+      ]
+    }
+  ]
+}

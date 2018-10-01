@@ -1,0 +1,29 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "org.xwiki.component.ProviderTest",
+      "timeInMs": 25264
+    },
+    {
+      "fullQualifiedName": "org.xwiki.component.annotation.ComponentAnnotationLoaderTest",
+      "timeInMs": 13402
+    },
+    {
+      "fullQualifiedName": "org.xwiki.component.annotation.ComponentDescriptorFactoryTest",
+      "timeInMs": 7645
+    },
+    {
+      "fullQualifiedName": "org.xwiki.component.embed.EmbeddableComponentManagerTest",
+      "timeInMs": 26411
+    },
+    {
+      "fullQualifiedName": "org.xwiki.component.guice.GuiceCompatibilityTest",
+      "timeInMs": 9692
+    },
+    {
+      "fullQualifiedName": "org.xwiki.component.internal.StackingComponentEventManagerTest",
+      "timeInMs": 7963
+    }
+  ],
+  "projectName": "xwiki-commons-component-default"
+}
