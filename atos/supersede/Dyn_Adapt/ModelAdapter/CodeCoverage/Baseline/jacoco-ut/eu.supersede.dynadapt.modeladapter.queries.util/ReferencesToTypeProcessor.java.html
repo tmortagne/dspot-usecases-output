@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReferencesToTypeProcessor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter.queries.util</a> &gt; <span class="el_source">ReferencesToTypeProcessor.java</span></div><h1>ReferencesToTypeProcessor.java</h1><pre class="source lang-java linenums">/**
+ * Generated from platform:/resource/eu.supersede.dynadapt.modeladapter-stamp/src/main/java/eu/supersede/dynadapt/modeladapter/queries/model_adapter.vql
+ */
+package eu.supersede.dynadapt.modeladapter.queries.util;
+
+import eu.supersede.dynadapt.modeladapter.queries.ReferencesToTypeMatch;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.viatra.query.runtime.api.IMatchProcessor;
+
+/**
+ * A match processor tailored for the eu.supersede.dynadapt.modeladapter.queries.referencesToType pattern.
+ * 
+ * Clients should derive an (anonymous) class that implements the abstract process().
+ * 
+ */
+@SuppressWarnings(&quot;all&quot;)
+<span class="nc" id="L17">public abstract class ReferencesToTypeProcessor implements IMatchProcessor&lt;ReferencesToTypeMatch&gt; {</span>
+  /**
+   * Defines the action that is to be executed on each match.
+   * @param pElement the value of pattern parameter element in the currently processed match
+   * @param pType the value of pattern parameter type in the currently processed match
+   * 
+   */
+  public abstract void process(final Element pElement, final org.eclipse.uml2.uml.Class pType);
+  
+  @Override
+  public void process(final ReferencesToTypeMatch match) {
+<span class="nc" id="L28">    process(match.getElement(), match.getType());</span>
+<span class="nc" id="L29">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

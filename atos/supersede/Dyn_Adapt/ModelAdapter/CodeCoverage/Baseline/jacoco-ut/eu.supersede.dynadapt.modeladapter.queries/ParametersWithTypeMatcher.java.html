@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParametersWithTypeMatcher.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter.queries</a> &gt; <span class="el_source">ParametersWithTypeMatcher.java</span></div><h1>ParametersWithTypeMatcher.java</h1><pre class="source lang-java linenums">/**
+ * Generated from platform:/resource/eu.supersede.dynadapt.modeladapter-stamp/src/main/java/eu/supersede/dynadapt/modeladapter/queries/model_adapter.vql
+ */
+package eu.supersede.dynadapt.modeladapter.queries;
+
+import eu.supersede.dynadapt.modeladapter.queries.ParametersWithTypeMatch;
+import eu.supersede.dynadapt.modeladapter.queries.util.ParametersWithTypeQuerySpecification;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import org.apache.log4j.Logger;
+import org.eclipse.uml2.uml.Parameter;
+import org.eclipse.uml2.uml.Type;
+import org.eclipse.viatra.query.runtime.api.IMatchProcessor;
+import org.eclipse.viatra.query.runtime.api.IQuerySpecification;
+import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
+import org.eclipse.viatra.query.runtime.api.impl.BaseMatcher;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+import org.eclipse.viatra.query.runtime.matchers.tuple.Tuple;
+import org.eclipse.viatra.query.runtime.util.ViatraQueryLoggingUtil;
+
+/**
+ * Generated pattern matcher API of the eu.supersede.dynadapt.modeladapter.queries.parametersWithType pattern,
+ * providing pattern-specific query methods.
+ * 
+ * &lt;p&gt;Use the pattern matcher on a given model via {@link #on(ViatraQueryEngine)},
+ * e.g. in conjunction with {@link ViatraQueryEngine#on(Notifier)}.
+ * 
+ * &lt;p&gt;Matches of the pattern will be represented as {@link ParametersWithTypeMatch}.
+ * 
+ * &lt;p&gt;Original source:
+ * &lt;code&gt;&lt;pre&gt;
+ * pattern parametersWithType (parameter : Parameter, type: Type){
+ * 	Parameter.type (parameter, type);
+ * 	
+ * //	Type.name (type, name);
+ * //	check (
+ * //		name.equals(&quot;UserToAuthenticate&quot;)
+ * //	);
+ * }
+ * &lt;/pre&gt;&lt;/code&gt;
+ * 
+ * @see ParametersWithTypeMatch
+ * @see ParametersWithTypeProcessor
+ * @see ParametersWithTypeQuerySpecification
+ * 
+ */
+@SuppressWarnings(&quot;all&quot;)
+public class ParametersWithTypeMatcher extends BaseMatcher&lt;ParametersWithTypeMatch&gt; {
+  /**
+   * Initializes the pattern matcher within an existing VIATRA Query engine.
+   * If the pattern matcher is already constructed in the engine, only a light-weight reference is returned.
+   * The match set will be incrementally refreshed upon updates.
+   * @param engine the existing VIATRA Query engine in which this matcher will be created.
+   * @throws ViatraQueryException if an error occurs during pattern matcher creation
+   * 
+   */
+  public static ParametersWithTypeMatcher on(final ViatraQueryEngine engine) throws ViatraQueryException {
+    // check if matcher already exists
+<span class="nc" id="L60">    ParametersWithTypeMatcher matcher = engine.getExistingMatcher(querySpecification());</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">    if (matcher == null) {</span>
+<span class="nc" id="L62">        matcher = (ParametersWithTypeMatcher)engine.getMatcher(querySpecification());</span>
+    }
+<span class="nc" id="L64">    return matcher;</span>
+  }
+  
+  /**
+   * @throws ViatraQueryException if an error occurs during pattern matcher creation
+   * @return an initialized matcher
+   * @noreference This method is for internal matcher initialization by the framework, do not call it manually.
+   * 
+   */
+  public static ParametersWithTypeMatcher create() throws ViatraQueryException {
+<span class="nc" id="L74">    return new ParametersWithTypeMatcher();</span>
+  }
+  
+  private final static int POSITION_PARAMETER = 0;
+  
+  private final static int POSITION_TYPE = 1;
+  
+<span class="nc" id="L81">  private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(ParametersWithTypeMatcher.class);</span>
+  
+  /**
+   * Initializes the pattern matcher within an existing VIATRA Query engine.
+   * If the pattern matcher is already constructed in the engine, only a light-weight reference is returned.
+   * The match set will be incrementally refreshed upon updates.
+   * @param engine the existing VIATRA Query engine in which this matcher will be created.
+   * @throws ViatraQueryException if an error occurs during pattern matcher creation
+   * 
+   */
+  private ParametersWithTypeMatcher() throws ViatraQueryException {
+<span class="nc" id="L92">    super(querySpecification());</span>
+<span class="nc" id="L93">  }</span>
+  
+  /**
+   * Returns the set of all matches of the pattern that conform to the given fixed values of some parameters.
+   * @param pParameter the fixed value of pattern parameter parameter, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @return matches represented as a ParametersWithTypeMatch object.
+   * 
+   */
+  public Collection&lt;ParametersWithTypeMatch&gt; getAllMatches(final Parameter pParameter, final Type pType) {
+<span class="nc" id="L103">    return rawGetAllMatches(new Object[]{pParameter, pType});</span>
+  }
+  
+  /**
+   * Returns an arbitrarily chosen match of the pattern that conforms to the given fixed values of some parameters.
+   * Neither determinism nor randomness of selection is guaranteed.
+   * @param pParameter the fixed value of pattern parameter parameter, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @return a match represented as a ParametersWithTypeMatch object, or null if no match is found.
+   * 
+   */
+  public ParametersWithTypeMatch getOneArbitraryMatch(final Parameter pParameter, final Type pType) {
+<span class="nc" id="L115">    return rawGetOneArbitraryMatch(new Object[]{pParameter, pType});</span>
+  }
+  
+  /**
+   * Indicates whether the given combination of specified pattern parameters constitute a valid pattern match,
+   * under any possible substitution of the unspecified parameters (if any).
+   * @param pParameter the fixed value of pattern parameter parameter, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @return true if the input is a valid (partial) match of the pattern.
+   * 
+   */
+  public boolean hasMatch(final Parameter pParameter, final Type pType) {
+<span class="nc" id="L127">    return rawHasMatch(new Object[]{pParameter, pType});</span>
+  }
+  
+  /**
+   * Returns the number of all matches of the pattern that conform to the given fixed values of some parameters.
+   * @param pParameter the fixed value of pattern parameter parameter, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @return the number of pattern matches found.
+   * 
+   */
+  public int countMatches(final Parameter pParameter, final Type pType) {
+<span class="nc" id="L138">    return rawCountMatches(new Object[]{pParameter, pType});</span>
+  }
+  
+  /**
+   * Executes the given processor on each match of the pattern that conforms to the given fixed values of some parameters.
+   * @param pParameter the fixed value of pattern parameter parameter, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @param processor the action that will process each pattern match.
+   * 
+   */
+  public void forEachMatch(final Parameter pParameter, final Type pType, final IMatchProcessor&lt;? super ParametersWithTypeMatch&gt; processor) {
+<span class="nc" id="L149">    rawForEachMatch(new Object[]{pParameter, pType}, processor);</span>
+<span class="nc" id="L150">  }</span>
+  
+  /**
+   * Executes the given processor on an arbitrarily chosen match of the pattern that conforms to the given fixed values of some parameters.
+   * Neither determinism nor randomness of selection is guaranteed.
+   * @param pParameter the fixed value of pattern parameter parameter, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @param processor the action that will process the selected match.
+   * @return true if the pattern has at least one match with the given parameter values, false if the processor was not invoked
+   * 
+   */
+  public boolean forOneArbitraryMatch(final Parameter pParameter, final Type pType, final IMatchProcessor&lt;? super ParametersWithTypeMatch&gt; processor) {
+<span class="nc" id="L162">    return rawForOneArbitraryMatch(new Object[]{pParameter, pType}, processor);</span>
+  }
+  
+  /**
+   * Returns a new (partial) match.
+   * This can be used e.g. to call the matcher with a partial match.
+   * &lt;p&gt;The returned match will be immutable. Use {@link #newEmptyMatch()} to obtain a mutable match object.
+   * @param pParameter the fixed value of pattern parameter parameter, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @return the (partial) match object.
+   * 
+   */
+  public ParametersWithTypeMatch newMatch(final Parameter pParameter, final Type pType) {
+<span class="nc" id="L175">    return ParametersWithTypeMatch.newMatch(pParameter, pType);</span>
+  }
+  
+  /**
+   * Retrieve the set of values that occur in matches for parameter.
+   * @return the Set of all values or empty set if there are no matches
+   * 
+   */
+  protected Set&lt;Parameter&gt; rawAccumulateAllValuesOfparameter(final Object[] parameters) {
+<span class="nc" id="L184">    Set&lt;Parameter&gt; results = new HashSet&lt;Parameter&gt;();</span>
+<span class="nc" id="L185">    rawAccumulateAllValues(POSITION_PARAMETER, parameters, results);</span>
+<span class="nc" id="L186">    return results;</span>
+  }
+  
+  /**
+   * Retrieve the set of values that occur in matches for parameter.
+   * @return the Set of all values or empty set if there are no matches
+   * 
+   */
+  public Set&lt;Parameter&gt; getAllValuesOfparameter() {
+<span class="nc" id="L195">    return rawAccumulateAllValuesOfparameter(emptyArray());</span>
+  }
+  
+  /**
+   * Retrieve the set of values that occur in matches for parameter.
+   * @return the Set of all values or empty set if there are no matches
+   * 
+   */
+  public Set&lt;Parameter&gt; getAllValuesOfparameter(final ParametersWithTypeMatch partialMatch) {
+<span class="nc" id="L204">    return rawAccumulateAllValuesOfparameter(partialMatch.toArray());</span>
+  }
+  
+  /**
+   * Retrieve the set of values that occur in matches for parameter.
+   * @return the Set of all values or empty set if there are no matches
+   * 
+   */
+  public Set&lt;Parameter&gt; getAllValuesOfparameter(final Type pType) {
+<span class="nc" id="L213">    return rawAccumulateAllValuesOfparameter(new Object[]{</span>
+    null, 
+    pType
+    });
+  }
+  
+  /**
+   * Retrieve the set of values that occur in matches for type.
+   * @return the Set of all values or empty set if there are no matches
+   * 
+   */
+  protected Set&lt;Type&gt; rawAccumulateAllValuesOftype(final Object[] parameters) {
+<span class="nc" id="L225">    Set&lt;Type&gt; results = new HashSet&lt;Type&gt;();</span>
+<span class="nc" id="L226">    rawAccumulateAllValues(POSITION_TYPE, parameters, results);</span>
+<span class="nc" id="L227">    return results;</span>
+  }
+  
+  /**
+   * Retrieve the set of values that occur in matches for type.
+   * @return the Set of all values or empty set if there are no matches
+   * 
+   */
+  public Set&lt;Type&gt; getAllValuesOftype() {
+<span class="nc" id="L236">    return rawAccumulateAllValuesOftype(emptyArray());</span>
+  }
+  
+  /**
+   * Retrieve the set of values that occur in matches for type.
+   * @return the Set of all values or empty set if there are no matches
+   * 
+   */
+  public Set&lt;Type&gt; getAllValuesOftype(final ParametersWithTypeMatch partialMatch) {
+<span class="nc" id="L245">    return rawAccumulateAllValuesOftype(partialMatch.toArray());</span>
+  }
+  
+  /**
+   * Retrieve the set of values that occur in matches for type.
+   * @return the Set of all values or empty set if there are no matches
+   * 
+   */
+  public Set&lt;Type&gt; getAllValuesOftype(final Parameter pParameter) {
+<span class="nc" id="L254">    return rawAccumulateAllValuesOftype(new Object[]{</span>
+    pParameter, 
+    null
+    });
+  }
+  
+  @Override
+  protected ParametersWithTypeMatch tupleToMatch(final Tuple t) {
+    try {
+<span class="nc" id="L263">        return ParametersWithTypeMatch.newMatch((Parameter) t.get(POSITION_PARAMETER), (Type) t.get(POSITION_TYPE));</span>
+<span class="nc" id="L264">    } catch(ClassCastException e) {</span>
+<span class="nc" id="L265">        LOGGER.error(&quot;Element(s) in tuple not properly typed!&quot;,e);</span>
+<span class="nc" id="L266">        return null;</span>
+    }
+  }
+  
+  @Override
+  protected ParametersWithTypeMatch arrayToMatch(final Object[] match) {
+    try {
+<span class="nc" id="L273">        return ParametersWithTypeMatch.newMatch((Parameter) match[POSITION_PARAMETER], (Type) match[POSITION_TYPE]);</span>
+<span class="nc" id="L274">    } catch(ClassCastException e) {</span>
+<span class="nc" id="L275">        LOGGER.error(&quot;Element(s) in array not properly typed!&quot;,e);</span>
+<span class="nc" id="L276">        return null;</span>
+    }
+  }
+  
+  @Override
+  protected ParametersWithTypeMatch arrayToMatchMutable(final Object[] match) {
+    try {
+<span class="nc" id="L283">        return ParametersWithTypeMatch.newMutableMatch((Parameter) match[POSITION_PARAMETER], (Type) match[POSITION_TYPE]);</span>
+<span class="nc" id="L284">    } catch(ClassCastException e) {</span>
+<span class="nc" id="L285">        LOGGER.error(&quot;Element(s) in array not properly typed!&quot;,e);</span>
+<span class="nc" id="L286">        return null;</span>
+    }
+  }
+  
+  /**
+   * @return the singleton instance of the query specification of this pattern
+   * @throws ViatraQueryException if the pattern definition could not be loaded
+   * 
+   */
+  public static IQuerySpecification&lt;ParametersWithTypeMatcher&gt; querySpecification() throws ViatraQueryException {
+<span class="nc" id="L296">    return ParametersWithTypeQuerySpecification.instance();</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

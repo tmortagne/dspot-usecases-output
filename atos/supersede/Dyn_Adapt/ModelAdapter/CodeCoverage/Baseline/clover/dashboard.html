@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    
+    
+    <link rel="SHORTCUT ICON" href="img/clover.ico" />
+
+    <link rel="stylesheet" href="aui/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="aui/css/aui-experimental.min.css" media="all"/>
+    <!--[if IE 9]><link rel="stylesheet" href="aui/css/aui-ie9.min.css" media="all"/><![endif]-->
+
+    <style type="text/css" media="all">
+        @import url('style.css');
+        @import url('tree.css');
+        
+    </style>
+
+    <script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui-experimental.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui-soy.min.js" type="text/javascript"></script>
+
+    <script src="package-nodes-tree.js" type="text/javascript"></script>
+    <script src="clover-tree.js" type="text/javascript"></script>
+    <script src="clover.js" type="text/javascript"></script>
+    <script src="clover-descriptions.js" type="text/javascript"></script>
+    <script src="cloud.js" type="text/javascript"></script>
+
+            <title>modeladapter-stamp 1.0.0-SNAPSHOT</title>
+    </head>
+
+<body onresize="processTreeMapDashJson(treeMapJson);" >
+    <div id="page">
+        
+        
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+        <div class="aui-header-inner">
+            <div class="aui-header-primary">
+                <h1 id="logo" class="aui-header-logo aui-header-logo-clover">
+                    <a href="http://openclover.org" title="Visit OpenClover home page"><span class="aui-header-logo-device">OpenClover</span></a>
+                </h1>
+                            </div>
+            <div class="aui-header-secondary">
+                <ul class="aui-nav">
+                    <li id="system-help-menu">
+                        <a class="aui-nav-link" title="Open online documentation" target="_blank"
+                           href="http://openclover.org/documentation">
+                            <span class="aui-icon aui-icon-small aui-iconfont-help">&#160;Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        
+        <div class="aui-page-panel">
+            <div class="aui-page-panel-inner">
+                <div class="aui-page-panel-nav aui-page-panel-nav-clover">
+                    
+
+<div class="aui-page-header-inner" style="margin-bottom: 20px;">
+    <div class="aui-page-header-image">
+                <div class="aui-avatar aui-avatar-large aui-avatar-project">
+            <div class="aui-avatar-inner">
+                                    <img src="img/clover_logo_large.png" alt="Clover icon"/>
+                            </div>
+        </div>
+            </div>
+    <div class="aui-page-header-main" >
+        <h1>
+                                        modeladapter-stamp 1.0.0-SNAPSHOT
+                                </h1>
+    </div>
+</div>
+
+<nav class="aui-navgroup aui-navgroup-vertical">
+    <div class="aui-navgroup-inner">
+                                            <ul class="aui-nav">
+                <li class="aui-nav-selected">
+                    <a href="dashboard.html">Project overview</a>
+                </li>
+            </ul>
+        
+                <div class="aui-nav-heading packages-nav-heading">
+            <strong>Packages</strong>
+        </div>
+        <div class="aui-nav project-packages">
+            <form method="get" action="#" class="aui package-filter-container">
+                <input type="text" autocomplete="off" class="package-filter text"
+                       placeholder="Type to filter packages..." name="package-filter" id="package-filter"
+                       title="Start typing package name (or part of the name) to search through the tree. Use arrow keys and the Enter key to navigate."/>
+            </form>
+            <p class="package-filter-no-results-message hidden">
+                <small>No results found.</small>
+            </p>
+                                                  <div class="packages-tree-wrapper" data-root-relative="" data-package-name="">
+                <div class="packages-tree-container"></div>
+                <div class="clover-packages-lozenges"></div>
+            </div>
+        </div>
+        
+            </div>
+</nav>                </div>
+                <section class="aui-page-panel-content">
+                    <div class="aui-page-panel-content-clover">
+
+                    
+                    <ol class="aui-nav aui-nav-breadcrumbs">
+            
+        <li><a href="dashboard.html">Project Clover database Mon Oct 8 2018 14:42:31 CEST</a></li>
+    </ol>
+    
+<h1 class="aui-h2-clover">
+            Project overview
+    </h1>
+<div class="aui-tabs horizontal-tabs">
+        <ul class="tabs-menu">
+            <li class="menu-item active-tab">
+            <a href="dashboard.html">Dashboard</a>
+        </li>
+                <li class="menu-item ">
+            <a href="pkg-summary.html"><strong>Application code</strong></a>
+        </li>
+                <li class="menu-item ">
+            <a href="testsrc-pkg-summary.html"><strong>Test code</strong></a>
+        </li>
+        <li class="menu-item ">
+            <a href="test-pkg-summary.html"><strong>Test results</strong></a>
+        </li>
+                <li class="menu-item ">
+            <a href="top-risks.html"><strong>Top risks</strong></a>
+        </li>
+        <li class="menu-item ">
+            <a href="quick-wins.html"><strong>Quick wins</strong></a>
+        </li>
+                                                <li class="menu-item ">
+                <a href="treemap.html"><strong>Coverage tree map</strong></a>
+            </li>
+            </ul>
+    <div class="tabs-pane active-pane" id="tabs-first">
+
+        <div>&#160;</div>
+
+
+
+
+
+
+<div class="aui-group">
+    <div class="aui-item">
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                
+                <h3>
+                    Code coverage
+                    <small style="float:right; font-weight: normal">
+                        77 classes,
+                        185 /
+                        3,114 elements
+                    </small>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.05940912</span>5.9%</div><div style="display: table-cell">
+ <div title="5.9% Covered"  style="min-width:200px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:5.9%"></div></div></div></div>
+                <p><a href="pkg-summary.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    Test results
+                    <small style="float:right; font-weight: normal">
+                        1 /
+                        1 tests
+                        14.78 secs
+                    </small>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                                    
+
+<div style="display: table; width: 100%">
+            <div class="barGraphValue"><span class="sortValue">1.0</span>100%</div>         <div style="display: table-cell">
+            
+            <div title="0% Errors" style="min-width: 40px;" class="testBarError">
+                <div title="100% of tests passed&lt;br/&gt;0% of tests failed" class="testBarFail" style="width: 100%"><div class="testBarPass" style="width: 100%"></div></div>
+            </div>
+        </div>
+    </div>                                <p><a href="test-pkg-summary.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Code metrics</h3>
+            </header>
+                         
+
+<div id="$statsId" class="aui-item" style="display: ${display}">
+<div style="display: table">
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of branches in this project">Branches:</label></div>
+        <div class="stats-box-value">652</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of statements in this project">Statements:</label></div>
+        <div class="stats-box-value">1,907</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of methods in this project">Methods:</label></div>
+        <div class="stats-box-value">555</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of classes in this project">Classes:</label></div>
+        <div class="stats-box-value">77</div>
+    </div>
+            <div class="stats-box">
+            <div class="stats-box-label"><label title="Total number of files in this project">Files:</label></div>
+            <div class="stats-box-value">45</div>
+        </div>
+                <div class="stats-box">
+            <div class="stats-box-label"><label title="Total number of packages in this project">Packages:</label></div>
+            <div class="stats-box-value">3</div>
+        </div>
+        <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of lines of code in this project">LOC:</label></div>
+        <div class="stats-box-value">8,044</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of non-comment lines of code in this project">NCLOC:</label></div>
+        <div class="stats-box-value">4,647</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Cyclomatic complexity is the number of paths in this project">Total complexity:</label></div>
+        <div class="stats-box-value">961</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label">
+            <label title="Complexity density is the complexity divided by the number of statements in this project">Complexity density:</label>
+        </div>
+        <div class="stats-box-value">0.5</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Number of statements per method.">Statements/Method:</label></div>
+        <div class="stats-box-value">3.44</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Number of methods per class.">Methods/Class:</label></div>
+        <div class="stats-box-value">7.21</div>
+    </div>
+            <div class="stats-box">
+            <div class="stats-box-label"><label title="Number of classes per package.">Classes/Package:</label></div>
+            <div class="stats-box-value">25.67</div>
+        </div>
+        <div class="stats-box">
+        <div class="stats-box-label"><label title="Complexity divided by the number of methods in this project">Average method complexity:</label></div>
+        <div class="stats-box-value">1.73</div>
+    </div>
+</div>
+
+</div>        </div>
+
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Class Coverage Distribution</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="text-align: center">                     <img src="img/classDistrubutionChart.png" alt="img/classDistrubutionChart.png" usemap="#classDistrubutionChart.png"/>
+                </div>
+                <map id="classDistrubutionChart.png" name="classDistrubutionChart.png">
+<area shape="rect" coords="288,204,310,206" title="1 class has 91-100% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="138,204,160,206" title="1 class has 31-40% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="113,201,135,206" title="2 classes have 21-30% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="88,204,110,206" title="1 class has 11-20% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="38,15,60,206" title="69 classes have 0% coverage" alt="" nohref="nohref"/>
+</map>
+            </div>
+        </div>
+        
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Class Complexity</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="text-align: center">
+                    <img src="img/classComplexityChart.png" alt="img/classComplexityChart.png" usemap="#classComplexityChart.png"/>
+                </div>
+                <map id="classComplexityChart.png" name="classComplexityChart.png">
+<area shape="poly" coords="54,202,51,205,49,202,51,200,54,202,54,202" title="Complexity: 5; Coverage: 0%; Class: SubClassOfQuerySpecification.GeneratedPQuery" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.GeneratedPQuery"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,200,51,202,49,200,51,197,54,200,54,200" title="Complexity: 7; Coverage: 0%; Class: SubClassOfQuerySpecification" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,202,51,205,49,202,51,200,54,202,54,202" title="Complexity: 5; Coverage: 0%; Class: SubClassOfQuerySpecification.GeneratedPQuery" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.GeneratedPQuery"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,200,51,202,49,200,51,197,54,200,54,200" title="Complexity: 7; Coverage: 0%; Class: SubClassOfQuerySpecification" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,202,51,205,49,202,51,200,54,202,54,202" title="Complexity: 5; Coverage: 0%; Class: SubClassOfQuerySpecification.GeneratedPQuery" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.GeneratedPQuery"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,200,51,202,49,200,51,197,54,200,54,200" title="Complexity: 7; Coverage: 0%; Class: SubClassOfQuerySpecification" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,202,51,205,49,202,51,200,54,202,54,202" title="Complexity: 5; Coverage: 0%; Class: SubClassOfQuerySpecification.GeneratedPQuery" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.GeneratedPQuery"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,200,51,202,49,200,51,197,54,200,54,200" title="Complexity: 7; Coverage: 0%; Class: SubClassOfQuerySpecification" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,202,51,205,49,202,51,200,54,202,54,202" title="Complexity: 5; Coverage: 0%; Class: SubClassOfQuerySpecification.GeneratedPQuery" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.GeneratedPQuery"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,200,51,202,49,200,51,197,54,200,54,200" title="Complexity: 7; Coverage: 0%; Class: SubClassOfQuerySpecification" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,202,51,205,49,202,51,200,54,202,54,202" title="Complexity: 5; Coverage: 0%; Class: SubClassOfQuerySpecification.GeneratedPQuery" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.GeneratedPQuery"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,200,51,202,49,200,51,197,54,200,54,200" title="Complexity: 7; Coverage: 0%; Class: SubClassOfQuerySpecification" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,202,51,205,49,202,51,200,54,202,54,202" title="Complexity: 5; Coverage: 0%; Class: SubClassOfQuerySpecification.GeneratedPQuery" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.GeneratedPQuery"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,200,51,202,49,200,51,197,54,200,54,200" title="Complexity: 7; Coverage: 0%; Class: SubClassOfQuerySpecification" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,202,51,205,49,202,51,200,54,202,54,202" title="Complexity: 5; Coverage: 0%; Class: SubClassOfQuerySpecification.GeneratedPQuery" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.GeneratedPQuery"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,200,51,202,49,200,51,197,54,200,54,200" title="Complexity: 7; Coverage: 0%; Class: SubClassOfQuerySpecification" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification"/>
+<area shape="poly" coords="54,208,51,210,49,208,51,205,54,208,54,208" title="Complexity: 1; Coverage: 0%; Class: SubClassOfQuerySpecification.LazyHolder" alt="" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html#SubClassOfQuerySpecification.LazyHolder"/>
+<area shape="poly" coords="54,175,51,178,49,175,51,173,54,175,54,175" title="Complexity: 26; Coverage: 0%; Class: SubClassOfMatcher" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatcher.html#SubClassOfMatcher"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,157,51,159,49,157,51,154,54,157,54,157" title="Complexity: 40; Coverage: 0%; Class: SubClassOfMatch" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch"/>
+<area shape="poly" coords="54,175,51,178,49,175,51,173,54,175,54,175" title="Complexity: 26; Coverage: 0%; Class: SubClassOfMatcher" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatcher.html#SubClassOfMatcher"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,157,51,159,49,157,51,154,54,157,54,157" title="Complexity: 40; Coverage: 0%; Class: SubClassOfMatch" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch"/>
+<area shape="poly" coords="54,175,51,178,49,175,51,173,54,175,54,175" title="Complexity: 26; Coverage: 0%; Class: SubClassOfMatcher" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatcher.html#SubClassOfMatcher"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,157,51,159,49,157,51,154,54,157,54,157" title="Complexity: 40; Coverage: 0%; Class: SubClassOfMatch" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch"/>
+<area shape="poly" coords="54,175,51,178,49,175,51,173,54,175,54,175" title="Complexity: 26; Coverage: 0%; Class: SubClassOfMatcher" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatcher.html#SubClassOfMatcher"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,157,51,159,49,157,51,154,54,157,54,157" title="Complexity: 40; Coverage: 0%; Class: SubClassOfMatch" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch"/>
+<area shape="poly" coords="54,184,51,187,49,184,51,182,54,184,54,184" title="Complexity: 19; Coverage: 0%; Class: Model_adapter" alt="" href="eu/supersede/dynadapt/modeladapter/queries/Model_adapter.html#Model_adapter"/>
+<area shape="poly" coords="54,183,51,185,49,183,51,180,54,183,54,183" title="Complexity: 20; Coverage: 0%; Class: InstanceSpecificationLinkMatcher" alt="" href="eu/supersede/dynadapt/modeladapter/queries/InstanceSpecificationLinkMatcher.html#InstanceSpecificationLinkMatcher"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,169,51,171,49,169,51,166,54,169,54,169" title="Complexity: 31; Coverage: 0%; Class: InstanceSpecificationLinkMatch" alt="" href="eu/supersede/dynadapt/modeladapter/queries/InstanceSpecificationLinkMatch.html#InstanceSpecificationLinkMatch"/>
+<area shape="poly" coords="54,175,51,178,49,175,51,173,54,175,54,175" title="Complexity: 26; Coverage: 0%; Class: SubClassOfMatcher" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatcher.html#SubClassOfMatcher"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,157,51,159,49,157,51,154,54,157,54,157" title="Complexity: 40; Coverage: 0%; Class: SubClassOfMatch" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch"/>
+<area shape="poly" coords="54,175,51,178,49,175,51,173,54,175,54,175" title="Complexity: 26; Coverage: 0%; Class: SubClassOfMatcher" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatcher.html#SubClassOfMatcher"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,157,51,159,49,157,51,154,54,157,54,157" title="Complexity: 40; Coverage: 0%; Class: SubClassOfMatch" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch"/>
+<area shape="poly" coords="54,170,51,172,49,170,51,167,54,170,54,170" title="Complexity: 30; Coverage: 0%; Class: GetManifestationsMatcher" alt="" href="eu/supersede/dynadapt/modeladapter/queries/GetManifestationsMatcher.html#GetManifestationsMatcher"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,206,51,209,49,206,51,204,54,206,54,206" title="Complexity: 2; Coverage: 0%; Class: SubClassOfMatch.Immutable" alt="" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html#SubClassOfMatch.Immutable"/>
+<area shape="poly" coords="54,145,51,148,49,145,51,143,54,145,54,145" title="Complexity: 49; Coverage: 0%; Class: GetManifestationsMatch" alt="" href="eu/supersede/dynadapt/modeladapter/queries/GetManifestationsMatch.html#GetManifestationsMatch"/>
+<area shape="poly" coords="98,18,95,20,93,18,95,15,98,18,98,18" title="Complexity: 147; Coverage: 18%; Class: ModelAdapterUtilities" alt="" href="eu/supersede/dynadapt/modeladapter/ModelAdapterUtilities.html#ModelAdapterUtilities"/>
+<area shape="poly" coords="122,192,120,195,117,192,120,190,122,192,122,192" title="Complexity: 13; Coverage: 28%; Class: ModelAdapter" alt="" href="eu/supersede/dynadapt/modeladapter/ModelAdapter.html#ModelAdapter"/>
+<area shape="poly" coords="54,196,51,198,49,196,51,193,54,196,54,196" title="Complexity: 10; Coverage: 0%; Class: ComposableOpaqueAction" alt="" href="eu/supersede/dynadapt/modeladapter/ComposableOpaqueAction.html#ComposableOpaqueAction"/>
+<area shape="poly" coords="54,174,51,176,49,174,51,171,54,174,54,174" title="Complexity: 27; Coverage: 0%; Class: ComposableInstanceSpecification" alt="" href="eu/supersede/dynadapt/modeladapter/ComposableInstanceSpecification.html#ComposableInstanceSpecification"/>
+<area shape="poly" coords="298,208,296,210,293,208,296,205,298,208,298,208" title="Complexity: 1; Coverage: 100%; Class: ComposableImpl" alt="" href="eu/supersede/dynadapt/modeladapter/ComposableImpl.html#ComposableImpl"/>
+<area shape="poly" coords="152,201,149,204,147,201,149,199,152,201,152,201" title="Complexity: 6; Coverage: 40%; Class: ComposableFactory" alt="" href="eu/supersede/dynadapt/modeladapter/ComposableFactory.html#ComposableFactory"/>
+<area shape="poly" coords="54,193,51,196,49,193,51,191,54,193,54,193" title="Complexity: 12; Coverage: 0%; Class: ComposableExecutionEnvironment" alt="" href="eu/supersede/dynadapt/modeladapter/ComposableExecutionEnvironment.html#ComposableExecutionEnvironment"/>
+<area shape="poly" coords="120,150,117,153,115,150,117,148,120,150,120,150" title="Complexity: 45; Coverage: 27%; Class: ComposableClass" alt="" href="eu/supersede/dynadapt/modeladapter/ComposableClass.html#ComposableClass"/>
+<area shape="poly" coords="54,195,51,197,49,195,51,192,54,195,54,195" title="Complexity: 11; Coverage: 0%; Class: ComposableActivityNode" alt="" href="eu/supersede/dynadapt/modeladapter/ComposableActivityNode.html#ComposableActivityNode"/>
+</map>
+            </div>
+        </div>
+        
+                    <div class="dashboard-widget">
+                <header class="dashboard-widget-header">
+                    <h3>Coverage tree map</h3>
+                </header>
+                <div class="dashboard-widget-content">
+                    <div id="infovis" style="width:100%; height:250px;">
+                        <div id="treemap-loader" style="position:relative;top:50px;">
+                            <p>
+                                Generating Coverage Tree Map. Please wait...
+                            </p>
+                            <p>
+                                <img src="img/ajax-loader.gif" alt="Loading Treemap"/>
+                            </p>
+                        </div>
+                    </div>
+                    <p><a href="treemap.html">See more</a></p>
+                </div>
+
+            </div>
+            </div>
+
+
+    <div class="aui-item">
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Top 20 project risks</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/ComposableFactory.html"
+                            style="font-size: 28px;color:#89c495"
+                            title="Average Method Complexity - 6 , Coverage - 40% ">ComposableFactory</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/ModelAdapter.html"
+                            style="font-size: 20px;color:#f6c342"
+                            title="Average Method Complexity - 3.25 , Coverage - 28.3% ">ModelAdapter</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/ComposableClass.html"
+                            style="font-size: 21px;color:#f6c342"
+                            title="Average Method Complexity - 3.462 , Coverage - 27.8% ">ComposableClass</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/ModelAdapterUtilities.html"
+                            style="font-size: 20px;color:#e28e87"
+                            title="Average Method Complexity - 3.196 , Coverage - 18.7% ">ModelAdapterUtilities</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/ComposableActivityNode.html"
+                            style="font-size: 19px;color:#d04437"
+                            title="Average Method Complexity - 2.75 , Coverage - 0% ">ComposableActivityNode</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/ComposableOpaqueAction.html"
+                            style="font-size: 18px;color:#d04437"
+                            title="Average Method Complexity - 2.5 , Coverage - 0% ">ComposableOpaqueAction</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/GetManifestationsMatch.html"
+                            style="font-size: 18px;color:#d04437"
+                            title="Average Method Complexity - 2.45 , Coverage - 0% ">GetManifestationsMatch</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/ComposableInstanceSpecification.html"
+                            style="font-size: 18px;color:#d04437"
+                            title="Average Method Complexity - 2.455 , Coverage - 0% ">ComposableInstanceSpecification</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/GetReferenceToTypeMatch.html"
+                            style="font-size: 17px;color:#d04437"
+                            title="Average Method Complexity - 2.222 , Coverage - 0% ">GetReferenceToTypeMatch</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/InstanceOfInstanceSpecificationLinkMatch.html"
+                            style="font-size: 17px;color:#d04437"
+                            title="Average Method Complexity - 2.222 , Coverage - 0% ">InstanceOfInstanceSpecificationLinkMatch</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/ParametersWithTypeMatch.html"
+                            style="font-size: 17px;color:#d04437"
+                            title="Average Method Complexity - 2.222 , Coverage - 0% ">ParametersWithTypeMatch</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/PropertiesWithTypeMatch.html"
+                            style="font-size: 17px;color:#d04437"
+                            title="Average Method Complexity - 2.222 , Coverage - 0% ">PropertiesWithTypeMatch</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/ReferencesToTypeMatch.html"
+                            style="font-size: 17px;color:#d04437"
+                            title="Average Method Complexity - 2.222 , Coverage - 0% ">ReferencesToTypeMatch</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html"
+                            style="font-size: 17px;color:#d04437"
+                            title="Average Method Complexity - 2.222 , Coverage - 0% ">SubClassOfMatch</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/InstanceSpecificationLinkMatch.html"
+                            style="font-size: 17px;color:#d04437"
+                            title="Average Method Complexity - 1.938 , Coverage - 0% ">InstanceSpecificationLinkMatch</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/ComposableExecutionEnvironment.html"
+                            style="font-size: 16px;color:#d04437"
+                            title="Average Method Complexity - 1.714 , Coverage - 0% ">ComposableExecutionEnvironment</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/InstanceSpecificationLinkMatcher.html"
+                            style="font-size: 15px;color:#d04437"
+                            title="Average Method Complexity - 1.25 , Coverage - 0% ">InstanceSpecificationLinkMatcher</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/util/InstanceOfInstanceSpecificationLinkQuerySpecification.html"
+                            style="font-size: 15px;color:#d04437"
+                            title="Average Method Complexity - 1.25 , Coverage - 0% ">InstanceOfInstanceSpecificationLinkQuerySpecification.GeneratedPQuery</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/util/ReferencesToTypeQuerySpecification.html"
+                            style="font-size: 15px;color:#d04437"
+                            title="Average Method Complexity - 1.25 , Coverage - 0% ">ReferencesToTypeQuerySpecification.GeneratedPQuery</a>
+                                    
+                                                                <a class="tag" href="eu/supersede/dynadapt/modeladapter/queries/util/GetManifestationsQuerySpecification.html"
+                            style="font-size: 15px;color:#d04437"
+                            title="Average Method Complexity - 1.25 , Coverage - 0% ">GetManifestationsQuerySpecification.GeneratedPQuery</a>
+                                                    <p><a href="top-risks.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Most complex packages</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                
+                <table class="aui">
+                                            
+                                                <tr>
+                            <td>1. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                            <td>
+                                <a href="eu/supersede/dynadapt/modeladapter/queries/pkg-summary.html">eu.supersede.dynadapt.modeladapter.queries</a>
+                                <span class="aui-badge" title="Package complexity">577</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>2. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.16681695</span>16.7%</div><div style="display: table-cell">
+ <div title="16.7% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:16.7%"></div></div></div></div></td>
+                            <td>
+                                <a href="eu/supersede/dynadapt/modeladapter/pkg-summary.html">eu.supersede.dynadapt.modeladapter</a>
+                                <span class="aui-badge" title="Package complexity">272</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>3. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                            <td>
+                                <a href="eu/supersede/dynadapt/modeladapter/queries/util/pkg-summary.html">eu.supersede.dynadapt.modeladapter.queries.util</a>
+                                <span class="aui-badge" title="Package complexity">112</span>
+                            </td>
+                        </tr>
+                                    </table>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Most complex classes</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <table class="aui">
+                                            
+                                                <tr>
+                            <td>1. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.18675722</span>18.7%</div><div style="display: table-cell">
+ <div title="18.7% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:18.7%"></div></div></div></div></td>
+                            <td>
+                                <a  href="eu/supersede/dynadapt/modeladapter/ModelAdapterUtilities.html"  title="eu.supersede.dynadapt.modeladapter.ModelAdapterUtilities">ModelAdapterUtilities</a>
+                                <span class="aui-badge" title="Class complexity">147</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>2. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                            <td>
+                                <a  href="eu/supersede/dynadapt/modeladapter/queries/GetManifestationsMatch.html"  title="eu.supersede.dynadapt.modeladapter.queries.GetManifestationsMatch">GetManifestationsMatch</a>
+                                <span class="aui-badge" title="Class complexity">49</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>3. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.2781065</span>27.8%</div><div style="display: table-cell">
+ <div title="27.8% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:27.8%"></div></div></div></div></td>
+                            <td>
+                                <a  href="eu/supersede/dynadapt/modeladapter/ComposableClass.html"  title="eu.supersede.dynadapt.modeladapter.ComposableClass">ComposableClass</a>
+                                <span class="aui-badge" title="Class complexity">45</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>4. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                            <td>
+                                <a  href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html"  title="eu.supersede.dynadapt.modeladapter.queries.SubClassOfMatch">SubClassOfMatch</a>
+                                <span class="aui-badge" title="Class complexity">40</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>5. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                            <td>
+                                <a  href="eu/supersede/dynadapt/modeladapter/queries/ReferencesToTypeMatch.html"  title="eu.supersede.dynadapt.modeladapter.queries.ReferencesToTypeMatch">ReferencesToTypeMatch</a>
+                                <span class="aui-badge" title="Class complexity">40</span>
+                            </td>
+                        </tr>
+                                    </table>
+            </div>
+        </div>
+
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Least tested methods</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <table class="aui">
+                                            
+
+                    <tr>
+                        <td align="right">1.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="GetManifestationsMatch.equals(Object)&#160;:&#160;boolean" href="eu/supersede/dynadapt/modeladapter/queries/GetManifestationsMatch.html?line=140#src-140">GetManifestationsMatch.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">15</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">2.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="GetReferenceToTypeMatch.equals(Object)&#160;:&#160;boolean" href="eu/supersede/dynadapt/modeladapter/queries/GetReferenceToTypeMatch.html?line=118#src-118">GetReferenceToTypeMatch.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">12</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">3.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="InstanceOfInstanceSpecificationLinkMatch.equals(Object)&#160;:&#160;boolean" href="eu/supersede/dynadapt/modeladapter/queries/InstanceOfInstanceSpecificationLinkMatch.html?line=118#src-118">InstanceOfInstanceSpecificationLinkMatch.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">12</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">4.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ParametersWithTypeMatch.equals(Object)&#160;:&#160;boolean" href="eu/supersede/dynadapt/modeladapter/queries/ParametersWithTypeMatch.html?line=119#src-119">ParametersWithTypeMatch.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">12</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">5.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="PropertiesWithTypeMatch.equals(Object)&#160;:&#160;boolean" href="eu/supersede/dynadapt/modeladapter/queries/PropertiesWithTypeMatch.html?line=119#src-119">PropertiesWithTypeMatch.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">12</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">6.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ReferencesToTypeMatch.equals(Object)&#160;:&#160;boolean" href="eu/supersede/dynadapt/modeladapter/queries/ReferencesToTypeMatch.html?line=118#src-118">ReferencesToTypeMatch.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">12</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">7.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="SubClassOfMatch.equals(Object)&#160;:&#160;boolean" href="eu/supersede/dynadapt/modeladapter/queries/SubClassOfMatch.html?line=118#src-118">SubClassOfMatch.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">12</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">8.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ComposableClass.applyDeleteComposition(Model,Element,Model,Element)&#160;:&#160;void" href="eu/supersede/dynadapt/modeladapter/ComposableClass.html?line=230#src-230">ComposableClass.applyDeleteComposition(Model,Element,Model,Element)&#160;:&#160;void</a>
+                            <span class="aui-badge" title="Method complexity">7</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">9.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ComposableClass.findReferencesOfType(Class,Model,Model)&#160;:&#160;List&lt;Type&gt;" href="eu/supersede/dynadapt/modeladapter/ComposableClass.html?line=353#src-353">ComposableClass.findReferencesOfType(Class,Model,Model)&#160;:&#160;List&lt;Type&gt;</a>
+                            <span class="aui-badge" title="Method complexity">13</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">10.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ComposableOpaqueAction.appendElementToBaseModel(ActivityImpl,OpaqueAction,List&lt;ActivityEdge&gt;,List&lt;ActivityEdge&gt;)&#160;:&#160;List&lt;ActivityNode&gt;" href="eu/supersede/dynadapt/modeladapter/ComposableOpaqueAction.html?line=113#src-113">ComposableOpaqueAction.appendElementToBaseModel(ActivityImpl,OpaqueAction,List&lt;ActivityEdge&gt;,List&lt;ActivityEdge&gt;)&#160;:&#160;List&lt;ActivityNode&gt;</a>
+                            <span class="aui-badge" title="Method complexity">6</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">11.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="InstanceSpecificationLinkMatch.equals(Object)&#160;:&#160;boolean" href="eu/supersede/dynadapt/modeladapter/queries/InstanceSpecificationLinkMatch.html?line=98#src-98">InstanceSpecificationLinkMatch.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">9</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">12.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ComposableActivityNode.appendElementToBaseModel(ActivityImpl,ActivityNode,List&lt;ActivityEdge&gt;,List&lt;ActivityEdge&gt;)&#160;:&#160;List&lt;ActivityNode&gt;" href="eu/supersede/dynadapt/modeladapter/ComposableActivityNode.html?line=115#src-115">ComposableActivityNode.appendElementToBaseModel(ActivityImpl,ActivityNode,List&lt;ActivityEdge&gt;,List&lt;ActivityEdge&gt;)&#160;:&#160;List&lt;ActivityNode&gt;</a>
+                            <span class="aui-badge" title="Method complexity">6</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">13.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="InstanceOfInstanceSpecificationLinkQuerySpecification.GeneratedPQuery.doGetContainedBodies()&#160;:&#160;Set&lt;PBody&gt;" href="eu/supersede/dynadapt/modeladapter/queries/util/InstanceOfInstanceSpecificationLinkQuerySpecification.html?line=129#src-129">InstanceOfInstanceSpecificationLinkQuerySpecification.GeneratedPQuery.doGetContainedBodies()&#160;:&#160;Set&lt;PBody&gt;</a>
+                            <span class="aui-badge" title="Method complexity">2</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">14.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ReferencesToTypeQuerySpecification.GeneratedPQuery.doGetContainedBodies()&#160;:&#160;Set&lt;PBody&gt;" href="eu/supersede/dynadapt/modeladapter/queries/util/ReferencesToTypeQuerySpecification.html?line=129#src-129">ReferencesToTypeQuerySpecification.GeneratedPQuery.doGetContainedBodies()&#160;:&#160;Set&lt;PBody&gt;</a>
+                            <span class="aui-badge" title="Method complexity">2</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">15.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ModelAdapterUtilities.createManifestation(Manifestation,Package,HashMap&lt;Stereotype,&#160;List&lt;Element&gt;&gt;,Model)&#160;:&#160;Manifestation" href="eu/supersede/dynadapt/modeladapter/ModelAdapterUtilities.html?line=447#src-447">ModelAdapterUtilities.createManifestation(Manifestation,Package,HashMap&lt;Stereotype,&#160;List&lt;Element&gt;&gt;,Model)&#160;:&#160;Manifestation</a>
+                            <span class="aui-badge" title="Method complexity">5</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">16.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ModelAdapterUtilities.createValue(Slot,ValueSpecification,HashMap&lt;Stereotype,&#160;List&lt;Element&gt;&gt;,Model)&#160;:&#160;void" href="eu/supersede/dynadapt/modeladapter/ModelAdapterUtilities.html?line=525#src-525">ModelAdapterUtilities.createValue(Slot,ValueSpecification,HashMap&lt;Stereotype,&#160;List&lt;Element&gt;&gt;,Model)&#160;:&#160;void</a>
+                            <span class="aui-badge" title="Method complexity">7</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">17.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="GetManifestationsQuerySpecification.GeneratedPQuery.doGetContainedBodies()&#160;:&#160;Set&lt;PBody&gt;" href="eu/supersede/dynadapt/modeladapter/queries/util/GetManifestationsQuerySpecification.html?line=129#src-129">GetManifestationsQuerySpecification.GeneratedPQuery.doGetContainedBodies()&#160;:&#160;Set&lt;PBody&gt;</a>
+                            <span class="aui-badge" title="Method complexity">2</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">18.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ComposableActivityNode.applyReplaceComposition(Model,Element,Model,Element)&#160;:&#160;void" href="eu/supersede/dynadapt/modeladapter/ComposableActivityNode.html?line=61#src-61">ComposableActivityNode.applyReplaceComposition(Model,Element,Model,Element)&#160;:&#160;void</a>
+                            <span class="aui-badge" title="Method complexity">3</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">19.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="SubClassOfQuerySpecification.GeneratedPQuery.doGetContainedBodies()&#160;:&#160;Set&lt;PBody&gt;" href="eu/supersede/dynadapt/modeladapter/queries/util/SubClassOfQuerySpecification.html?line=127#src-127">SubClassOfQuerySpecification.GeneratedPQuery.doGetContainedBodies()&#160;:&#160;Set&lt;PBody&gt;</a>
+                            <span class="aui-badge" title="Method complexity">2</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">20.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ComposableOpaqueAction.applyReplaceComposition(Model,Element,Model,Element)&#160;:&#160;void" href="eu/supersede/dynadapt/modeladapter/ComposableOpaqueAction.html?line=66#src-66">ComposableOpaqueAction.applyReplaceComposition(Model,Element,Model,Element)&#160;:&#160;void</a>
+                            <span class="aui-badge" title="Method complexity">2</span>
+
+                        </td>
+                    </tr>
+                                    </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+                            </div> <!-- tabs-pane active-pane -->
+                        </div>
+
+    <script type="text/javascript" src="jit.js" ></script>
+    <script type="text/javascript" src="treemap-dash-json.js" ></script>
+
+                        </div> <!-- class="aui-page-panel-content-clover" -->
+                    <footer id="footer" role="contentinfo">
+    <section class="footer-body">
+        <ul>
+            <li>
+                Report generated by <a target="_new" href="http://openclover.org">OpenClover</a> v 4.2.0
+                on Mon Oct 8 2018 14:42:59 CEST using coverage data from Mon Oct 8 2018 14:42:56 CEST.
+            </li>
+        </ul>
+        <ul>
+            <li>Clover free edition. </li>
+        </ul>
+    </section>
+</footer>                </section> <!-- class="aui-page-panel-content" -->
+            </div> <!-- class="aui-page-panel-inner" -->
+        </div> <!-- class="aui-page-panel" -->
+    </div> <!-- id="page" -->
+</body>
+</html>

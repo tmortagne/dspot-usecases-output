@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ComposableExecutionEnvironment.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter</a> &gt; <span class="el_source">ComposableExecutionEnvironment.java</span></div><h1>ComposableExecutionEnvironment.java</h1><pre class="source lang-java linenums">package eu.supersede.dynadapt.modeladapter;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.ExecutionEnvironment;
+import org.eclipse.uml2.uml.InstanceSpecification;
+import org.eclipse.uml2.uml.Manifestation;
+import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.NamedElement;
+import org.eclipse.uml2.uml.Package;
+import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+
+import eu.supersede.dynadapt.model.query.IModelQuery;
+import eu.supersede.dynadapt.modeladapter.queries.GetManifestationsMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.util.GetManifestationsQuerySpecification;
+
+public class ComposableExecutionEnvironment extends ComposableImpl implements Composable {
+<span class="nc" id="L25">	private final Logger log = LogManager.getLogger(this.getClass());</span>
+	
+	public ComposableExecutionEnvironment (IModelQuery modelQuery, HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints){
+<span class="nc" id="L28">		super (modelQuery, baseJointpoints);</span>
+<span class="nc" id="L29">	}</span>
+
+	@Override
+	public void applyAddComposition(Model inBaseModel, Element jointpointBaseModelElement, Model usingVariantModel,
+			Element jointpointVariantModelElement) {
+		// Look in Variant model for manifestations whose client is the jointpointVariantModelElement
+		// For each found manifestation, 
+		// IF manifestation does not exist in base model, create manifestation
+		// Take manifestation supplier
+		// IF supplier does not exist in base model, create it
+		// For created supplier, follow slots to create other instance specifications
+		// FIXME: Reuse instance specification creation methods in ComposableInstanceSpecification
+<span class="nc" id="L41">		Set&lt;Manifestation&gt; manifestations = getManifestationForExecutionEnvironment ((ExecutionEnvironment)jointpointVariantModelElement);</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">		for (Manifestation manifestation: manifestations){</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">			if (!ModelAdapterUtilities.modelContainsElement(manifestation, inBaseModel)){</span>
+<span class="nc" id="L44">				log.debug(&quot;Adding detected manifestation in variant model, from client: &quot; </span>
+<span class="nc" id="L45">					+ manifestation.getClients().get(0).getQualifiedName()</span>
+<span class="nc" id="L46">					+ &quot; to utilized element: &quot; + manifestation.getUtilizedElement().getQualifiedName());</span>
+<span class="nc" id="L47">				addManifestationInModel (manifestation, inBaseModel);</span>
+			}
+<span class="nc" id="L49">		}</span>
+<span class="nc" id="L50">	}</span>
+
+	
+	@Override
+	public void applyDeleteComposition(Model inBaseModel, Element jointpointBaseModelElement, Model usingVariantModel,
+			Element jointpointVariantModelElement) {
+		// TODO Auto-generated method stub
+
+<span class="nc" id="L58">	}</span>
+
+	@Override
+	public void applyReplaceComposition(Model inBaseModel, Element jointpointBaseModelElement, Model usingVariantModel,
+			Element jointpointVariantModelElement) {
+		// TODO Auto-generated method stub
+
+<span class="nc" id="L65">	}</span>
+	
+	private void addManifestationInModel(Manifestation manifestation, Model model) {
+		// Locate manifestation container. Add it to model if it does not exist
+		// Create manifestation
+<span class="nc" id="L70">		Package pack  = ModelAdapterUtilities.getPackageInModel (manifestation.getNearestPackage(), model);</span>
+<span class="nc bnc" id="L71" title="All 2 branches missed.">		if (pack != null){</span>
+<span class="nc" id="L72">			Manifestation newManifestation = </span>
+<span class="nc" id="L73">				ModelAdapterUtilities.createElement (manifestation, pack, baseJointpoints, model);</span>
+		}
+<span class="nc" id="L75">	}</span>
+
+	
+	private Set&lt;Manifestation&gt; getManifestationForExecutionEnvironment(ExecutionEnvironment execEnv) {
+<span class="nc" id="L79">		Set&lt;Manifestation&gt; result = new HashSet&lt;&gt;();</span>
+		try {
+<span class="nc" id="L81">			GetManifestationsMatcher matcher = </span>
+<span class="nc" id="L82">					(GetManifestationsMatcher) modelQuery.queryMatcher(GetManifestationsQuerySpecification.instance());</span>
+<span class="nc" id="L83">			Set&lt;Manifestation&gt; manifestationMatches = matcher.getAllValuesOfmanifestation();</span>
+			//Filtering out manifestations whose client is not the given execution environment
+<span class="nc bnc" id="L85" title="All 2 branches missed.">			for (Manifestation manifestation: manifestationMatches){</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">				if (manifestationContainsElementAsClient (manifestation, execEnv)){</span>
+<span class="nc" id="L87">					result.add(manifestation); </span>
+				}
+<span class="nc" id="L89">			}</span>
+<span class="nc" id="L90">		} catch (ViatraQueryException e) {</span>
+<span class="nc" id="L91">			e.printStackTrace();</span>
+<span class="nc" id="L92">		}</span>
+<span class="nc" id="L93">		return result;</span>
+	}
+
+	private boolean manifestationContainsElementAsClient(Manifestation manifestation, ExecutionEnvironment execEnv) {
+<span class="nc" id="L97">		boolean result = false;</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">		for (NamedElement client: manifestation.getClients()){</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">			if (client.getQualifiedName().equals(execEnv.getQualifiedName())){</span>
+<span class="nc" id="L100">				result = true;</span>
+<span class="nc" id="L101">				break;</span>
+			}
+<span class="nc" id="L103">		}</span>
+<span class="nc" id="L104">		return result;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

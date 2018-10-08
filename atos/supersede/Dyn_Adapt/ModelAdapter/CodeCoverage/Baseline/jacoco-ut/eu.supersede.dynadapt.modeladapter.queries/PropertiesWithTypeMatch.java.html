@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PropertiesWithTypeMatch.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter.queries</a> &gt; <span class="el_source">PropertiesWithTypeMatch.java</span></div><h1>PropertiesWithTypeMatch.java</h1><pre class="source lang-java linenums">/**
+ * Generated from platform:/resource/eu.supersede.dynadapt.modeladapter-stamp/src/main/java/eu/supersede/dynadapt/modeladapter/queries/model_adapter.vql
+ */
+package eu.supersede.dynadapt.modeladapter.queries;
+
+import eu.supersede.dynadapt.modeladapter.queries.util.PropertiesWithTypeQuerySpecification;
+import java.util.Arrays;
+import java.util.List;
+import org.eclipse.uml2.uml.Property;
+import org.eclipse.uml2.uml.Type;
+import org.eclipse.viatra.query.runtime.api.IPatternMatch;
+import org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+
+/**
+ * Pattern-specific match representation of the eu.supersede.dynadapt.modeladapter.queries.propertiesWithType pattern,
+ * to be used in conjunction with {@link PropertiesWithTypeMatcher}.
+ * 
+ * &lt;p&gt;Class fields correspond to parameters of the pattern. Fields with value null are considered unassigned.
+ * Each instance is a (possibly partial) substitution of pattern parameters,
+ * usable to represent a match of the pattern in the result of a query,
+ * or to specify the bound (fixed) input parameters when issuing a query.
+ * 
+ * @see PropertiesWithTypeMatcher
+ * @see PropertiesWithTypeProcessor
+ * 
+ */
+@SuppressWarnings(&quot;all&quot;)
+public abstract class PropertiesWithTypeMatch extends BasePatternMatch {
+  private Property fProperty;
+  
+  private Type fType;
+  
+<span class="nc" id="L34">  private static List&lt;String&gt; parameterNames = makeImmutableList(&quot;property&quot;, &quot;type&quot;);</span>
+  
+<span class="nc" id="L36">  private PropertiesWithTypeMatch(final Property pProperty, final Type pType) {</span>
+<span class="nc" id="L37">    this.fProperty = pProperty;</span>
+<span class="nc" id="L38">    this.fType = pType;</span>
+<span class="nc" id="L39">  }</span>
+  
+  @Override
+  public Object get(final String parameterName) {
+<span class="nc bnc" id="L43" title="All 2 branches missed.">    if (&quot;property&quot;.equals(parameterName)) return this.fProperty;</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">    if (&quot;type&quot;.equals(parameterName)) return this.fType;</span>
+<span class="nc" id="L45">    return null;</span>
+  }
+  
+  public Property getProperty() {
+<span class="nc" id="L49">    return this.fProperty;</span>
+  }
+  
+  public Type getType() {
+<span class="nc" id="L53">    return this.fType;</span>
+  }
+  
+  @Override
+  public boolean set(final String parameterName, final Object newValue) {
+<span class="nc bnc" id="L58" title="All 2 branches missed.">    if (!isMutable()) throw new java.lang.UnsupportedOperationException();</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">    if (&quot;property&quot;.equals(parameterName) ) {</span>
+<span class="nc" id="L60">        this.fProperty = (Property) newValue;</span>
+<span class="nc" id="L61">        return true;</span>
+    }
+<span class="nc bnc" id="L63" title="All 2 branches missed.">    if (&quot;type&quot;.equals(parameterName) ) {</span>
+<span class="nc" id="L64">        this.fType = (Type) newValue;</span>
+<span class="nc" id="L65">        return true;</span>
+    }
+<span class="nc" id="L67">    return false;</span>
+  }
+  
+  public void setProperty(final Property pProperty) {
+<span class="nc bnc" id="L71" title="All 2 branches missed.">    if (!isMutable()) throw new java.lang.UnsupportedOperationException();</span>
+<span class="nc" id="L72">    this.fProperty = pProperty;</span>
+<span class="nc" id="L73">  }</span>
+  
+  public void setType(final Type pType) {
+<span class="nc bnc" id="L76" title="All 2 branches missed.">    if (!isMutable()) throw new java.lang.UnsupportedOperationException();</span>
+<span class="nc" id="L77">    this.fType = pType;</span>
+<span class="nc" id="L78">  }</span>
+  
+  @Override
+  public String patternName() {
+<span class="nc" id="L82">    return &quot;eu.supersede.dynadapt.modeladapter.queries.propertiesWithType&quot;;</span>
+  }
+  
+  @Override
+  public List&lt;String&gt; parameterNames() {
+<span class="nc" id="L87">    return PropertiesWithTypeMatch.parameterNames;</span>
+  }
+  
+  @Override
+  public Object[] toArray() {
+<span class="nc" id="L92">    return new Object[]{fProperty, fType};</span>
+  }
+  
+  @Override
+  public PropertiesWithTypeMatch toImmutable() {
+<span class="nc bnc" id="L97" title="All 2 branches missed.">    return isMutable() ? newMatch(fProperty, fType) : this;</span>
+  }
+  
+  @Override
+  public String prettyPrint() {
+<span class="nc" id="L102">    StringBuilder result = new StringBuilder();</span>
+<span class="nc" id="L103">    result.append(&quot;\&quot;property\&quot;=&quot; + prettyPrintValue(fProperty) + &quot;, &quot;);</span>
+    
+<span class="nc" id="L105">    result.append(&quot;\&quot;type\&quot;=&quot; + prettyPrintValue(fType)</span>
+    );
+<span class="nc" id="L107">    return result.toString();</span>
+  }
+  
+  @Override
+  public int hashCode() {
+<span class="nc" id="L112">    final int prime = 31;</span>
+<span class="nc" id="L113">    int result = 1;</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">    result = prime * result + ((fProperty == null) ? 0 : fProperty.hashCode());</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">    result = prime * result + ((fType == null) ? 0 : fType.hashCode());</span>
+<span class="nc" id="L116">    return result;</span>
+  }
+  
+  @Override
+  public boolean equals(final Object obj) {
+<span class="nc bnc" id="L121" title="All 2 branches missed.">    if (this == obj)</span>
+<span class="nc" id="L122">        return true;</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">    if (!(obj instanceof PropertiesWithTypeMatch)) { // this should be infrequent</span>
+<span class="nc bnc" id="L124" title="All 2 branches missed.">        if (obj == null) {</span>
+<span class="nc" id="L125">            return false;</span>
+        }
+<span class="nc bnc" id="L127" title="All 2 branches missed.">        if (!(obj instanceof IPatternMatch)) {</span>
+<span class="nc" id="L128">            return false;</span>
+        }
+<span class="nc" id="L130">        IPatternMatch otherSig  = (IPatternMatch) obj;</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">        if (!specification().equals(otherSig.specification()))</span>
+<span class="nc" id="L132">            return false;</span>
+<span class="nc" id="L133">        return Arrays.deepEquals(toArray(), otherSig.toArray());</span>
+    }
+<span class="nc" id="L135">    PropertiesWithTypeMatch other = (PropertiesWithTypeMatch) obj;</span>
+<span class="nc bnc" id="L136" title="All 4 branches missed.">    if (fProperty == null) {if (other.fProperty != null) return false;}</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">    else if (!fProperty.equals(other.fProperty)) return false;</span>
+<span class="nc bnc" id="L138" title="All 4 branches missed.">    if (fType == null) {if (other.fType != null) return false;}</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">    else if (!fType.equals(other.fType)) return false;</span>
+<span class="nc" id="L140">    return true;</span>
+  }
+  
+  @Override
+  public PropertiesWithTypeQuerySpecification specification() {
+    try {
+<span class="nc" id="L146">        return PropertiesWithTypeQuerySpecification.instance();</span>
+<span class="nc" id="L147">    } catch (ViatraQueryException ex) {</span>
+         // This cannot happen, as the match object can only be instantiated if the query specification exists
+<span class="nc" id="L149">         throw new IllegalStateException (ex);</span>
+    }
+  }
+  
+  /**
+   * Returns an empty, mutable match.
+   * Fields of the mutable match can be filled to create a partial match, usable as matcher input.
+   * 
+   * @return the empty match.
+   * 
+   */
+  public static PropertiesWithTypeMatch newEmptyMatch() {
+<span class="nc" id="L161">    return new Mutable(null, null);</span>
+  }
+  
+  /**
+   * Returns a mutable (partial) match.
+   * Fields of the mutable match can be filled to create a partial match, usable as matcher input.
+   * 
+   * @param pProperty the fixed value of pattern parameter property, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @return the new, mutable (partial) match object.
+   * 
+   */
+  public static PropertiesWithTypeMatch newMutableMatch(final Property pProperty, final Type pType) {
+<span class="nc" id="L174">    return new Mutable(pProperty, pType);</span>
+  }
+  
+  /**
+   * Returns a new (partial) match.
+   * This can be used e.g. to call the matcher with a partial match.
+   * &lt;p&gt;The returned match will be immutable. Use {@link #newEmptyMatch()} to obtain a mutable match object.
+   * @param pProperty the fixed value of pattern parameter property, or null if not bound.
+   * @param pType the fixed value of pattern parameter type, or null if not bound.
+   * @return the (partial) match object.
+   * 
+   */
+  public static PropertiesWithTypeMatch newMatch(final Property pProperty, final Type pType) {
+<span class="nc" id="L187">    return new Immutable(pProperty, pType);</span>
+  }
+  
+  private static final class Mutable extends PropertiesWithTypeMatch {
+    Mutable(final Property pProperty, final Type pType) {
+<span class="nc" id="L192">      super(pProperty, pType);</span>
+<span class="nc" id="L193">    }</span>
+    
+    @Override
+    public boolean isMutable() {
+<span class="nc" id="L197">      return true;</span>
+    }
+  }
+  
+  private static final class Immutable extends PropertiesWithTypeMatch {
+    Immutable(final Property pProperty, final Type pType) {
+<span class="nc" id="L203">      super(pProperty, pType);</span>
+<span class="nc" id="L204">    }</span>
+    
+    @Override
+    public boolean isMutable() {
+<span class="nc" id="L208">      return false;</span>
+    }
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

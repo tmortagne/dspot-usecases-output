@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ModelAdapter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter</a> &gt; <span class="el_source">ModelAdapter.java</span></div><h1>ModelAdapter.java</h1><pre class="source lang-java linenums">/*******************************************************************************
+ * Copyright (c) 2016 Universitat Politécnica de Catalunya (UPC), ATOS Spain S.A
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Contributors:
+ * 	Quim Motger (UPC) - main development
+ *  Yosu Gorroñogoitia (Atos) - main development
+ * 	
+ * Initially developed in the context of SUPERSEDE EU project
+ * www.supersede.eu
+ *******************************************************************************/
+
+package eu.supersede.dynadapt.modeladapter;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.LiteralBoolean;
+import org.eclipse.uml2.uml.LiteralInteger;
+import org.eclipse.uml2.uml.LiteralReal;
+import org.eclipse.uml2.uml.LiteralString;
+import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.Slot;
+import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.StructuralFeature;
+import org.eclipse.uml2.uml.UMLPackage;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+
+import eu.supersede.dynadapt.dsl.aspect.ActionOptionType;
+import eu.supersede.dynadapt.model.IModelManager;
+import eu.supersede.dynadapt.model.query.IModelQuery;
+import eu.supersede.dynadapt.model.query.ModelQuery;
+import eu.supersede.dynadapt.model.tagger.ModelTagger;
+
+public class ModelAdapter implements IModelAdapter {	
+<span class="fc" id="L50">	private final static Logger log = LogManager.getLogger(ModelAdapter.class);</span>
+
+<span class="fc" id="L52">	private ModelTagger mt = null;</span>
+<span class="fc" id="L53">	private IModelQuery modelQuery = null;</span>
+	
+<span class="fc" id="L55">	public ModelAdapter(IModelManager modelManager) throws ViatraQueryException {</span>
+<span class="fc" id="L56">		mt = new ModelTagger(modelManager);</span>
+<span class="fc" id="L57">		modelQuery = new ModelQuery (modelManager);</span>
+<span class="fc" id="L58">	}</span>
+
+	@Override
+	public Model applyCompositionDirective(ActionOptionType actionOptionType, Model inBaseModel,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; elements, Stereotype adviceRole, Model usingVariantModel)
+			throws Exception {
+		
+<span class="fc" id="L65">		Element variantElement = ModelAdapterUtilities.findElementByStereotype(usingVariantModel, adviceRole);</span>
+		// Notified if variantElement cannot be found in variant model. In this
+		// case, adaptation cannot be applied
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">		if (variantElement == null) {</span>
+<span class="nc" id="L69">			log.debug(&quot;Role &quot; + adviceRole.getName() + &quot; could not be found in variant model: &quot;</span>
+<span class="nc" id="L70">					+ usingVariantModel.getName());</span>
+<span class="nc" id="L71">			return null;</span>
+		}
+<span class="fc" id="L73">		Composable composable = ComposableFactory.create (variantElement, modelQuery, elements);</span>
+
+<span class="fc bfc" id="L75" title="All 2 branches covered.">		for (Stereotype stereotype : elements.keySet()) {</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">			for (Element baseElement : elements.get(stereotype)) {</span>
+				//Apply composition only if baseElement and variantElement share the same jointpoint role
+<span class="fc bfc" id="L78" title="All 2 branches covered.">				if (ModelAdapterUtilities.elementHasRole (variantElement, stereotype)){</span>
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">					if (actionOptionType.eGet(actionOptionType.eClass().getEStructuralFeature(&quot;ADD&quot;)) != null)</span>
+<span class="fc" id="L80">						composable.applyAddComposition(inBaseModel, baseElement, usingVariantModel, variantElement);</span>
+<span class="nc bnc" id="L81" title="All 2 branches missed.">					else if (actionOptionType.eGet(actionOptionType.eClass().getEStructuralFeature(&quot;DELETE&quot;)) != null)</span>
+<span class="nc" id="L82">						composable.applyDeleteComposition(inBaseModel, baseElement, usingVariantModel, variantElement);</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">					else if (actionOptionType.eGet(actionOptionType.eClass().getEStructuralFeature(&quot;REPLACE&quot;)) != null)</span>
+<span class="nc" id="L84">						composable.applyReplaceComposition(inBaseModel, baseElement, usingVariantModel, variantElement);</span>
+				}
+<span class="fc" id="L86">			}</span>
+<span class="fc" id="L87">		}</span>
+
+<span class="fc" id="L89">		return inBaseModel;</span>
+	}
+
+	@Override
+	public Model applyUpdateComposition(Model inBaseModel, Slot jointpointBaseModelSlot, String newValue) {
+
+<span class="nc" id="L95">		StructuralFeature feat = jointpointBaseModelSlot.getDefiningFeature();</span>
+
+<span class="nc bnc" id="L97" title="All 2 branches missed.">		if (feat.getType().getName().equals(&quot;Integer&quot;)) {</span>
+<span class="nc" id="L98">			LiteralInteger value = ((LiteralInteger) jointpointBaseModelSlot.getValues().get(0));</span>
+<span class="nc" id="L99">			value.setValue(Integer.valueOf(newValue));</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">		} else if (feat.getType().getName().equals(&quot;Boolean&quot;)) {</span>
+<span class="nc" id="L101">			LiteralBoolean value = ((LiteralBoolean) jointpointBaseModelSlot.getValues().get(0));</span>
+<span class="nc" id="L102">			value.setValue(Boolean.valueOf(newValue));</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">		} else if (feat.getType().getName().equals(&quot;String&quot;)) {</span>
+<span class="nc" id="L104">			LiteralString value = ((LiteralString) jointpointBaseModelSlot.getValues().get(0));</span>
+<span class="nc" id="L105">			value.setValue(newValue);</span>
+<span class="nc bnc" id="L106" title="All 2 branches missed.">		} else if (feat.getType().getName().equals(&quot;Real&quot;)) {</span>
+<span class="nc" id="L107">			LiteralReal value = ((LiteralReal) jointpointBaseModelSlot.getValues().get(0));</span>
+<span class="nc" id="L108">			value.setValue(Double.valueOf(newValue));</span>
+		}
+<span class="nc" id="L110">		log.debug(&quot;Updated property value of &quot; + feat.getName() + &quot; with &quot; + newValue);</span>
+
+<span class="nc" id="L112">		return inBaseModel;</span>
+	}
+
+	public Model applyUpdateCompositionDirective(Model inBaseModel, HashMap&lt;Stereotype, List&lt;Element&gt;&gt; elements,
+			String newValue) {
+<span class="nc" id="L117">		Model model = null;</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">		for (Stereotype stereotype : elements.keySet()) {</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">			for (Element element : elements.get(stereotype)) {</span>
+<span class="nc" id="L120">				Slot s = (Slot) element;</span>
+<span class="nc" id="L121">				model = applyUpdateComposition(inBaseModel, s, newValue);</span>
+<span class="nc" id="L122">			}</span>
+<span class="nc" id="L123">		}</span>
+<span class="nc" id="L124">		return model;</span>
+	}
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

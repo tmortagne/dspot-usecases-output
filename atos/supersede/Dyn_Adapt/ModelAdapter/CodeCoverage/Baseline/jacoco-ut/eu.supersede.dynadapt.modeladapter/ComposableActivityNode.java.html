@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ComposableActivityNode.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter</a> &gt; <span class="el_source">ComposableActivityNode.java</span></div><h1>ComposableActivityNode.java</h1><pre class="source lang-java linenums">/*******************************************************************************
+ * Copyright (c) 2016 Universitat Politécnica de Catalunya (UPC), ATOS Spain S.A
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Contributors:
+ * 	Quim Motger (UPC) - main development
+ *  Yosu Gorroñogoitia (Atos) - main development
+ * 	
+ * Initially developed in the context of SUPERSEDE EU project
+ * www.supersede.eu
+ *******************************************************************************/
+
+package eu.supersede.dynadapt.modeladapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.uml2.uml.Action;
+import org.eclipse.uml2.uml.ActivityEdge;
+import org.eclipse.uml2.uml.ActivityFinalNode;
+import org.eclipse.uml2.uml.ActivityNode;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.Profile;
+import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.ActivityNode;
+import org.eclipse.uml2.uml.internal.impl.ActivityImpl;
+import org.eclipse.uml2.uml.internal.impl.ActivityNodeImpl;
+import org.eclipse.uml2.uml.internal.impl.NodeImpl;
+
+<span class="nc" id="L45">public class ComposableActivityNode extends ActivityNodeImpl implements Composable{</span>
+	
+<span class="nc" id="L47">	private final static Logger log = LogManager.getLogger(ComposableActivityNode.class);</span>
+	
+	@Override
+	public void applyAddComposition(Model inBaseModel, Element jointpointBaseModelElement, Model usingVariantModel,
+			Element jointpointVariantModelElement) {
+		//TODO 
+<span class="nc" id="L53">	}</span>
+	
+	@Override
+	public void applyDeleteComposition(Model inBaseModel, Element jointpointBaseModelElement,
+			Model usingVariantModel, Element jointpointVariantModelElement) {
+		//TODO
+<span class="nc" id="L59">	}</span>
+
+	@Override
+	public void applyReplaceComposition(Model inBaseModel, Element jointpointBaseModelElement, Model usingVariantModel,
+			Element jointpointVariantModelElement) {
+				
+<span class="nc" id="L65">		ActivityNode baseModelAction = (ActivityNode) jointpointBaseModelElement;</span>
+<span class="nc" id="L66">		ActivityNode variantModelAction = (ActivityNode) jointpointVariantModelElement;</span>
+<span class="nc" id="L67">		ActivityImpl activity = (ActivityImpl) baseModelAction.getOwner();</span>
+<span class="nc" id="L68">		ActivityImpl variantActivity = (ActivityImpl) variantModelAction.getOwner();</span>
+		
+		//Apply stereotypes from variant activity to base activity
+<span class="nc bnc" id="L71" title="All 2 branches missed.">		for (Stereotype s : variantActivity.getAppliedStereotypes()) {</span>
+<span class="nc" id="L72">			log.debug(&quot;\tApplying stereotype &quot; + s.getName() + &quot; to activity&quot;);</span>
+<span class="nc" id="L73">			activity.applyStereotype(s);</span>
+<span class="nc bnc" id="L74" title="All 2 branches missed.">			if (s.getName().equals(&quot;Service&quot;)) {</span>
+<span class="nc" id="L75">				activity.setValue(s, &quot;endpoint&quot;, variantActivity.getValue(s, &quot;endpoint&quot;));</span>
+			}
+<span class="nc bnc" id="L77" title="All 2 branches missed.">			else if (s.getName().equals(&quot;Callback&quot;)) {</span>
+<span class="nc" id="L78">				activity.setValue(s, &quot;function&quot;, variantActivity.getValue(s, &quot;function&quot;));</span>
+			}
+<span class="nc" id="L80">		}</span>
+		
+<span class="nc" id="L82">		List&lt;ActivityEdge&gt; incomingEdges = baseModelAction.getIncomings();</span>
+		//log.debug(&quot;Incoming edges: &quot; + incomingEdges.size());
+<span class="nc" id="L84">		List&lt;ActivityEdge&gt; outgoingEdges = variantModelAction.getOutgoings();</span>
+		//log.debug(&quot;Outcoming edges: &quot; + outgoingEdges.size());
+		
+		//Starting from the already created incomingEdges in baseModel, appends the new
+		//variantModelAction and creates the new outgoingEdges from the variantModel
+<span class="nc" id="L89">		List&lt;ActivityNode&gt; finalNodes = appendElementToBaseModel(activity, variantModelAction, incomingEdges, outgoingEdges);</span>
+				
+<span class="nc" id="L91">		ActivityEdge deleteEdge = baseModelAction.getOutgoings().get(0);</span>
+<span class="nc" id="L92">		ActivityNode finalNode = deleteEdge.getTarget();</span>
+<span class="nc" id="L93">		deleteEdge.destroy();</span>
+		
+<span class="nc bnc" id="L95" title="All 2 branches missed.">		for (ActivityNode node : finalNodes) {</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">			for (ActivityEdge edge : node.getOutgoings()) {</span>
+				//log.debug(&quot;\tSet edge target to &quot; + finalNode);
+<span class="nc" id="L98">				edge.setTarget(finalNode);</span>
+<span class="nc" id="L99">			}</span>
+<span class="nc" id="L100">		}</span>
+		
+		/*for (ActivityNode node : finalNodes) {
+			List&lt;ActivityEdge&gt; edges = ModelAdapterUtilities.setOutgoingEdges(activity, baseModelAction.getOutgoings(), (ActivityNode) node);
+			for (ActivityEdge edge : baseModelAction.getOutgoings()) ModelAdapterUtilities.setIncomingEdges(edges, edge.getTarget());
+		}*/
+		
+		//log.debug(&quot;Destroying &quot; + baseModelAction.getName());
+<span class="nc" id="L108">		baseModelAction.destroy();</span>
+		
+<span class="nc" id="L110">	}</span>
+
+	/**
+	 * Returns the list of nodes defining the final activity diagram
+	 */
+	private List&lt;ActivityNode&gt; appendElementToBaseModel(ActivityImpl activity, ActivityNode variantModelAction,
+			List&lt;ActivityEdge&gt; incomingEdges, List&lt;ActivityEdge&gt; outgoingEdges) {
+		
+<span class="nc" id="L118">		List&lt;ActivityNode&gt; finalNodes = new ArrayList&lt;&gt;();</span>
+		
+		ActivityNode originAction;
+		//Check if the action was already created by another call
+<span class="nc bnc" id="L122" title="All 2 branches missed.">		if (activity.getNode(variantModelAction.getName()) != null) {</span>
+<span class="nc" id="L123">			originAction = (ActivityNode) activity.getNode(variantModelAction.getName());</span>
+<span class="nc" id="L124">			ModelAdapterUtilities.setIncomingEdges(incomingEdges, originAction);</span>
+		} else {
+<span class="nc" id="L126">			originAction = (ActivityNode) activity.createOwnedNode(variantModelAction.getName(), variantModelAction.eClass());</span>
+<span class="nc" id="L127">			log.debug(&quot;\t&quot; + originAction.getName() + &quot; node created&quot;);</span>
+					
+<span class="nc bnc" id="L129" title="All 2 branches missed.">			for (Stereotype s : variantModelAction.getAppliedStereotypes()) {</span>
+<span class="nc" id="L130">				originAction.applyStereotype(s);</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">				if (s.getName().equals(&quot;Service&quot;)) {</span>
+<span class="nc" id="L132">					originAction.setValue(s, &quot;endpoint&quot;, variantModelAction.getValue(s, &quot;endpoint&quot;));</span>
+				}
+<span class="nc bnc" id="L134" title="All 2 branches missed.">				else if (s.getName().equals(&quot;Callback&quot;)) {</span>
+<span class="nc" id="L135">					originAction.setValue(s, &quot;function&quot;, variantModelAction.getValue(s, &quot;function&quot;));</span>
+				}
+<span class="nc" id="L137">			}</span>
+<span class="nc" id="L138">			ModelAdapterUtilities.setIncomingEdges(incomingEdges, originAction);</span>
+
+<span class="nc" id="L140">			ModelAdapterUtilities.setOutgoingEdges(activity, outgoingEdges, originAction);</span>
+			//Recursive call for appending following actions
+<span class="nc bnc" id="L142" title="All 2 branches missed.">			for (int i = 0; i &lt; variantModelAction.getOutgoings().size(); ++i) {</span>
+<span class="nc" id="L143">				ActivityEdge edge = variantModelAction.getOutgoings().get(i);</span>
+<span class="nc bnc" id="L144" title="All 2 branches missed.">				if (edge.getTarget() instanceof ActivityFinalNode) {</span>
+<span class="nc" id="L145">					finalNodes.add(originAction);</span>
+				} else {
+<span class="nc" id="L147">					ActivityNode node = (ActivityNode) edge.getTarget();</span>
+<span class="nc" id="L148">					List&lt;ActivityEdge&gt; incoming = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L149">					incoming.add(originAction.getOutgoings().get(i));</span>
+<span class="nc" id="L150">					finalNodes.addAll(appendElementToBaseModel(activity, node, incoming, edge.getTarget().getOutgoings()));</span>
+				}
+			}
+		}
+<span class="nc" id="L154">		return finalNodes;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

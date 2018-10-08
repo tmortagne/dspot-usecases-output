@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ComposableInstanceSpecification.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter</a> &gt; <span class="el_source">ComposableInstanceSpecification.java</span></div><h1>ComposableInstanceSpecification.java</h1><pre class="source lang-java linenums">/*******************************************************************************
+ * Copyright (c) 2016 Universitat Politécnica de Catalunya (UPC), ATOS Spain S.A
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Contributors:
+ * 	Quim Motger (UPC) - main development
+ *  Yosu Gorroñogoitia (Atos) - main development
+ * 	
+ * Initially developed in the context of SUPERSEDE EU project
+ * www.supersede.eu
+ *******************************************************************************/
+
+package eu.supersede.dynadapt.modeladapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.InstanceSpecification;
+import org.eclipse.uml2.uml.InstanceValue;
+import org.eclipse.uml2.uml.LiteralInteger;
+import org.eclipse.uml2.uml.LiteralReal;
+import org.eclipse.uml2.uml.LiteralString;
+import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.Package;
+import org.eclipse.uml2.uml.PackageableElement;
+import org.eclipse.uml2.uml.Relationship;
+import org.eclipse.uml2.uml.Slot;
+import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.StructuralFeature;
+import org.eclipse.uml2.uml.ValueSpecification;
+import org.eclipse.uml2.uml.Class;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+
+import eu.supersede.dynadapt.model.query.IModelQuery;
+import eu.supersede.dynadapt.modeladapter.queries.InstanceOfInstanceSpecificationLinkMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.util.InstanceOfInstanceSpecificationLinkQuerySpecification;
+//import eu.supersede.dynadapt.model.query.test.InstanceOfInstanceSpecificationLinkMatcher;
+//import eu.supersede.dynadapt.model.query.test.util.InstanceOfInstanceSpecificationLinkQuerySpecification;
+
+public class ComposableInstanceSpecification extends ComposableImpl implements Composable{
+<span class="nc" id="L58">	private final static Logger log = LogManager.getLogger(ComposableInstanceSpecification.class);</span>
+	
+	public ComposableInstanceSpecification (IModelQuery modelQuery, HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints){
+<span class="nc" id="L61">		super (modelQuery, baseJointpoints);</span>
+<span class="nc" id="L62">	}</span>
+	
+	@Override
+	public void applyAddComposition(Model inBaseModel, Element jointpointBaseModelElement,
+			Model usingVariantModel, Element jointpointVariantModelElement) {
+<span class="nc" id="L67">		InstanceSpecification instanceBase = (InstanceSpecification) jointpointBaseModelElement;</span>
+<span class="nc" id="L68">		InstanceSpecification instanceVariant = (InstanceSpecification) jointpointVariantModelElement;</span>
+		//Adding new slots in variant model to insertion point (e.g. Jointpoint) in base model
+<span class="nc bnc" id="L70" title="All 2 branches missed.">		for (Slot slot : instanceVariant.getSlots()) {</span>
+<span class="nc" id="L71">			log.debug(&quot;Adding slot: &quot; + slot.getDefiningFeature().getName() + &quot; in instance &quot; + instanceBase.getQualifiedName());</span>
+<span class="nc" id="L72">			addSlotInInstanceSpecification(slot, instanceBase, inBaseModel);</span>
+<span class="nc" id="L73">		}</span>
+		//Adding new relationships (as instance specification of instance specification links) 
+		// referencing the insertion point
+<span class="nc bnc" id="L76" title="All 2 branches missed.">		for (InstanceSpecification linkInstance: getReferencingInstanceSpecificationLinks(instanceVariant, usingVariantModel)){</span>
+			//Add link instance specification
+			//FIXME avoid adding duplicated instances
+			
+<span class="nc bnc" id="L80" title="All 2 branches missed.">			if (!ModelAdapterUtilities.modelContainsElement(linkInstance, inBaseModel)){</span>
+<span class="nc" id="L81">				log.debug(&quot;Adding detected link instance specification in variant model: &quot; + linkInstance.getQualifiedName());</span>
+<span class="nc" id="L82">				addInstanceSpecificationInModel (linkInstance, inBaseModel);</span>
+			}
+<span class="nc" id="L84">		}</span>
+<span class="nc" id="L85">	}</span>
+	
+	@Override
+	public void applyDeleteComposition(Model inBaseModel,
+			Element jointpointBaseModelElement, Model usingVariantModel, Element jointpointVariantModelElement) {
+<span class="nc" id="L90">		InstanceSpecification instanceBase = (InstanceSpecification) jointpointBaseModelElement;</span>
+<span class="nc" id="L91">		InstanceSpecification instanceVariant = (InstanceSpecification) jointpointVariantModelElement;</span>
+		
+		//Deleting Slot occurrences in base model, corresponding to variant jointpoint instance
+<span class="nc bnc" id="L94" title="All 2 branches missed.">		for (Slot slotInInstanceVariant: instanceVariant.getSlots()){</span>
+<span class="nc" id="L95">			deleteSlotInInstanceBase (slotInInstanceVariant, instanceBase);</span>
+<span class="nc" id="L96">		}</span>
+
+		//Deleting relationships (as instance specification of instance specification links) 
+		// referencing the insertion point
+<span class="nc bnc" id="L100" title="All 2 branches missed.">		for (InstanceSpecification linkInstance: getReferencingInstanceSpecificationLinks(instanceVariant, usingVariantModel)){</span>
+			//Add link instance specification
+<span class="nc" id="L102">			log.debug(&quot;Deleting detected link instance specification in base model: &quot; + linkInstance.getQualifiedName());</span>
+<span class="nc" id="L103">			deleteInstanceSpecificationInModel (linkInstance, jointpointBaseModelElement, inBaseModel);</span>
+<span class="nc" id="L104">		}</span>
+<span class="nc" id="L105">	}</span>
+	
+	private void addSlotInInstanceSpecification(Slot slot, InstanceSpecification instanceSpecification, Model model) {
+		// Creates the new slot referencing new object		
+<span class="nc" id="L109">		Slot newSlot = ModelAdapterUtilities.createElement (slot, instanceSpecification, baseJointpoints, model);</span>
+//		//Resolve defining feature in base model
+//		Element definingFeature = ModelAdapterUtilities.getEquivalentElementInModel(slot.getDefiningFeature(), model);
+//		newSlot.setDefiningFeature((StructuralFeature)definingFeature);
+		
+		// DefiningFeature should be added to base model if it does not exit therein
+//		StructuralFeature sf = slot.getDefiningFeature();
+//		if (!ModelAdapterUtilities.modelContainsElement(sf, model)){
+//			Package pack  = ModelAdapterUtilities.getPackageInModel (sf.getNearestPackage(), model);
+//			if (pack != null){
+//				log.debug(&quot;Adding instance: &quot; + sf.getName() + &quot; in base model in package &quot; + pack.getQualifiedName());
+//				
+//				//The model is created into the existing in base model
+//				ModelAdapterUtilities.createElement((PackageableElement) sf, pack, baseJointpoints, model);
+//			}
+//		}
+//
+//		ValueSpecification valueSpecification = slot.getValues().get(0);
+//		ValueSpecification newValueSpecification = newSlot.getValues().get(0);
+//		
+//		if (valueSpecification instanceof InstanceValue){
+//			InstanceValue newInstanceValue = (InstanceValue) newSlot.getValues().get(0);
+//			InstanceValue instanceValue = (InstanceValue) slot.getValues().get(0);
+//			InstanceSpecification newInstance = createValueSpecificationInstance(model, instanceValue);
+//			newInstanceValue.setInstance(newInstance);
+//		}else if (valueSpecification instanceof LiteralReal){
+//			((LiteralReal)newValueSpecification).setValue(((LiteralReal)valueSpecification).getValue());
+//		}else if (valueSpecification instanceof LiteralInteger){
+//			((LiteralInteger)newValueSpecification).setValue(((LiteralInteger)valueSpecification).getValue());
+//		}else if (valueSpecification instanceof LiteralString){
+//			((LiteralString)newValueSpecification).setValue(((LiteralString)valueSpecification).getValue());
+//		}
+<span class="nc" id="L141">	}</span>
+
+	private InstanceSpecification createValueSpecificationInstance(Model model, InstanceValue instanceValue) {
+<span class="nc" id="L144">		InstanceSpecification newInstance = null;</span>
+		// Adds the instance to the model in the proper package
+<span class="nc" id="L146">		InstanceSpecification instance = instanceValue.getInstance();</span>
+		// Copy variant instance only if it does not exist in base model.
+		// If it does not exist it should placed in the package defined in variant model
+<span class="nc" id="L149">		Package pack  = ModelAdapterUtilities.getPackageInModel (instance.getNearestPackage(), model);</span>
+<span class="nc bnc" id="L150" title="All 4 branches missed.">		if (!ModelAdapterUtilities.modelContainsElement (instance, model) &amp;&amp; pack != null){</span>
+<span class="nc" id="L151">			log.debug(&quot;Adding instance: &quot; + instance.getName() + &quot; in base model in package &quot; + pack.getQualifiedName());</span>
+			//Element should be created, not added (to avoid references to advice model)
+<span class="nc" id="L153">			newInstance = (InstanceSpecification)ModelAdapterUtilities.createElement((PackageableElement) instance, pack, baseJointpoints, model);</span>
+		}
+		// Creates the reference between base object and referenced object in
+		// base model
+<span class="nc" id="L157">		return newInstance;</span>
+	}
+
+	private void addInstanceSpecificationInModel(InstanceSpecification linkInstance, Model model) {
+		//Get the package in base model where linkInstance should be placed
+<span class="nc" id="L162">		Package pack  = ModelAdapterUtilities.getPackageInModel (linkInstance.getNearestPackage(), model);</span>
+<span class="nc bnc" id="L163" title="All 2 branches missed.">		if (pack != null){</span>
+			//Create InstanceSpecification copy:
+			//Create Slots, Add them to the model
+			//Add instance to the model
+<span class="nc" id="L167">			InstanceSpecification newLinkInstance = ModelAdapterUtilities.createElement (linkInstance, pack, baseJointpoints, model);</span>
+<span class="nc bnc" id="L168" title="All 2 branches missed.">			for (Slot slot : linkInstance.getSlots()) {</span>
+<span class="nc" id="L169">				addSlotInInstanceSpecification(slot, newLinkInstance, model);</span>
+<span class="nc" id="L170">			}</span>
+		}
+<span class="nc" id="L172">	}</span>
+	
+	//FIXME This method does not work when modelQuery is created targeting target model.
+	private Set&lt;InstanceSpecification&gt; getReferencingInstanceSpecificationLinks(InstanceSpecification instanceVariant, Model model) {
+<span class="nc" id="L176">		Set&lt;InstanceSpecification&gt; result = new HashSet&lt;&gt;();</span>
+		try {
+<span class="nc" id="L178">			InstanceOfInstanceSpecificationLinkMatcher matcher = </span>
+<span class="nc" id="L179">					(InstanceOfInstanceSpecificationLinkMatcher) modelQuery.queryMatcher(InstanceOfInstanceSpecificationLinkQuerySpecification.instance());</span>
+<span class="nc" id="L180">			Set&lt;InstanceSpecification&gt; instances = matcher.getAllValuesOflink(instanceVariant);</span>
+			//Filtering out instances that do not belong to target model
+<span class="nc bnc" id="L182" title="All 2 branches missed.">			for (InstanceSpecification instance: instances){</span>
+<span class="nc bnc" id="L183" title="All 2 branches missed.">				if (ModelAdapterUtilities.modelContainsElement(instance, model)){</span>
+<span class="nc" id="L184">					result.add(instance); </span>
+				}
+<span class="nc" id="L186">			}</span>
+<span class="nc" id="L187">		} catch (ViatraQueryException e) {</span>
+<span class="nc" id="L188">			e.printStackTrace();</span>
+<span class="nc" id="L189">		}</span>
+<span class="nc" id="L190">		return result;</span>
+	}
+	
+	private void deleteInstanceSpecificationInModel(InstanceSpecification linkInstance, Element jointpointBaseModelElement, Model inBaseModel) {
+		//Get linkInstance equivalent in base model
+<span class="nc" id="L195">		InstanceSpecification linkInstanceInBaseModel = (InstanceSpecification) ModelAdapterUtilities.getEquivalentElementInModel (linkInstance, inBaseModel);</span>
+<span class="nc bnc" id="L196" title="All 2 branches missed.">		if(linkInstanceInBaseModel == null) return;</span>
+		
+		// Delete instances referenced by slots of the link
+<span class="nc bnc" id="L199" title="All 2 branches missed.">		for (Slot slot : linkInstanceInBaseModel.getSlots()) {</span>
+<span class="nc" id="L200">			ValueSpecification valueSpecification = slot.getValues().get(0);</span>
+<span class="nc bnc" id="L201" title="All 2 branches missed.">			if (valueSpecification != null){</span>
+<span class="nc bnc" id="L202" title="All 2 branches missed.">				if (valueSpecification instanceof InstanceValue){</span>
+<span class="nc" id="L203">					InstanceSpecification instance = ((InstanceValue)valueSpecification).getInstance();</span>
+					//Do not remove the jointpoint basemodel element
+//					if (instance != null &amp;&amp; areSameElements (instance, (NamedElement) jointpointBaseModelElement)){
+					//FIXME Since base model is cloned, and not stored in ResourceSet, object found in RS is not identical object to the one found
+					//in cloned based model, but both has same qualified name
+<span class="nc bnc" id="L208" title="All 4 branches missed.">					if (instance != null &amp;&amp; !(instance.getQualifiedName().equals(((InstanceSpecification)jointpointBaseModelElement).getQualifiedName()))){</span>
+<span class="nc" id="L209">						log.debug(&quot;Removing instance: &quot; + instance.getQualifiedName() + </span>
+<span class="nc" id="L210">							&quot; from base model since it is referenced in slot &quot; + slot.getDefiningFeature().getQualifiedName());</span>
+<span class="nc" id="L211">						instance.destroy();</span>
+					}
+				}
+			}
+<span class="nc" id="L215">		}</span>
+		
+		//Delete link
+<span class="nc" id="L218">		linkInstanceInBaseModel.destroy();</span>
+<span class="nc" id="L219">	}</span>
+	
+	private void deleteSlotInInstanceBase(Slot slotInInstanceVariant, InstanceSpecification instanceBase) {
+		//Slots cannot be removed when traversing the array. Collect first all slots to remove into an array, and destroy the after
+<span class="nc" id="L223">		List&lt;Slot&gt; slotsToRemove = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L224" title="All 2 branches missed.">		for (Slot slotInInstanceBase: instanceBase.getSlots()){</span>
+<span class="nc bnc" id="L225" title="All 2 branches missed.">			if (slotInInstanceBase.getDefiningFeature() == null){ //FIXME Investigate when this happens</span>
+<span class="nc" id="L226">				continue;</span>
+			}
+			//Slot exists in both instances AND
+			//Slot in both instances refers to the same value
+<span class="nc bnc" id="L230" title="All 2 branches missed.">			if (ModelAdapterUtilities.slotsHasSameDefiningFeature(slotInInstanceVariant, slotInInstanceBase) &amp;&amp; </span>
+<span class="nc bnc" id="L231" title="All 2 branches missed.">				ModelAdapterUtilities.slotsHasSameValue(slotInInstanceVariant, slotInInstanceBase)){</span>
+<span class="nc" id="L232">				log.debug(&quot;Deleting slot : &quot; + slotInInstanceBase.getDefiningFeature().getQualifiedName() + &quot; in instance &quot; + instanceBase.getQualifiedName());</span>
+<span class="nc" id="L233">				destroySlotValueSpecification(slotInInstanceBase);</span>
+<span class="nc" id="L234">				slotsToRemove.add(slotInInstanceBase);</span>
+			}	
+<span class="nc" id="L236">		}</span>
+<span class="nc bnc" id="L237" title="All 2 branches missed.">		for (Slot slot: slotsToRemove){</span>
+<span class="nc" id="L238">			slot.destroy();</span>
+<span class="nc" id="L239">		}</span>
+<span class="nc" id="L240">	}</span>
+	
+	private void destroySlotValueSpecification(Slot slot) {
+<span class="nc" id="L243">		ValueSpecification ve = slot.getValues().get(0);</span>
+<span class="nc bnc" id="L244" title="All 2 branches missed.">		if (ve instanceof InstanceValue){</span>
+<span class="nc" id="L245">			InstanceValue iv = (InstanceValue)ve;</span>
+<span class="nc" id="L246">			InstanceSpecification instance = iv.getInstance();</span>
+<span class="nc bnc" id="L247" title="All 2 branches missed.">			if (instance!=null) {</span>
+<span class="nc" id="L248">				log.debug(&quot;Deleting instance value : &quot; + instance.getQualifiedName() + &quot; referenced by slot &quot; + slot.getDefiningFeature().getQualifiedName());</span>
+<span class="nc" id="L249">				instance.destroy();</span>
+			}
+		}
+<span class="nc" id="L252">	}</span>
+
+	@Override
+	public void applyReplaceComposition(Model inBaseModel, Element jointpointBaseModelElement, Model usingVariantModel,
+			Element jointpointVariantModelElement) {
+		// TODO Auto-generated method stub
+		
+<span class="nc" id="L259">	}</span>
+	
+//	/**
+//	 * Given a pair of instances, retrieves the Relationship ref object of the
+//	 * relationship
+//	 * 
+//	 * @param e1
+//	 *            parent instance
+//	 * @param e2
+//	 *            child instance
+//	 * @return relationship
+//	 */
+//	private Relationship getRelationship(InstanceSpecification e1, InstanceSpecification e2) {
+//		List&lt;Relationship&gt; rs = ((org.eclipse.uml2.uml.Class) e1.getClassifiers().get(0)).getRelationships();
+//		Relationship rel = null;
+//		for (Relationship r : rs) {
+//			if (r.getRelatedElements().contains(e2.getClassifiers().get(0))) {
+//				rel = r;
+//				break;
+//			}
+//		}
+//		return rel;
+//	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

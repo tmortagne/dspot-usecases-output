@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReferencesToTypeQuerySpecification.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter.queries.util</a> &gt; <span class="el_source">ReferencesToTypeQuerySpecification.java</span></div><h1>ReferencesToTypeQuerySpecification.java</h1><pre class="source lang-java linenums">/**
+ * Generated from platform:/resource/eu.supersede.dynadapt.modeladapter-stamp/src/main/java/eu/supersede/dynadapt/modeladapter/queries/model_adapter.vql
+ */
+package eu.supersede.dynadapt.modeladapter.queries.util;
+
+import com.google.common.collect.Sets;
+import eu.supersede.dynadapt.modeladapter.queries.ReferencesToTypeMatch;
+import eu.supersede.dynadapt.modeladapter.queries.ReferencesToTypeMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.util.ParametersWithTypeQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.PropertiesWithTypeQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.SubClassOfQuerySpecification;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
+import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedEMFPQuery;
+import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedEMFQuerySpecification;
+import org.eclipse.viatra.query.runtime.emf.types.EClassTransitiveInstancesKey;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+import org.eclipse.viatra.query.runtime.matchers.backend.IQueryBackendFactory;
+import org.eclipse.viatra.query.runtime.matchers.backend.QueryEvaluationHint;
+import org.eclipse.viatra.query.runtime.matchers.psystem.PBody;
+import org.eclipse.viatra.query.runtime.matchers.psystem.PVariable;
+import org.eclipse.viatra.query.runtime.matchers.psystem.basicdeferred.ExportedParameter;
+import org.eclipse.viatra.query.runtime.matchers.psystem.basicenumerables.PositivePatternCall;
+import org.eclipse.viatra.query.runtime.matchers.psystem.basicenumerables.TypeConstraint;
+import org.eclipse.viatra.query.runtime.matchers.psystem.queries.PParameter;
+import org.eclipse.viatra.query.runtime.matchers.psystem.queries.PParameterDirection;
+import org.eclipse.viatra.query.runtime.matchers.psystem.queries.QueryInitializationException;
+import org.eclipse.viatra.query.runtime.matchers.tuple.FlatTuple;
+
+/**
+ * A pattern-specific query specification that can instantiate ReferencesToTypeMatcher in a type-safe way.
+ * 
+ * @see ReferencesToTypeMatcher
+ * @see ReferencesToTypeMatch
+ * 
+ */
+@SuppressWarnings(&quot;all&quot;)
+public final class ReferencesToTypeQuerySpecification extends BaseGeneratedEMFQuerySpecification&lt;ReferencesToTypeMatcher&gt; {
+  private ReferencesToTypeQuerySpecification() {
+<span class="nc" id="L43">    super(GeneratedPQuery.INSTANCE);</span>
+<span class="nc" id="L44">  }</span>
+  
+  /**
+   * @return the singleton instance of the query specification
+   * @throws ViatraQueryException if the pattern definition could not be loaded
+   * 
+   */
+  public static ReferencesToTypeQuerySpecification instance() throws ViatraQueryException {
+    try{
+<span class="nc" id="L53">        return LazyHolder.INSTANCE;</span>
+<span class="nc" id="L54">    } catch (ExceptionInInitializerError err) {</span>
+<span class="nc" id="L55">        throw processInitializerError(err);</span>
+    }
+  }
+  
+  @Override
+  protected ReferencesToTypeMatcher instantiate(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L61">    return ReferencesToTypeMatcher.on(engine);</span>
+  }
+  
+  @Override
+  public ReferencesToTypeMatcher instantiate() throws ViatraQueryException {
+<span class="nc" id="L66">    return ReferencesToTypeMatcher.create();</span>
+  }
+  
+  @Override
+  public ReferencesToTypeMatch newEmptyMatch() {
+<span class="nc" id="L71">    return ReferencesToTypeMatch.newEmptyMatch();</span>
+  }
+  
+  @Override
+  public ReferencesToTypeMatch newMatch(final Object... parameters) {
+<span class="nc" id="L76">    return ReferencesToTypeMatch.newMatch((org.eclipse.uml2.uml.Element) parameters[0], (org.eclipse.uml2.uml.Class) parameters[1]);</span>
+  }
+  
+  /**
+   * Inner class allowing the singleton instance of {@link ReferencesToTypeQuerySpecification} to be created 
+   *     &lt;b&gt;not&lt;/b&gt; at the class load time of the outer class, 
+   *     but rather at the first call to {@link ReferencesToTypeQuerySpecification#instance()}.
+   * 
+   * &lt;p&gt; This workaround is required e.g. to support recursion.
+   * 
+   */
+  private static class LazyHolder {
+<span class="nc" id="L88">    private final static ReferencesToTypeQuerySpecification INSTANCE = new ReferencesToTypeQuerySpecification();</span>
+    
+    /**
+     * Statically initializes the query specification &lt;b&gt;after&lt;/b&gt; the field {@link #INSTANCE} is assigned.
+     * This initialization order is required to support indirect recursion.
+     * 
+     * &lt;p&gt; The static initializer is defined using a helper field to work around limitations of the code generator.
+     * 
+     */
+<span class="nc" id="L97">    private final static Object STATIC_INITIALIZER = ensureInitialized();</span>
+    
+    public static Object ensureInitialized() {
+<span class="nc" id="L100">      INSTANCE.ensureInitializedInternalSneaky();</span>
+<span class="nc" id="L101">      return null;</span>
+    }
+  }
+  
+<span class="nc" id="L105">  private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {</span>
+<span class="nc" id="L106">    private final static ReferencesToTypeQuerySpecification.GeneratedPQuery INSTANCE = new GeneratedPQuery();</span>
+    
+<span class="nc" id="L108">    private final PParameter parameter_pElement = new PParameter(&quot;element&quot;, &quot;org.eclipse.uml2.uml.Element&quot;, new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe(&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;, &quot;Element&quot;)), PParameterDirection.INOUT);</span>
+    
+<span class="nc" id="L110">    private final PParameter parameter_pType = new PParameter(&quot;type&quot;, &quot;org.eclipse.uml2.uml.Class&quot;, new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe(&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;, &quot;Class&quot;)), PParameterDirection.INOUT);</span>
+    
+<span class="nc" id="L112">    private final List&lt;PParameter&gt; parameters = Arrays.asList(parameter_pElement, parameter_pType);</span>
+    
+    @Override
+    public String getFullyQualifiedName() {
+<span class="nc" id="L116">      return &quot;eu.supersede.dynadapt.modeladapter.queries.referencesToType&quot;;</span>
+    }
+    
+    @Override
+    public List&lt;String&gt; getParameterNames() {
+<span class="nc" id="L121">      return Arrays.asList(&quot;element&quot;,&quot;type&quot;);</span>
+    }
+    
+    @Override
+    public List&lt;PParameter&gt; getParameters() {
+<span class="nc" id="L126">      return parameters;</span>
+    }
+    
+    @Override
+    public Set&lt;PBody&gt; doGetContainedBodies() throws QueryInitializationException {
+<span class="nc" id="L131">      setEvaluationHints(new QueryEvaluationHint(null, (IQueryBackendFactory)null));</span>
+<span class="nc" id="L132">      Set&lt;PBody&gt; bodies = Sets.newLinkedHashSet();</span>
+      try {
+          {
+<span class="nc" id="L135">              PBody body = new PBody(this);</span>
+<span class="nc" id="L136">              PVariable var_element = body.getOrCreateVariableByName(&quot;element&quot;);</span>
+<span class="nc" id="L137">              PVariable var_type = body.getOrCreateVariableByName(&quot;type&quot;);</span>
+<span class="nc" id="L138">              new TypeConstraint(body, new FlatTuple(var_element), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral(&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;, &quot;Element&quot;)));</span>
+<span class="nc" id="L139">              new TypeConstraint(body, new FlatTuple(var_type), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral(&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;, &quot;Class&quot;)));</span>
+<span class="nc" id="L140">              body.setSymbolicParameters(Arrays.&lt;ExportedParameter&gt;asList(</span>
+                 new ExportedParameter(body, var_element, parameter_pElement),
+                 new ExportedParameter(body, var_type, parameter_pType)
+              ));
+              // 	find subClassOf(element, type)
+<span class="nc" id="L145">              new PositivePatternCall(body, new FlatTuple(var_element, var_type), SubClassOfQuerySpecification.instance().getInternalQueryRepresentation());</span>
+<span class="nc" id="L146">              bodies.add(body);</span>
+          }
+          {
+<span class="nc" id="L149">              PBody body = new PBody(this);</span>
+<span class="nc" id="L150">              PVariable var_element = body.getOrCreateVariableByName(&quot;element&quot;);</span>
+<span class="nc" id="L151">              PVariable var_type = body.getOrCreateVariableByName(&quot;type&quot;);</span>
+<span class="nc" id="L152">              new TypeConstraint(body, new FlatTuple(var_element), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral(&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;, &quot;Element&quot;)));</span>
+<span class="nc" id="L153">              new TypeConstraint(body, new FlatTuple(var_type), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral(&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;, &quot;Class&quot;)));</span>
+<span class="nc" id="L154">              body.setSymbolicParameters(Arrays.&lt;ExportedParameter&gt;asList(</span>
+                 new ExportedParameter(body, var_element, parameter_pElement),
+                 new ExportedParameter(body, var_type, parameter_pType)
+              ));
+              // 	find propertiesWithType (element, type)
+<span class="nc" id="L159">              new PositivePatternCall(body, new FlatTuple(var_element, var_type), PropertiesWithTypeQuerySpecification.instance().getInternalQueryRepresentation());</span>
+<span class="nc" id="L160">              bodies.add(body);</span>
+          }
+          {
+<span class="nc" id="L163">              PBody body = new PBody(this);</span>
+<span class="nc" id="L164">              PVariable var_element = body.getOrCreateVariableByName(&quot;element&quot;);</span>
+<span class="nc" id="L165">              PVariable var_type = body.getOrCreateVariableByName(&quot;type&quot;);</span>
+<span class="nc" id="L166">              new TypeConstraint(body, new FlatTuple(var_element), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral(&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;, &quot;Element&quot;)));</span>
+<span class="nc" id="L167">              new TypeConstraint(body, new FlatTuple(var_type), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral(&quot;http://www.eclipse.org/uml2/5.0.0/UML&quot;, &quot;Class&quot;)));</span>
+<span class="nc" id="L168">              body.setSymbolicParameters(Arrays.&lt;ExportedParameter&gt;asList(</span>
+                 new ExportedParameter(body, var_element, parameter_pElement),
+                 new ExportedParameter(body, var_type, parameter_pType)
+              ));
+              // 	find parametersWithType(element, type)
+<span class="nc" id="L173">              new PositivePatternCall(body, new FlatTuple(var_element, var_type), ParametersWithTypeQuerySpecification.instance().getInternalQueryRepresentation());</span>
+<span class="nc" id="L174">              bodies.add(body);</span>
+          }
+          // to silence compiler error
+          if (false) throw new ViatraQueryException(&quot;Never&quot;, &quot;happens&quot;);
+<span class="nc" id="L178">      } catch (ViatraQueryException ex) {</span>
+<span class="nc" id="L179">          throw processDependencyException(ex);</span>
+<span class="nc" id="L180">      }</span>
+<span class="nc" id="L181">      return bodies;</span>
+    }
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

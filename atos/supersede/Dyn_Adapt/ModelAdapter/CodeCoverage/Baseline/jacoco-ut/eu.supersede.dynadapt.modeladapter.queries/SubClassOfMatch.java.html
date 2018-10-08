@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SubClassOfMatch.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter.queries</a> &gt; <span class="el_source">SubClassOfMatch.java</span></div><h1>SubClassOfMatch.java</h1><pre class="source lang-java linenums">/**
+ * Generated from platform:/resource/eu.supersede.dynadapt.modeladapter-stamp/src/main/java/eu/supersede/dynadapt/modeladapter/queries/model_adapter.vql
+ */
+package eu.supersede.dynadapt.modeladapter.queries;
+
+import eu.supersede.dynadapt.modeladapter.queries.util.SubClassOfQuerySpecification;
+import java.util.Arrays;
+import java.util.List;
+import org.eclipse.uml2.uml.Classifier;
+import org.eclipse.viatra.query.runtime.api.IPatternMatch;
+import org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+
+/**
+ * Pattern-specific match representation of the eu.supersede.dynadapt.modeladapter.queries.subClassOf pattern,
+ * to be used in conjunction with {@link SubClassOfMatcher}.
+ * 
+ * &lt;p&gt;Class fields correspond to parameters of the pattern. Fields with value null are considered unassigned.
+ * Each instance is a (possibly partial) substitution of pattern parameters,
+ * usable to represent a match of the pattern in the result of a query,
+ * or to specify the bound (fixed) input parameters when issuing a query.
+ * 
+ * @see SubClassOfMatcher
+ * @see SubClassOfProcessor
+ * 
+ */
+@SuppressWarnings(&quot;all&quot;)
+public abstract class SubClassOfMatch extends BasePatternMatch {
+  private Classifier fSubclass;
+  
+  private org.eclipse.uml2.uml.Class fSuperclass;
+  
+<span class="nc" id="L33">  private static List&lt;String&gt; parameterNames = makeImmutableList(&quot;subclass&quot;, &quot;superclass&quot;);</span>
+  
+<span class="nc" id="L35">  private SubClassOfMatch(final Classifier pSubclass, final org.eclipse.uml2.uml.Class pSuperclass) {</span>
+<span class="nc" id="L36">    this.fSubclass = pSubclass;</span>
+<span class="nc" id="L37">    this.fSuperclass = pSuperclass;</span>
+<span class="nc" id="L38">  }</span>
+  
+  @Override
+  public Object get(final String parameterName) {
+<span class="nc bnc" id="L42" title="All 2 branches missed.">    if (&quot;subclass&quot;.equals(parameterName)) return this.fSubclass;</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">    if (&quot;superclass&quot;.equals(parameterName)) return this.fSuperclass;</span>
+<span class="nc" id="L44">    return null;</span>
+  }
+  
+  public Classifier getSubclass() {
+<span class="nc" id="L48">    return this.fSubclass;</span>
+  }
+  
+  public org.eclipse.uml2.uml.Class getSuperclass() {
+<span class="nc" id="L52">    return this.fSuperclass;</span>
+  }
+  
+  @Override
+  public boolean set(final String parameterName, final Object newValue) {
+<span class="nc bnc" id="L57" title="All 2 branches missed.">    if (!isMutable()) throw new java.lang.UnsupportedOperationException();</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">    if (&quot;subclass&quot;.equals(parameterName) ) {</span>
+<span class="nc" id="L59">        this.fSubclass = (Classifier) newValue;</span>
+<span class="nc" id="L60">        return true;</span>
+    }
+<span class="nc bnc" id="L62" title="All 2 branches missed.">    if (&quot;superclass&quot;.equals(parameterName) ) {</span>
+<span class="nc" id="L63">        this.fSuperclass = (org.eclipse.uml2.uml.Class) newValue;</span>
+<span class="nc" id="L64">        return true;</span>
+    }
+<span class="nc" id="L66">    return false;</span>
+  }
+  
+  public void setSubclass(final Classifier pSubclass) {
+<span class="nc bnc" id="L70" title="All 2 branches missed.">    if (!isMutable()) throw new java.lang.UnsupportedOperationException();</span>
+<span class="nc" id="L71">    this.fSubclass = pSubclass;</span>
+<span class="nc" id="L72">  }</span>
+  
+  public void setSuperclass(final org.eclipse.uml2.uml.Class pSuperclass) {
+<span class="nc bnc" id="L75" title="All 2 branches missed.">    if (!isMutable()) throw new java.lang.UnsupportedOperationException();</span>
+<span class="nc" id="L76">    this.fSuperclass = pSuperclass;</span>
+<span class="nc" id="L77">  }</span>
+  
+  @Override
+  public String patternName() {
+<span class="nc" id="L81">    return &quot;eu.supersede.dynadapt.modeladapter.queries.subClassOf&quot;;</span>
+  }
+  
+  @Override
+  public List&lt;String&gt; parameterNames() {
+<span class="nc" id="L86">    return SubClassOfMatch.parameterNames;</span>
+  }
+  
+  @Override
+  public Object[] toArray() {
+<span class="nc" id="L91">    return new Object[]{fSubclass, fSuperclass};</span>
+  }
+  
+  @Override
+  public SubClassOfMatch toImmutable() {
+<span class="nc bnc" id="L96" title="All 2 branches missed.">    return isMutable() ? newMatch(fSubclass, fSuperclass) : this;</span>
+  }
+  
+  @Override
+  public String prettyPrint() {
+<span class="nc" id="L101">    StringBuilder result = new StringBuilder();</span>
+<span class="nc" id="L102">    result.append(&quot;\&quot;subclass\&quot;=&quot; + prettyPrintValue(fSubclass) + &quot;, &quot;);</span>
+    
+<span class="nc" id="L104">    result.append(&quot;\&quot;superclass\&quot;=&quot; + prettyPrintValue(fSuperclass)</span>
+    );
+<span class="nc" id="L106">    return result.toString();</span>
+  }
+  
+  @Override
+  public int hashCode() {
+<span class="nc" id="L111">    final int prime = 31;</span>
+<span class="nc" id="L112">    int result = 1;</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">    result = prime * result + ((fSubclass == null) ? 0 : fSubclass.hashCode());</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">    result = prime * result + ((fSuperclass == null) ? 0 : fSuperclass.hashCode());</span>
+<span class="nc" id="L115">    return result;</span>
+  }
+  
+  @Override
+  public boolean equals(final Object obj) {
+<span class="nc bnc" id="L120" title="All 2 branches missed.">    if (this == obj)</span>
+<span class="nc" id="L121">        return true;</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">    if (!(obj instanceof SubClassOfMatch)) { // this should be infrequent</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">        if (obj == null) {</span>
+<span class="nc" id="L124">            return false;</span>
+        }
+<span class="nc bnc" id="L126" title="All 2 branches missed.">        if (!(obj instanceof IPatternMatch)) {</span>
+<span class="nc" id="L127">            return false;</span>
+        }
+<span class="nc" id="L129">        IPatternMatch otherSig  = (IPatternMatch) obj;</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">        if (!specification().equals(otherSig.specification()))</span>
+<span class="nc" id="L131">            return false;</span>
+<span class="nc" id="L132">        return Arrays.deepEquals(toArray(), otherSig.toArray());</span>
+    }
+<span class="nc" id="L134">    SubClassOfMatch other = (SubClassOfMatch) obj;</span>
+<span class="nc bnc" id="L135" title="All 4 branches missed.">    if (fSubclass == null) {if (other.fSubclass != null) return false;}</span>
+<span class="nc bnc" id="L136" title="All 2 branches missed.">    else if (!fSubclass.equals(other.fSubclass)) return false;</span>
+<span class="nc bnc" id="L137" title="All 4 branches missed.">    if (fSuperclass == null) {if (other.fSuperclass != null) return false;}</span>
+<span class="nc bnc" id="L138" title="All 2 branches missed.">    else if (!fSuperclass.equals(other.fSuperclass)) return false;</span>
+<span class="nc" id="L139">    return true;</span>
+  }
+  
+  @Override
+  public SubClassOfQuerySpecification specification() {
+    try {
+<span class="nc" id="L145">        return SubClassOfQuerySpecification.instance();</span>
+<span class="nc" id="L146">    } catch (ViatraQueryException ex) {</span>
+         // This cannot happen, as the match object can only be instantiated if the query specification exists
+<span class="nc" id="L148">         throw new IllegalStateException (ex);</span>
+    }
+  }
+  
+  /**
+   * Returns an empty, mutable match.
+   * Fields of the mutable match can be filled to create a partial match, usable as matcher input.
+   * 
+   * @return the empty match.
+   * 
+   */
+  public static SubClassOfMatch newEmptyMatch() {
+<span class="nc" id="L160">    return new Mutable(null, null);</span>
+  }
+  
+  /**
+   * Returns a mutable (partial) match.
+   * Fields of the mutable match can be filled to create a partial match, usable as matcher input.
+   * 
+   * @param pSubclass the fixed value of pattern parameter subclass, or null if not bound.
+   * @param pSuperclass the fixed value of pattern parameter superclass, or null if not bound.
+   * @return the new, mutable (partial) match object.
+   * 
+   */
+  public static SubClassOfMatch newMutableMatch(final Classifier pSubclass, final org.eclipse.uml2.uml.Class pSuperclass) {
+<span class="nc" id="L173">    return new Mutable(pSubclass, pSuperclass);</span>
+  }
+  
+  /**
+   * Returns a new (partial) match.
+   * This can be used e.g. to call the matcher with a partial match.
+   * &lt;p&gt;The returned match will be immutable. Use {@link #newEmptyMatch()} to obtain a mutable match object.
+   * @param pSubclass the fixed value of pattern parameter subclass, or null if not bound.
+   * @param pSuperclass the fixed value of pattern parameter superclass, or null if not bound.
+   * @return the (partial) match object.
+   * 
+   */
+  public static SubClassOfMatch newMatch(final Classifier pSubclass, final org.eclipse.uml2.uml.Class pSuperclass) {
+<span class="nc" id="L186">    return new Immutable(pSubclass, pSuperclass);</span>
+  }
+  
+  private static final class Mutable extends SubClassOfMatch {
+    Mutable(final Classifier pSubclass, final org.eclipse.uml2.uml.Class pSuperclass) {
+<span class="nc" id="L191">      super(pSubclass, pSuperclass);</span>
+<span class="nc" id="L192">    }</span>
+    
+    @Override
+    public boolean isMutable() {
+<span class="nc" id="L196">      return true;</span>
+    }
+  }
+  
+  private static final class Immutable extends SubClassOfMatch {
+    Immutable(final Classifier pSubclass, final org.eclipse.uml2.uml.Class pSuperclass) {
+<span class="nc" id="L202">      super(pSubclass, pSuperclass);</span>
+<span class="nc" id="L203">    }</span>
+    
+    @Override
+    public boolean isMutable() {
+<span class="nc" id="L207">      return false;</span>
+    }
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

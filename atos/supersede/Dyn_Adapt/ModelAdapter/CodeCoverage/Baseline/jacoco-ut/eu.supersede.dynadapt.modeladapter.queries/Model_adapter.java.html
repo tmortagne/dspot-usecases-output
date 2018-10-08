@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Model_adapter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter.queries</a> &gt; <span class="el_source">Model_adapter.java</span></div><h1>Model_adapter.java</h1><pre class="source lang-java linenums">/**
+ * Generated from platform:/resource/eu.supersede.dynadapt.modeladapter-stamp/src/main/java/eu/supersede/dynadapt/modeladapter/queries/model_adapter.vql
+ */
+package eu.supersede.dynadapt.modeladapter.queries;
+
+import eu.supersede.dynadapt.modeladapter.queries.GetManifestationsMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.GetReferenceToTypeMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.InstanceOfInstanceSpecificationLinkMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.InstanceSpecificationLinkMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.ParametersWithTypeMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.PropertiesWithTypeMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.ReferencesToTypeMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.SubClassOfMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.util.GetManifestationsQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.GetReferenceToTypeQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.InstanceOfInstanceSpecificationLinkQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.InstanceSpecificationLinkQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.ParametersWithTypeQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.PropertiesWithTypeQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.ReferencesToTypeQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.SubClassOfQuerySpecification;
+import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
+import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+
+/**
+ * A pattern group formed of all public patterns defined in model_adapter.vql.
+ * 
+ * &lt;p&gt;Use the static instance as any {@link org.eclipse.viatra.query.runtime.api.IPatternGroup}, to conveniently prepare
+ * a VIATRA Query engine for matching all patterns originally defined in file model_adapter.vql,
+ * in order to achieve better performance than one-by-one on-demand matcher initialization.
+ * 
+ * &lt;p&gt; From package eu.supersede.dynadapt.modeladapter.queries, the group contains the definition of the following patterns: &lt;ul&gt;
+ * &lt;li&gt;InstanceSpecificationLink&lt;/li&gt;
+ * &lt;li&gt;InstanceOfInstanceSpecificationLink&lt;/li&gt;
+ * &lt;li&gt;subClassOf&lt;/li&gt;
+ * &lt;li&gt;propertiesWithType&lt;/li&gt;
+ * &lt;li&gt;parametersWithType&lt;/li&gt;
+ * &lt;li&gt;referencesToType&lt;/li&gt;
+ * &lt;li&gt;getReferenceToType&lt;/li&gt;
+ * &lt;li&gt;getManifestations&lt;/li&gt;
+ * &lt;/ul&gt;
+ * 
+ * @see IPatternGroup
+ * 
+ */
+@SuppressWarnings(&quot;all&quot;)
+public final class Model_adapter extends BaseGeneratedPatternGroup {
+  /**
+   * Access the pattern group.
+   * 
+   * @return the singleton instance of the group
+   * @throws ViatraQueryException if there was an error loading the generated code of pattern specifications
+   * 
+   */
+  public static Model_adapter instance() throws ViatraQueryException {
+<span class="nc bnc" id="L57" title="All 2 branches missed.">    if (INSTANCE == null) {</span>
+<span class="nc" id="L58">        INSTANCE = new Model_adapter();</span>
+    }
+<span class="nc" id="L60">    return INSTANCE;</span>
+  }
+  
+  private static Model_adapter INSTANCE;
+  
+<span class="nc" id="L65">  private Model_adapter() throws ViatraQueryException {</span>
+<span class="nc" id="L66">    querySpecifications.add(InstanceSpecificationLinkQuerySpecification.instance());</span>
+<span class="nc" id="L67">    querySpecifications.add(InstanceOfInstanceSpecificationLinkQuerySpecification.instance());</span>
+<span class="nc" id="L68">    querySpecifications.add(SubClassOfQuerySpecification.instance());</span>
+<span class="nc" id="L69">    querySpecifications.add(PropertiesWithTypeQuerySpecification.instance());</span>
+<span class="nc" id="L70">    querySpecifications.add(ParametersWithTypeQuerySpecification.instance());</span>
+<span class="nc" id="L71">    querySpecifications.add(ReferencesToTypeQuerySpecification.instance());</span>
+<span class="nc" id="L72">    querySpecifications.add(GetReferenceToTypeQuerySpecification.instance());</span>
+<span class="nc" id="L73">    querySpecifications.add(GetManifestationsQuerySpecification.instance());</span>
+<span class="nc" id="L74">  }</span>
+  
+  public InstanceSpecificationLinkQuerySpecification getInstanceSpecificationLink() throws ViatraQueryException {
+<span class="nc" id="L77">    return InstanceSpecificationLinkQuerySpecification.instance();</span>
+  }
+  
+  public InstanceSpecificationLinkMatcher getInstanceSpecificationLink(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L81">    return InstanceSpecificationLinkMatcher.on(engine);</span>
+  }
+  
+  public InstanceOfInstanceSpecificationLinkQuerySpecification getInstanceOfInstanceSpecificationLink() throws ViatraQueryException {
+<span class="nc" id="L85">    return InstanceOfInstanceSpecificationLinkQuerySpecification.instance();</span>
+  }
+  
+  public InstanceOfInstanceSpecificationLinkMatcher getInstanceOfInstanceSpecificationLink(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L89">    return InstanceOfInstanceSpecificationLinkMatcher.on(engine);</span>
+  }
+  
+  public SubClassOfQuerySpecification getSubClassOf() throws ViatraQueryException {
+<span class="nc" id="L93">    return SubClassOfQuerySpecification.instance();</span>
+  }
+  
+  public SubClassOfMatcher getSubClassOf(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L97">    return SubClassOfMatcher.on(engine);</span>
+  }
+  
+  public PropertiesWithTypeQuerySpecification getPropertiesWithType() throws ViatraQueryException {
+<span class="nc" id="L101">    return PropertiesWithTypeQuerySpecification.instance();</span>
+  }
+  
+  public PropertiesWithTypeMatcher getPropertiesWithType(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L105">    return PropertiesWithTypeMatcher.on(engine);</span>
+  }
+  
+  public ParametersWithTypeQuerySpecification getParametersWithType() throws ViatraQueryException {
+<span class="nc" id="L109">    return ParametersWithTypeQuerySpecification.instance();</span>
+  }
+  
+  public ParametersWithTypeMatcher getParametersWithType(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L113">    return ParametersWithTypeMatcher.on(engine);</span>
+  }
+  
+  public ReferencesToTypeQuerySpecification getReferencesToType() throws ViatraQueryException {
+<span class="nc" id="L117">    return ReferencesToTypeQuerySpecification.instance();</span>
+  }
+  
+  public ReferencesToTypeMatcher getReferencesToType(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L121">    return ReferencesToTypeMatcher.on(engine);</span>
+  }
+  
+  public GetReferenceToTypeQuerySpecification getGetReferenceToType() throws ViatraQueryException {
+<span class="nc" id="L125">    return GetReferenceToTypeQuerySpecification.instance();</span>
+  }
+  
+  public GetReferenceToTypeMatcher getGetReferenceToType(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L129">    return GetReferenceToTypeMatcher.on(engine);</span>
+  }
+  
+  public GetManifestationsQuerySpecification getGetManifestations() throws ViatraQueryException {
+<span class="nc" id="L133">    return GetManifestationsQuerySpecification.instance();</span>
+  }
+  
+  public GetManifestationsMatcher getGetManifestations(final ViatraQueryEngine engine) throws ViatraQueryException {
+<span class="nc" id="L137">    return GetManifestationsMatcher.on(engine);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

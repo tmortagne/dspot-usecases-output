@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ModelAdapterUtilities.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">modeladapter-stamp</a> &gt; <a href="index.source.html" class="el_package">eu.supersede.dynadapt.modeladapter</a> &gt; <span class="el_source">ModelAdapterUtilities.java</span></div><h1>ModelAdapterUtilities.java</h1><pre class="source lang-java linenums">/*******************************************************************************
+ * Copyright (c) 2016 Universitat Politécnica de Catalunya (UPC), ATOS Spain S.A
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Contributors:
+ * 	Quim Motger (UPC) - main development
+ *  Yosu Gorroñogoitia (Atos) - main development
+ * 	
+ * Initially developed in the context of SUPERSEDE EU project
+ * www.supersede.eu
+ *******************************************************************************/
+
+package eu.supersede.dynadapt.modeladapter;
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.uml2.uml.ActivityEdge;
+import org.eclipse.uml2.uml.ActivityNode;
+import org.eclipse.uml2.uml.Association;
+import org.eclipse.uml2.uml.Classifier;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.ExecutionEnvironment;
+import org.eclipse.uml2.uml.InstanceSpecification;
+import org.eclipse.uml2.uml.InstanceValue;
+import org.eclipse.uml2.uml.LiteralInteger;
+import org.eclipse.uml2.uml.LiteralReal;
+import org.eclipse.uml2.uml.LiteralString;
+import org.eclipse.uml2.uml.Manifestation;
+import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.NamedElement;
+import org.eclipse.uml2.uml.Node;
+import org.eclipse.uml2.uml.Operation;
+import org.eclipse.uml2.uml.PackageableElement;
+import org.eclipse.uml2.uml.Parameter;
+import org.eclipse.uml2.uml.PrimitiveType;
+import org.eclipse.uml2.uml.Property;
+import org.eclipse.uml2.uml.Relationship;
+import org.eclipse.uml2.uml.Slot;
+import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.StructuralFeature;
+import org.eclipse.uml2.uml.internal.impl.ActivityImpl;
+import org.eclipse.uml2.uml.Type;
+import org.eclipse.uml2.uml.UMLFactory;
+import org.eclipse.uml2.uml.ValueSpecification;
+import org.eclipse.uml2.uml.internal.impl.ClassImpl;
+import org.eclipse.uml2.uml.internal.impl.InstanceSpecificationImpl;
+import org.eclipse.uml2.uml.internal.impl.PrimitiveTypeImpl;
+import org.eclipse.uml2.uml.internal.impl.StructuralFeatureImpl;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+
+import eu.supersede.dynadapt.model.IModelManager;
+import eu.supersede.dynadapt.model.ModelManager;
+import eu.supersede.dynadapt.model.query.ModelQuery;
+import eu.supersede.dynadapt.modeladapter.queries.GetReferenceToTypeMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.InstanceOfInstanceSpecificationLinkMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.SubClassOfMatcher;
+import eu.supersede.dynadapt.modeladapter.queries.util.GetReferenceToTypeQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.InstanceOfInstanceSpecificationLinkQuerySpecification;
+import eu.supersede.dynadapt.modeladapter.queries.util.SubClassOfQuerySpecification;
+
+import org.eclipse.uml2.uml.Package;
+import org.eclipse.uml2.uml.PackageImport;
+import org.eclipse.uml2.uml.Class;
+
+<span class="nc" id="L89">public class ModelAdapterUtilities {</span>
+<span class="fc" id="L90">	private final static Logger log = LogManager.getLogger(ModelAdapterUtilities.class);</span>
+
+	public static boolean checkSameRelationship(Relationship r1, Relationship r2) {
+<span class="nc bnc" id="L93" title="All 2 branches missed.">		for (int i = 0; i &lt; r1.getRelatedElements().size(); ++i) {</span>
+<span class="nc" id="L94">			NamedElement e1 = (NamedElement) r1.getRelatedElements().get(i);</span>
+<span class="nc" id="L95">			boolean found = false;</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">			for (int j = 0; j &lt; r2.getRelatedElements().size(); ++j) {</span>
+<span class="nc" id="L97">				NamedElement e2 = (NamedElement) r2.getRelatedElements().get(j);</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">				if (e1.getName().equals(e2.getName())) {</span>
+<span class="nc" id="L99">					found = true;</span>
+<span class="nc" id="L100">					break;</span>
+				}
+			}
+<span class="nc bnc" id="L103" title="All 2 branches missed.">			if (!found)</span>
+<span class="nc" id="L104">				return false;</span>
+		}
+<span class="nc" id="L106">		return true;</span>
+	}
+
+	public static boolean modelContainsElement(NamedElement element, Model model) {
+<span class="nc" id="L110">		TreeIterator&lt;EObject&gt; tree = model.eAllContents();</span>
+<span class="nc bnc" id="L111" title="All 2 branches missed.">		while (tree.hasNext()) {</span>
+<span class="nc" id="L112">			EObject a = tree.next();</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">			if (a.eClass().getEStructuralFeature(&quot;name&quot;) != null) {</span>
+<span class="nc" id="L114">				Object name = a.eGet(a.eClass().getEStructuralFeature(&quot;name&quot;));</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">				if (name != null) {</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">					if (name.toString().equals(element.getName()))</span>
+<span class="nc" id="L117">						return true;</span>
+				}
+			}
+<span class="nc" id="L120">		}</span>
+<span class="nc" id="L121">		return false;</span>
+	}
+
+	public static List&lt;NamedElement&gt; getInstances(ClassImpl c, Model model) {
+<span class="nc" id="L125">		List&lt;NamedElement&gt; instances = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L126">		TreeIterator&lt;EObject&gt; tree = model.eAllContents();</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">		while (tree.hasNext()) {</span>
+<span class="nc" id="L128">			EObject a = tree.next();</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">			if (a.eClass().getEStructuralFeature(&quot;classifier&quot;) != null) {</span>
+<span class="nc" id="L130">				EObjectResolvingEList eList = (EObjectResolvingEList) a</span>
+<span class="nc" id="L131">						.eGet(a.eClass().getEStructuralFeature(&quot;classifier&quot;));</span>
+<span class="nc bnc" id="L132" title="All 4 branches missed.">				if (eList != null &amp;&amp; eList.size() &gt; 0) {</span>
+<span class="nc" id="L133">					Classifier classifier = (Classifier) eList.get(0);</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">					if (classifier.getName().equals(c.getName()))</span>
+<span class="nc" id="L135">						instances.add((NamedElement) a);</span>
+				}
+			}
+<span class="nc" id="L138">		}</span>
+<span class="nc" id="L139">		return instances;</span>
+	}
+
+	public static Package getPackageInModel(Package pack, Model model) {
+		// Find in model the corresponding package (same package nested route,
+		// excepting for model name)
+<span class="nc" id="L145">		String packageQName = pack.getQualifiedName();</span>
+<span class="nc" id="L146">		packageQName = packageQName.substring(packageQName.indexOf(&quot;::&quot;) + 2, packageQName.length());</span>
+<span class="nc" id="L147">		List&lt;String&gt; tokens = Arrays.asList(packageQName.split(&quot;\\::&quot;)); // Immutable</span>
+																			// list
+<span class="nc" id="L149">		List&lt;String&gt; packages = new ArrayList&lt;&gt;(tokens); // Mutable list</span>
+<span class="nc bnc" id="L150" title="All 2 branches missed.">		if (packages.size() == 0) {</span>
+<span class="nc" id="L151">			return null;</span>
+		}
+<span class="nc" id="L153">		return getPackageInPackage(packages, model);</span>
+	}
+
+	public static Package getPackageInPackage(List&lt;String&gt; packages, Package outerPackage) {
+<span class="nc bnc" id="L157" title="All 2 branches missed.">		if (packages.size() == 0) {</span>
+<span class="nc" id="L158">			return outerPackage;</span>
+		}
+<span class="nc" id="L160">		String packageName = packages.get(0);</span>
+<span class="nc" id="L161">		Package innerPackage = (Package) outerPackage.getPackagedElement(packageName);</span>
+<span class="nc" id="L162">		packages.remove(packageName);</span>
+
+<span class="nc" id="L164">		return getPackageInPackage(packages, innerPackage);</span>
+	}
+
+	public static void addElementInPackage(PackageableElement element, Package pack) {
+<span class="nc" id="L168">		pack.getPackagedElements().add(element);</span>
+<span class="nc" id="L169">	}</span>
+	
+	public static Element findElementInModel(NamedElement element, Model model) {
+<span class="nc" id="L172">		Element result = null;</span>
+<span class="nc" id="L173">		String qname = getQualifiedName(element);</span>
+<span class="nc bnc" id="L174" title="All 2 branches missed.">		for (Element e: model.getOwnedElements()){</span>
+<span class="nc bnc" id="L175" title="All 2 branches missed.">			if (e instanceof NamedElement){</span>
+<span class="nc bnc" id="L176" title="All 2 branches missed.">				if (getQualifiedName((NamedElement)e).equals(qname)){</span>
+<span class="nc" id="L177">					result = e;</span>
+<span class="nc" id="L178">					break;</span>
+				}else{
+<span class="nc" id="L180">					result = findElement(element, (NamedElement)e);</span>
+				}
+			}
+<span class="nc" id="L183">		}</span>
+<span class="nc" id="L184">		return result;</span>
+	}
+
+	private static Element findElement(NamedElement element, NamedElement target) {
+<span class="nc" id="L188">		Element result = null;</span>
+<span class="nc" id="L189">		String qname = getQualifiedName(element);</span>
+<span class="nc bnc" id="L190" title="All 2 branches missed.">		for (Element e: target.getOwnedElements()){</span>
+<span class="nc bnc" id="L191" title="All 2 branches missed.">			if (e instanceof NamedElement){</span>
+<span class="nc bnc" id="L192" title="All 2 branches missed.">				if (getQualifiedName((NamedElement)e).equals(qname)){</span>
+<span class="nc" id="L193">					result = e;</span>
+<span class="nc" id="L194">					break;</span>
+				}else{
+<span class="nc" id="L196">					result = findElement(element, (NamedElement)e);</span>
+				}
+			}
+<span class="nc" id="L199">		}</span>
+<span class="nc" id="L200">		return result;</span>
+	}
+
+	public static String getQualifiedName(NamedElement element) {
+<span class="nc" id="L204">		String qname = getQualifiedName (&quot;&quot;, element);</span>
+<span class="nc" id="L205">		return inverseStringWithDelimiter (qname, &quot;::&quot;);</span>
+	}
+
+	private static String getQualifiedName(String qname, Element element) {
+<span class="nc bnc" id="L209" title="All 2 branches missed.">		String name = element instanceof NamedElement? ((NamedElement)element).getName():&quot;UnamedElement&quot;;</span>
+<span class="nc bnc" id="L210" title="All 2 branches missed.">		if (name == null) name = &quot;UnamedElement&quot;;</span>
+<span class="nc bnc" id="L211" title="All 2 branches missed.">		if (qname.length() == 0)</span>
+<span class="nc" id="L212">			qname = name;</span>
+		else 
+<span class="nc" id="L214">			qname = qname + &quot;::&quot; + name;</span>
+<span class="nc bnc" id="L215" title="All 2 branches missed.">		if (element instanceof Model)</span>
+<span class="nc" id="L216">			return qname;</span>
+		else 
+<span class="nc" id="L218">			return getQualifiedName (qname, element.getOwner());</span>
+	}
+	
+	private static String inverseStringWithDelimiter (String string, String delimiter){
+<span class="nc" id="L222">		String[] split = string.split (delimiter);</span>
+<span class="nc" id="L223">		String[] reverse = new String[split.length];</span>
+<span class="nc" id="L224">		int j = 0;</span>
+<span class="nc bnc" id="L225" title="All 2 branches missed.">		for (int i = split.length - 1; i &gt;= 0; i--){</span>
+<span class="nc" id="L226">			reverse[j++] = split[i];</span>
+		}
+<span class="nc" id="L228">		String result = &quot;&quot;;</span>
+<span class="nc bnc" id="L229" title="All 2 branches missed.">		for (int k = 0; k &lt; reverse.length; k++)</span>
+<span class="nc" id="L230">			result += reverse[k] + delimiter;</span>
+<span class="nc" id="L231">		result = result.substring(0, result.length() - 2);</span>
+<span class="nc" id="L232">		return result;</span>
+	}
+
+	public static Element getEquivalentElementInModel(NamedElement element, Model model) {
+		// PrimitiveTypes are equivalent among models
+		// FIXME Get primitive Equivalent in model
+<span class="fc bfc" id="L238" title="All 2 branches covered.">		if (element instanceof PrimitiveType) {</span>
+<span class="fc" id="L239">			return element;</span>
+//			return getPrimitiveTypeInModel ((PrimitiveType) element, model);
+		}
+		
+		//Properties
+<span class="pc bpc" id="L244" title="3 of 4 branches missed.">		if (element instanceof Property &amp;&amp; ((Property)element).getAssociation()==null){</span>
+<span class="nc" id="L245">			return getPropertyInModel ((Property)element, model, false);</span>
+		}
+		
+		//Association
+<span class="pc bpc" id="L249" title="3 of 4 branches missed.">		if (element instanceof Property &amp;&amp; ((Property)element).getAssociation()!=null){</span>
+<span class="nc" id="L250">			return getPropertyInModel ((Property)element, model, true);</span>
+		}
+		
+		//ExecutionEnvironment
+		//FIXME Generalize resolution of different elements
+<span class="pc bpc" id="L255" title="1 of 2 branches missed.">		if (element instanceof ExecutionEnvironment){</span>
+<span class="nc" id="L256">			return getExecutionEnvironmentInModel ((ExecutionEnvironment)element, model);</span>
+		}
+
+<span class="fc" id="L259">		PackageableElement equivalentElement = null;</span>
+<span class="fc" id="L260">		Package pack = null;</span>
+		// Equivalent element for a model it the model itself
+<span class="fc bfc" id="L262" title="All 2 branches covered.">		if (element instanceof Model){ </span>
+<span class="fc" id="L263">			return model;</span>
+		}
+		// element in root container, that is the model
+<span class="pc bpc" id="L266" title="1 of 2 branches missed.">		if (element.getNearestPackage() instanceof Model) { </span>
+<span class="fc" id="L267">			pack = model;</span>
+		} else {
+<span class="nc" id="L269">			pack = getPackageInModel(element.getNearestPackage(), model);</span>
+		}
+<span class="pc bpc" id="L271" title="1 of 2 branches missed.">		if (pack != null) {</span>
+<span class="fc" id="L272">			equivalentElement = pack.getPackagedElement(((NamedElement) element).getName());</span>
+		}
+<span class="fc" id="L274">		return equivalentElement;</span>
+	}
+
+	private static Property getPropertyInModel(Property property, Model model, boolean isAssociation) {
+<span class="nc" id="L278">		Property result = null;</span>
+<span class="nc" id="L279">		Classifier classInModel = null;</span>
+<span class="nc bnc" id="L280" title="All 2 branches missed.">		if (isAssociation){</span>
+<span class="nc" id="L281">			classInModel = (Classifier) getEquivalentElementInModel(property.getAssociation(), model);</span>
+		}else{
+<span class="nc" id="L283">			classInModel = (org.eclipse.uml2.uml.Class)getEquivalentElementInModel((NamedElement)property.eContainer(), model);</span>
+		}
+		
+<span class="nc bnc" id="L286" title="All 2 branches missed.">		if (classInModel != null){</span>
+			//As given property is defined in another model than where class is defined, matches must be found by matching name and type
+//			result = classInModel.getAttribute(property.getName(), property.getType());
+<span class="nc bnc" id="L289" title="All 2 branches missed.">			for (Property p: classInModel.getAllAttributes()){</span>
+<span class="nc bnc" id="L290" title="All 2 branches missed.">				if (p.getName().equals(property.getName()) &amp;&amp; </span>
+<span class="nc bnc" id="L291" title="All 2 branches missed.">					p.getType().getQualifiedName().equals(property.getType().getQualifiedName())){</span>
+<span class="nc" id="L292">					result = p;</span>
+<span class="nc" id="L293">					break;</span>
+				}
+<span class="nc" id="L295">			}</span>
+		}
+	
+<span class="nc" id="L298">		return result;</span>
+	}
+	
+	private static ExecutionEnvironment getExecutionEnvironmentInModel(ExecutionEnvironment execEnv, Model model) {
+<span class="nc" id="L302">		ExecutionEnvironment result = null;</span>
+<span class="nc" id="L303">		Node nodeInModel = (Node)getEquivalentElementInModel((NamedElement)execEnv.eContainer(), model);</span>
+		
+<span class="nc bnc" id="L305" title="All 2 branches missed.">		if (nodeInModel != null){</span>
+<span class="nc bnc" id="L306" title="All 2 branches missed.">			for (Node node: nodeInModel.getNestedNodes()){</span>
+<span class="nc bnc" id="L307" title="All 4 branches missed.">				if (node instanceof ExecutionEnvironment &amp;&amp; node.getName().equals(execEnv.getName())){</span>
+<span class="nc" id="L308">					result = (ExecutionEnvironment)node;</span>
+<span class="nc" id="L309">					break;</span>
+				}
+<span class="nc" id="L311">			}</span>
+		}
+	
+<span class="nc" id="L314">		return result;</span>
+	}
+
+	private static Element getPrimitiveTypeInModel(PrimitiveType element, Model model) {
+<span class="nc bnc" id="L318" title="All 2 branches missed.">		if (element.eContainer() instanceof Model){</span>
+<span class="nc bnc" id="L319" title="All 2 branches missed.">			if(((Model)element.eContainer()).getName().equals(&quot;EcorePrimitiveTypes&quot;)){</span>
+<span class="nc" id="L320">				return element;</span>
+			}
+		}
+<span class="nc" id="L323">		Element type = null;</span>
+<span class="nc bnc" id="L324" title="All 2 branches missed.">		for (PackageImport pi:model.getPackageImports()){</span>
+<span class="nc bnc" id="L325" title="All 2 branches missed.">			if (pi.getImportedPackage().getName().equals(&quot;PrimitiveTypes&quot;)){</span>
+<span class="nc" id="L326">				type = pi.getImportedPackage().getPackagedElement(element.getName());</span>
+<span class="nc" id="L327">				break;</span>
+			}
+<span class="nc" id="L329">		}</span>
+<span class="nc" id="L330">		return null;</span>
+	}
+
+	public static boolean slotsHasSameDefiningFeature(Slot slot1, Slot slot2) {
+<span class="nc" id="L334">		return slot1.getDefiningFeature().getName().equals(slot2.getDefiningFeature().getName());</span>
+	}
+
+	public static boolean slotsHasSameValue(Slot slot1, Slot slot2) {
+<span class="nc" id="L338">		ValueSpecification iv1 = (ValueSpecification) slot1.getValues().get(0);</span>
+<span class="nc" id="L339">		ValueSpecification iv2 = (ValueSpecification) slot2.getValues().get(0);</span>
+<span class="nc bnc" id="L340" title="All 4 branches missed.">		if (iv1 instanceof InstanceValue &amp;&amp; iv2 instanceof InstanceValue){</span>
+<span class="nc" id="L341">			return ((InstanceValue)iv1).getInstance().getName().equals(((InstanceValue)iv2).getInstance().getName());</span>
+<span class="nc bnc" id="L342" title="All 4 branches missed.">		}else if (iv1 instanceof LiteralString &amp;&amp; iv2 instanceof LiteralString){</span>
+<span class="nc" id="L343">			return ((LiteralString)iv1).getValue().equals(((LiteralString)iv2).getValue());</span>
+<span class="nc bnc" id="L344" title="All 4 branches missed.">		}else if (iv1 instanceof LiteralReal &amp;&amp; iv2 instanceof LiteralReal){</span>
+<span class="nc bnc" id="L345" title="All 2 branches missed.">			return ((LiteralReal)iv1).getValue() == (((LiteralReal)iv2).getValue());</span>
+<span class="nc bnc" id="L346" title="All 4 branches missed.">		}else if (iv1 instanceof LiteralInteger &amp;&amp; iv2 instanceof LiteralInteger){</span>
+<span class="nc bnc" id="L347" title="All 2 branches missed.">			return ((LiteralInteger)iv1).getValue() == (((LiteralInteger)iv2).getValue());</span>
+		}else{
+<span class="nc" id="L349">			return false;</span>
+		}
+	}
+
+	public static boolean areSameElements(NamedElement e1, NamedElement e2) {
+<span class="nc" id="L354">		boolean result = true;</span>
+<span class="nc bnc" id="L355" title="All 4 branches missed.">		result = result &amp;&amp; (e1.getClass().getSimpleName().equals(e1.getClass().getSimpleName()));</span>
+<span class="nc bnc" id="L356" title="All 4 branches missed.">		result = result &amp;&amp; (e1.getName().equals(e2.getName()));</span>
+<span class="nc" id="L357">		return result;</span>
+	}
+
+	public static Element findElementByStereotype(Model model, Stereotype stereotype) {
+<span class="fc" id="L361">		EList&lt;Element&gt; list = model.allOwnedElements();</span>
+<span class="pc bpc" id="L362" title="1 of 2 branches missed.">		for (Element e : list) {</span>
+<span class="fc bfc" id="L363" title="All 2 branches covered.">			if (e.isStereotypeApplied(stereotype)) {</span>
+<span class="fc" id="L364">				return e;</span>
+			}
+<span class="fc" id="L366">		}</span>
+<span class="nc" id="L367">		return null;</span>
+	}
+	
+	public static List&lt;ActivityEdge&gt; setOutgoingEdges(ActivityImpl activity, List&lt;ActivityEdge&gt; outgoingEdges, ActivityNode originAction) {
+<span class="nc" id="L371">		List&lt;ActivityEdge&gt; edges = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L372" title="All 2 branches missed.">		for (int i = 0; i &lt; outgoingEdges.size(); ++i) {</span>
+<span class="nc" id="L373">			ActivityEdge edge = (ActivityEdge) activity.createEdge(outgoingEdges.get(i).getName(), outgoingEdges.get(i).eClass());</span>
+			//log.debug(&quot;\tNew edge from &quot; + originAction.getName());
+<span class="nc" id="L375">			edges.add(edge);</span>
+<span class="nc" id="L376">			edge.setSource(originAction);</span>
+<span class="nc" id="L377">			originAction.getOutgoings().add(edge);</span>
+		}
+<span class="nc" id="L379">		return edges;</span>
+	}
+
+	public static void setIncomingEdges(List&lt;ActivityEdge&gt; incomingEdges, ActivityNode originAction) {
+<span class="nc bnc" id="L383" title="All 2 branches missed.">		for (int i = 0; i &lt; incomingEdges.size(); ++i) {</span>
+			//log.debug(&quot;\tNew edge to &quot; + originAction.getName());
+			//log.debug(&quot;\tSet edge target to &quot; + originAction.getName() );
+<span class="nc" id="L386">			ActivityEdge edge = incomingEdges.get(i);</span>
+<span class="nc" id="L387">			edge.setTarget(originAction);</span>
+<span class="nc" id="L388">			originAction.getIncomings().add(edge);</span>
+		}
+<span class="nc" id="L390">	}</span>
+		
+	public static boolean elementHasRole(Element element, Stereotype stereotype) {
+<span class="fc" id="L393">		return element.isStereotypeApplied(stereotype);</span>
+	}
+
+	public static boolean elementMatchesInModel(Model model, NamedElement element) {
+<span class="pc bpc" id="L397" title="1 of 2 branches missed.">		return getEquivalentElementInModel(element, model) != null;</span>
+	}
+
+	public static Package getPackageInModelMatchingElement(Model model, PackageableElement element) {
+<span class="fc" id="L401">		return (Package) getEquivalentElementInModel(element.getNearestPackage(), model);</span>
+	}
+
+	public static &lt;T extends Element&gt; T createElement(T element, NamedElement inContainer,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+		
+<span class="fc bfc" id="L407" title="All 2 branches covered.">		if (element instanceof Class) {</span>
+<span class="fc" id="L408">			Class clazz = (Class)element;</span>
+<span class="fc" id="L409">			log.debug(&quot;Creating class: &quot; + clazz.getName() + &quot; in container:&quot; + inContainer.getQualifiedName() + &quot; in model: &quot; + model.getName());</span>
+<span class="fc" id="L410">			return (T) createClass(clazz, (Package) inContainer, baseJointpoints, model);</span>
+<span class="pc bpc" id="L411" title="1 of 2 branches missed.">		} else if (element instanceof Association) {</span>
+<span class="nc" id="L412">			Association association = (Association)element;</span>
+<span class="nc" id="L413">			log.debug(&quot;Creating association: &quot; + association.getName() + &quot; in container:&quot; + inContainer.getQualifiedName() + &quot; in model: &quot; + model.getName());</span>
+<span class="nc" id="L414">			return (T) createAssociation(association, (Class) inContainer, baseJointpoints, model);</span>
+<span class="pc bpc" id="L415" title="1 of 2 branches missed.">		} else if (element instanceof Operation) {</span>
+<span class="nc" id="L416">			Operation operation = (Operation)element;</span>
+<span class="nc" id="L417">			log.debug(&quot;Creating operation: &quot; + operation.getName() + &quot; in container:&quot; + inContainer.getQualifiedName() + &quot; in model: &quot; + model.getName());</span>
+<span class="nc" id="L418">			return (T) createOperation(operation, (Class) inContainer, baseJointpoints, model);</span>
+<span class="pc bpc" id="L419" title="1 of 2 branches missed.">		} else if (element instanceof Property) {</span>
+<span class="fc" id="L420">			Property property = (Property)element;</span>
+<span class="fc" id="L421">			log.debug(&quot;Creating property: &quot; + property.getName() + &quot; in container:&quot; + inContainer.getQualifiedName() + &quot; in model: &quot; + model.getName());</span>
+<span class="fc" id="L422">			return (T) createProperty((Property) element, (Classifier) inContainer, baseJointpoints, model);</span>
+<span class="nc bnc" id="L423" title="All 2 branches missed.">		} else if (element instanceof Package) {</span>
+<span class="nc" id="L424">			Package pack = (Package)element;</span>
+<span class="nc" id="L425">			log.debug(&quot;Creating package: &quot; + pack.getName() + &quot; in container:&quot; + inContainer.getQualifiedName() + &quot; in model: &quot; + model.getName());</span>
+<span class="nc" id="L426">			return (T) createPackage((Package) element, (Model) inContainer, baseJointpoints, model);</span>
+<span class="nc bnc" id="L427" title="All 2 branches missed.">		} else if (element instanceof Slot) {</span>
+<span class="nc" id="L428">			Slot slot = (Slot)element;</span>
+<span class="nc" id="L429">			log.debug(&quot;Creating slot for defining feature: &quot; + slot.getDefiningFeature().getQualifiedName() + &quot; in container:&quot; + inContainer.getQualifiedName() + &quot; in model: &quot; + model.getName());</span>
+<span class="nc" id="L430">			return (T) createSlot((Slot) element, (InstanceSpecification) inContainer, baseJointpoints, model);</span>
+<span class="nc bnc" id="L431" title="All 2 branches missed.">		} else if (element instanceof InstanceSpecification) {</span>
+<span class="nc" id="L432">			InstanceSpecification instanceSpecification = (InstanceSpecification)element;</span>
+<span class="nc" id="L433">			log.debug(&quot;Creating instanceSpecification: &quot; + instanceSpecification.getName() + &quot; in container:&quot; + inContainer.getQualifiedName() + &quot; in model: &quot; + model.getName());</span>
+<span class="nc" id="L434">			return (T) createInstanceSpecification((InstanceSpecification) element, (Package) inContainer,</span>
+					baseJointpoints, model);
+<span class="nc bnc" id="L436" title="All 2 branches missed.">		}else if (element instanceof Manifestation) {</span>
+<span class="nc" id="L437">			Manifestation manifestation = (Manifestation)element;</span>
+<span class="nc" id="L438">			log.debug(&quot;Creating manifestation for utilized element: &quot; + manifestation.getUtilizedElement().getQualifiedName() + &quot; in container:&quot; + inContainer.getQualifiedName() + &quot; in model: &quot; + model.getName());</span>
+<span class="nc" id="L439">			return (T) createManifestation((Manifestation) element, (Package) inContainer,</span>
+					baseJointpoints, model);
+		} else {
+<span class="nc" id="L442">			log.error(&quot;UML Type : &quot; + element.getClass().toString() + &quot; not supported for clonning&quot;);</span>
+<span class="nc" id="L443">			return null;</span>
+		}
+	}
+
+	private static Manifestation createManifestation(Manifestation manifestation, Package inContainer,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+<span class="nc" id="L449">		Manifestation newManifestation = UMLFactory.eINSTANCE.createManifestation();</span>
+<span class="nc" id="L450">		newManifestation.setName(manifestation.getName());</span>
+		
+		//Resolve clients in base model
+<span class="nc bnc" id="L453" title="All 2 branches missed.">		for (NamedElement client: manifestation.getClients()){</span>
+<span class="nc" id="L454">			NamedElement equivalentClient = (NamedElement)getEquivalentElementInModel(client, model);</span>
+<span class="nc bnc" id="L455" title="All 2 branches missed.">			if (equivalentClient==null){</span>
+<span class="nc" id="L456">				Package pack  = getPackageInModel (client.getNearestPackage(), model);</span>
+<span class="nc bnc" id="L457" title="All 2 branches missed.">				if (pack != null){</span>
+<span class="nc" id="L458">					equivalentClient = createElement(client, pack, baseJointpoints, model);</span>
+				}
+			}
+<span class="nc" id="L461">			newManifestation.getClients().add(equivalentClient);</span>
+<span class="nc" id="L462">		}</span>
+		
+		//Resolve suppliers in base model
+<span class="nc bnc" id="L465" title="All 2 branches missed.">		for (NamedElement supplier: manifestation.getSuppliers()){</span>
+<span class="nc" id="L466">			NamedElement equivalentSupplier = (NamedElement)getEquivalentElementInModel(supplier, model);</span>
+<span class="nc bnc" id="L467" title="All 2 branches missed.">			if (equivalentSupplier==null){</span>
+<span class="nc" id="L468">				Package pack  = getPackageInModel (supplier.getNearestPackage(), model);</span>
+<span class="nc bnc" id="L469" title="All 2 branches missed.">				if (pack != null){</span>
+<span class="nc" id="L470">					equivalentSupplier = createElement(supplier, pack, baseJointpoints, model);</span>
+				}
+			}
+<span class="nc" id="L473">			newManifestation.getSuppliers().add(equivalentSupplier);</span>
+<span class="nc" id="L474">			newManifestation.setUtilizedElement((PackageableElement)equivalentSupplier);</span>
+<span class="nc" id="L475">		}</span>
+		
+<span class="nc" id="L477">		inContainer.getPackagedElements().add(newManifestation);		</span>
+		
+<span class="nc" id="L479">		return newManifestation;</span>
+	}
+
+	private static InstanceSpecification createInstanceSpecification(InstanceSpecification instance,
+			Package inContainer, HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+<span class="nc" id="L484">		InstanceSpecification newInstance = UMLFactory.eINSTANCE.createInstanceSpecification();</span>
+<span class="nc" id="L485">		newInstance.setName(instance.getName());</span>
+<span class="nc" id="L486">		newInstance.setSpecification(instance.getSpecification());</span>
+		
+		//Resolve classifiers in base model
+<span class="nc bnc" id="L489" title="All 2 branches missed.">		for (Classifier classifier: instance.getClassifiers()){</span>
+<span class="nc" id="L490">			Classifier equivalentClassifier = (Classifier)getEquivalentElementInModel(classifier, model);</span>
+<span class="nc" id="L491">			newInstance.getClassifiers().add(equivalentClassifier);</span>
+<span class="nc" id="L492">		}</span>
+		
+		//Create slots
+<span class="nc bnc" id="L495" title="All 2 branches missed.">		for (Slot slot: instance.getSlots()){</span>
+<span class="nc" id="L496">			createSlot (slot, newInstance, baseJointpoints, model);</span>
+<span class="nc" id="L497">		}</span>
+		 
+<span class="nc" id="L499">		ModelAdapterUtilities.addElementInPackage(newInstance, inContainer);</span>
+<span class="nc" id="L500">		return newInstance;</span>
+	}
+
+	private static Slot createSlot(Slot slot, InstanceSpecification inInstanceSpecification,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+		// Creates the new slot referencing new object
+<span class="nc" id="L506">		ValueSpecification vs = slot.getValues().get(0);</span>
+<span class="nc" id="L507">		Slot newSlot = inInstanceSpecification.createSlot();</span>
+		//Resolve defining feature in base model
+<span class="nc" id="L509">		StructuralFeature equivalentDefiningFeature = (StructuralFeature)getEquivalentElementInModel(slot.getDefiningFeature(), model);</span>
+		//FIXME Check that in ComposableInstanceSpecification missing defining features are not checked nor created if missed
+<span class="nc bnc" id="L511" title="All 2 branches missed.">		if (equivalentDefiningFeature == null){</span>
+<span class="nc" id="L512">			Package pack  = getPackageInModel (slot.getDefiningFeature().getNearestPackage(), model);</span>
+<span class="nc bnc" id="L513" title="All 2 branches missed.">			if (pack != null){</span>
+<span class="nc" id="L514">				equivalentDefiningFeature = createElement(slot.getDefiningFeature(), (NamedElement)slot.getDefiningFeature().eContainer(), baseJointpoints, model);</span>
+		
+			}
+		}
+<span class="nc" id="L518">		newSlot.setDefiningFeature(equivalentDefiningFeature);</span>
+<span class="nc" id="L519">		createValue(newSlot, vs, baseJointpoints, model);</span>
+
+<span class="nc" id="L521">		newSlot.setOwningInstance(inInstanceSpecification);</span>
+<span class="nc" id="L522">		return newSlot;</span>
+	}
+	
+	private static void createValue (Slot slot, ValueSpecification vs, HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model){
+<span class="nc" id="L526">		ValueSpecification newVs = slot.createValue(vs.getName(), vs.getType(), vs.eClass());</span>
+<span class="nc bnc" id="L527" title="All 2 branches missed.">		if (vs instanceof InstanceValue){</span>
+<span class="nc" id="L528">			InstanceSpecification equivalentInstance = (InstanceSpecification)getEquivalentElementInModel(((InstanceValue) vs).getInstance(), model);</span>
+			//FIXME Check that in ComposableInstanceSpecification missing defining features are not checked nor created if missed
+<span class="nc bnc" id="L530" title="All 2 branches missed.">			if (equivalentInstance == null){</span>
+<span class="nc" id="L531">				Package pack  = getPackageInModel (((InstanceValue) vs).getInstance().getNearestPackage(), model);</span>
+<span class="nc bnc" id="L532" title="All 2 branches missed.">				if (pack != null){</span>
+<span class="nc" id="L533">					equivalentInstance = createElement(((InstanceValue) vs).getInstance(), pack, baseJointpoints, model);</span>
+				}
+			}
+<span class="nc" id="L536">			((InstanceValue)newVs).setInstance(equivalentInstance);</span>
+<span class="nc bnc" id="L537" title="All 2 branches missed.">		}else if (vs instanceof LiteralString){</span>
+<span class="nc" id="L538">			((LiteralString)newVs).setValue(((LiteralString)vs).getValue());</span>
+<span class="nc bnc" id="L539" title="All 2 branches missed.">		}else if (vs instanceof LiteralReal){</span>
+<span class="nc" id="L540">			((LiteralReal)newVs).setValue(((LiteralReal)vs).getValue());</span>
+<span class="nc bnc" id="L541" title="All 2 branches missed.">		}else if (vs instanceof LiteralInteger){</span>
+<span class="nc" id="L542">			((LiteralInteger)newVs).setValue(((LiteralInteger)vs).getValue());</span>
+		}else{
+			//Ignored
+		}
+<span class="nc" id="L546">	}</span>
+
+	private static Package createPackage(Package pack, Model container,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+<span class="nc" id="L550">		Package newPackage = UMLFactory.eINSTANCE.createPackage();</span>
+<span class="nc" id="L551">		newPackage.setName(pack.getName());</span>
+<span class="nc" id="L552">		Package nestingPackage = (Package) getEquivalentElementInModel(pack.getNestingPackage(), container);</span>
+<span class="nc bnc" id="L553" title="All 2 branches missed.">		if (nestingPackage != null) {</span>
+<span class="nc" id="L554">			newPackage.setNestingPackage(nestingPackage);</span>
+		} else {
+<span class="nc" id="L556">			newPackage.setNestingPackage(createPackage(pack.getNestingPackage(), container, baseJointpoints, model));</span>
+		}
+<span class="nc" id="L558">		return newPackage;</span>
+	}
+
+	private static Property createProperty(Property property, Classifier inClassifier,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+		// Resolve type if refers to Jointpoint role: from base model JP role
+		// element resolves advice type
+		// Resolve type pointing to base model.
+		// Resolve types pointing to the base model
+		// Resolve type in case of advice jointpoint role type
+
+<span class="fc" id="L569">		Type type = (Type) resolveElementInModel(property.getType(), inClassifier.getModel(), baseJointpoints);</span>
+
+		// Non-association property
+<span class="fc" id="L572">		Association association = property.getAssociation();</span>
+<span class="fc" id="L573">		Property newProperty = null;</span>
+<span class="fc bfc" id="L574" title="All 2 branches covered.">		if (association == null) {</span>
+<span class="fc" id="L575">			Class inClass = (Class)inClassifier;</span>
+<span class="fc" id="L576">			newProperty = inClass.createOwnedAttribute(property.getName(), type);</span>
+<span class="fc" id="L577">		} else {</span>
+			// Manage association properties
+<span class="fc" id="L579">			Association newAssociation = createAssociation(association, inClassifier, baseJointpoints, model);</span>
+<span class="fc" id="L580">			newProperty = inClassifier.getAttributes().get(inClassifier.getAttributes().size() - 1);</span>
+		}
+<span class="fc" id="L582">		return newProperty;</span>
+	}
+
+	private static Operation createOperation(Operation operation, Class inClass,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+		// Resolve type (for parameter and return type) if refers to Jointpoint
+		// role: from base model JP role element resolves advice type
+		// Resolve type (for parameter and return type) pointing to base model.
+<span class="fc" id="L590">		EList&lt;String&gt; parameterNames = new BasicEList&lt;&gt;();</span>
+<span class="fc" id="L591">		EList&lt;Type&gt; parameterTypes = new BasicEList&lt;&gt;();</span>
+<span class="fc bfc" id="L592" title="All 2 branches covered.">		for (Parameter parameter : operation.getOwnedParameters()) {</span>
+<span class="fc" id="L593">			parameterNames.add(parameter.getName());</span>
+			// Resolve types pointing to the base model
+			// Resolve type in case of advice jointpoint role type
+<span class="fc" id="L596">			parameterTypes.add((Type) resolveElementInModel(parameter.getType(), inClass.getModel(), baseJointpoints));</span>
+<span class="fc" id="L597">		}</span>
+<span class="fc" id="L598">		Type returnType = null;</span>
+<span class="pc bpc" id="L599" title="1 of 2 branches missed.">		if (operation.getReturnResult() != null)</span>
+<span class="nc" id="L600">			returnType = (Type) resolveElementInModel(operation.getReturnResult().getType(), inClass.getModel(),</span>
+					baseJointpoints);
+<span class="fc" id="L602">		return inClass.createOwnedOperation(operation.getName(), parameterNames, parameterTypes, returnType);</span>
+	}
+
+	private static Association createAssociation(Association association, Classifier inClass,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+<span class="fc" id="L607">		Association newAssociation = inClass.createAssociation(association.getMemberEnds().get(0).isNavigable(),</span>
+<span class="fc" id="L608">				association.getMemberEnds().get(0).getAggregation(), association.getMemberEnds().get(0).getName(),</span>
+<span class="fc" id="L609">				association.getMemberEnds().get(0).getLower(), association.getMemberEnds().get(0).getUpper(),</span>
+<span class="fc" id="L610">				(Type) resolveElementInModel(association.getMemberEnds().get(0).getType(), inClass, baseJointpoints),</span>
+<span class="fc" id="L611">				association.getMemberEnds().get(1).isNavigable(), association.getMemberEnds().get(1).getAggregation(),</span>
+<span class="fc" id="L612">				association.getMemberEnds().get(1).getName(), association.getMemberEnds().get(1).getLower(),</span>
+<span class="fc" id="L613">				association.getMemberEnds().get(1).getUpper());</span>
+
+<span class="fc" id="L615">		return newAssociation;</span>
+	}
+
+	private static Class createClass(Class clazz, Package inContainer,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints, Model model) {
+<span class="fc" id="L620">		Class newClass = inContainer.createOwnedClass(clazz.getName(), clazz.isAbstract());</span>
+
+		// Properties
+<span class="fc bfc" id="L623" title="All 2 branches covered.">		for (Property property : clazz.getAttributes()) {</span>
+<span class="fc" id="L624">			createProperty(property, newClass, baseJointpoints, model);</span>
+<span class="fc" id="L625">		}</span>
+		// Operations
+<span class="fc bfc" id="L627" title="All 2 branches covered.">		for (Operation operation : clazz.getOperations()) {</span>
+<span class="fc" id="L628">			createOperation(operation, newClass, baseJointpoints, model);</span>
+<span class="fc" id="L629">		}</span>
+
+<span class="fc" id="L631">		return newClass;</span>
+	}
+
+	public static Element resolveElementInModel(Element type, PackageableElement inContainer,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints) {
+		// Resolve type in model.
+		// If type stereotype with Jointpoint role, resolve it in model by role
+		// If type does not exist in model, create type and add it to model
+<span class="fc" id="L639">		Element resolvedElement = getEquivalentElementInModel((PackageableElement) type, inContainer.getModel());</span>
+<span class="fc bfc" id="L640" title="All 2 branches covered.">		if (resolvedElement == null) {</span>
+			// Resolve type the Jointpoint role
+			// Current resolution is based on stereotyped applications by
+			// jointpoint role
+			// but in base model jointpoint are determine by patterns, which are
+			// passed in baseJointpoints
+<span class="fc bfc" id="L646" title="All 2 branches covered.">			for (Stereotype stereotype : baseJointpoints.keySet()) {</span>
+<span class="fc bfc" id="L647" title="All 2 branches covered.">				if (type.isStereotypeApplied(stereotype)) {</span>
+					// FIXME Investigate possible multiple role assignments
+<span class="fc" id="L649">					resolvedElement = baseJointpoints.get(stereotype).get(0); </span>
+<span class="fc" id="L650">					break;</span>
+				}
+<span class="fc" id="L652">			}</span>
+		}
+<span class="fc bfc" id="L654" title="All 2 branches covered.">		if (resolvedElement == null) {</span>
+			// Get equivalent type container in model. Create it if not
+			// available
+<span class="fc" id="L657">			Package pack = (Package) resolveElementInModel(type.getNearestPackage(), inContainer, baseJointpoints);</span>
+<span class="pc bpc" id="L658" title="1 of 2 branches missed.">			if (pack == null) {</span>
+<span class="nc" id="L659">				pack = createElement(type.getNearestPackage(), inContainer, baseJointpoints, inContainer.getModel());</span>
+			}
+
+			// Create type
+<span class="fc" id="L663">			resolvedElement = createElement(type, pack, baseJointpoints, inContainer.getModel());</span>
+		}
+
+<span class="fc" id="L666">		return resolvedElement;</span>
+	}
+
+	public static Property resolvePropertyInClass(Property property, Class inClass,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints) {
+<span class="nc" id="L671">		Property found = null;</span>
+<span class="nc bnc" id="L672" title="All 2 branches missed.">		for (Property p : inClass.getAttributes()) {</span>
+<span class="nc bnc" id="L673" title="All 2 branches missed.">			if (propertyMatchAnotherInModel(p, property, inClass.getModel(), baseJointpoints)) {</span>
+<span class="nc" id="L674">				found = p;</span>
+<span class="nc" id="L675">				break;</span>
+			}
+<span class="nc" id="L677">		}</span>
+<span class="nc" id="L678">		return found;</span>
+	}
+
+	private static boolean propertyMatchAnotherInModel(Property p1, Property p2, Model model,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints) {
+<span class="nc" id="L683">		boolean match = false;</span>
+<span class="nc bnc" id="L684" title="All 2 branches missed.">		if (p1.getName().equals(p2.getName())</span>
+<span class="nc bnc" id="L685" title="All 2 branches missed.">				&amp;&amp; p1.getType() == ModelAdapterUtilities.resolveElementInModel(p2.getType(), model, baseJointpoints)) {</span>
+<span class="nc" id="L686">			match = true;</span>
+		}
+<span class="nc" id="L688">		return match;</span>
+	}
+
+	public static Operation resolveOperationInClass(Operation operation, Class inClass,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints) {
+<span class="nc" id="L693">		Operation found = null;</span>
+<span class="nc bnc" id="L694" title="All 2 branches missed.">		for (Operation oper : inClass.getOperations()) {</span>
+<span class="nc bnc" id="L695" title="All 2 branches missed.">			if (operationMatchAnotherInModel(oper, operation, inClass.getModel(), baseJointpoints)) {</span>
+<span class="nc" id="L696">				found = oper;</span>
+<span class="nc" id="L697">				break;</span>
+			}
+<span class="nc" id="L699">		}</span>
+<span class="nc" id="L700">		return found;</span>
+	}
+
+	private static boolean operationMatchAnotherInModel(Operation oper, Operation operation, Model model,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints) {
+<span class="nc" id="L705">		boolean match = false;</span>
+		// Comparing operation names
+<span class="nc bnc" id="L707" title="All 2 branches missed.">		if (oper.getName().equals(operation.getName())) {</span>
+			// Comparing return types
+<span class="nc bnc" id="L709" title="All 2 branches missed.">			if (operationReturnTypeMatchAnotherInModel(oper.getReturnResult(), operation.getReturnResult(), model,</span>
+					baseJointpoints)) {
+<span class="nc" id="L711">				match = true;</span>
+				// Comparing parameters
+<span class="nc bnc" id="L713" title="All 2 branches missed.">				for (Parameter param : oper.getOwnedParameters()) {</span>
+<span class="nc bnc" id="L714" title="All 2 branches missed.">					if (!parameterMatchAnotherInOperationInModel(param, operation, model, baseJointpoints)) {</span>
+<span class="nc" id="L715">						match = false;</span>
+<span class="nc" id="L716">						break;</span>
+					}
+<span class="nc" id="L718">				}</span>
+			}
+		}
+<span class="nc" id="L721">		return match;</span>
+	}
+
+	private static boolean parameterMatchAnotherInOperationInModel(Parameter param, Operation operation, Model model,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints) {
+<span class="nc" id="L726">		boolean match = true;</span>
+<span class="nc bnc" id="L727" title="All 2 branches missed.">		for (Parameter p : operation.getOwnedParameters()) {</span>
+<span class="nc bnc" id="L728" title="All 2 branches missed.">			if (!p.getName().equals(param.getName()) || !(p.getType() == ModelAdapterUtilities</span>
+<span class="nc bnc" id="L729" title="All 2 branches missed.">					.resolveElementInModel(param.getType(), model, baseJointpoints))) {</span>
+<span class="nc" id="L730">				match = false;</span>
+<span class="nc" id="L731">				break;</span>
+			}
+<span class="nc" id="L733">		}</span>
+<span class="nc" id="L734">		return match;</span>
+	}
+
+	private static boolean operationReturnTypeMatchAnotherInModel(Parameter param1, Parameter param2, Model model,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints) {
+<span class="nc bnc" id="L739" title="All 4 branches missed.">		if (param1 == null &amp;&amp; param2 == null) {</span>
+<span class="nc" id="L740">			return true;</span>
+		} else {
+<span class="nc" id="L742">			return parameterTypeMatchAnotherInModel(param1, param2, model, baseJointpoints);</span>
+		}
+	}
+
+	private static boolean parameterTypeMatchAnotherInModel(Parameter param1, Parameter param2, Model model,
+			HashMap&lt;Stereotype, List&lt;Element&gt;&gt; baseJointpoints) {
+<span class="nc" id="L748">		boolean match = true;</span>
+
+		// Both Param1 and param 2 must exist
+<span class="nc bnc" id="L751" title="All 4 branches missed.">		if (param1 != null &amp;&amp; param2 != null) {</span>
+<span class="nc bnc" id="L752" title="All 2 branches missed.">			match = param1.getType() == ModelAdapterUtilities.resolveElementInModel(param2.getType(), model,</span>
+					baseJointpoints);
+		}
+
+<span class="nc" id="L756">		return match;</span>
+	}
+
+	/**
+	 * returns true if element matches (by name) any of those included in
+	 * listOfElements FIXME Improve matching by name to more elaborated matching
+	 * by type
+	 * 
+	 * @param element
+	 * @param listOfElements
+	 * @return
+	 */
+	public static &lt;T extends NamedElement&gt; boolean elementMatchesInList(T element, EList&lt;T&gt; listOfElements) {
+<span class="fc" id="L769">		boolean match = false;</span>
+<span class="fc bfc" id="L770" title="All 2 branches covered.">		for (T e : listOfElements) {</span>
+<span class="pc bpc" id="L771" title="1 of 2 branches missed.">			if (e.getName().equals(element.getName())) {</span>
+<span class="nc" id="L772">				match = true;</span>
+<span class="nc" id="L773">				break;</span>
+			}
+<span class="fc" id="L775">		}</span>
+<span class="fc" id="L776">		return match;</span>
+	}
+
+	public static Set&lt;Classifier&gt; findSubclassesOfType(Class classVariant, Model model) {
+		// Use Model Query to find subclasses
+<span class="nc" id="L781">		Set&lt;Classifier&gt; result = new HashSet&lt;&gt;();</span>
+		try {
+<span class="nc" id="L783">			IModelManager modelManager = new ModelManager(false);</span>
+<span class="nc" id="L784">			modelManager.getResourceSet().getResources().add(model.eResource());</span>
+<span class="nc" id="L785">			ModelQuery modelQuery = new ModelQuery(modelManager, model.eResource());</span>
+<span class="nc" id="L786">			SubClassOfMatcher matcher = (SubClassOfMatcher) modelQuery</span>
+<span class="nc" id="L787">					.queryMatcher(SubClassOfQuerySpecification.instance());</span>
+<span class="nc" id="L788">			Set&lt;Classifier&gt; subClasses = matcher.getAllValuesOfsubclass(classVariant);</span>
+			// Filtering out instances that do not belong to target model
+<span class="nc bnc" id="L790" title="All 2 branches missed.">			for (Classifier subClass : subClasses) {</span>
+<span class="nc bnc" id="L791" title="All 2 branches missed.">				if (ModelAdapterUtilities.modelContainsElement(subClass, model)) {</span>
+<span class="nc" id="L792">					result.add(subClass);</span>
+				}
+<span class="nc" id="L794">			}</span>
+<span class="nc" id="L795">		} catch (Exception e) {</span>
+<span class="nc" id="L796">			e.printStackTrace();</span>
+<span class="nc" id="L797">		}</span>
+<span class="nc" id="L798">		return result;</span>
+	}
+
+	public static boolean elementIsReferencedInModel(Class type, Model model) {
+		// Use Model Query to find subclasses
+<span class="nc" id="L803">		Set&lt;Element&gt; result = new HashSet&lt;&gt;();</span>
+		try {
+<span class="nc" id="L805">			IModelManager modelManager = new ModelManager(false);</span>
+<span class="nc" id="L806">			modelManager.getResourceSet().getResources().add(model.eResource());</span>
+<span class="nc" id="L807">			ModelQuery modelQuery = new ModelQuery(modelManager, model.eResource());</span>
+<span class="nc" id="L808">			GetReferenceToTypeMatcher matcher = (GetReferenceToTypeMatcher) modelQuery</span>
+<span class="nc" id="L809">					.queryMatcher(GetReferenceToTypeQuerySpecification.instance());</span>
+<span class="nc" id="L810">			Set&lt;Element&gt; references = matcher.getAllValuesOfelement(type);</span>
+			// Filtering out instances that do not belong to target model
+<span class="nc bnc" id="L812" title="All 2 branches missed.">			for (Element reference : references) {</span>
+<span class="nc bnc" id="L813" title="All 2 branches missed.">				if (ModelAdapterUtilities.modelContainsElement((NamedElement) reference, model)) {</span>
+<span class="nc" id="L814">					result.add(reference);</span>
+				}
+<span class="nc" id="L816">			}</span>
+<span class="nc" id="L817">		} catch (Exception e) {</span>
+<span class="nc" id="L818">			e.printStackTrace();</span>
+<span class="nc" id="L819">		}</span>
+<span class="nc bnc" id="L820" title="All 2 branches missed.">		return !result.isEmpty();</span>
+	}
+	
+//	public static Set&lt;InstanceSpecification&gt; getReferencingInstanceSpecificationLinks(InstanceSpecification instance, Model model) {
+//		Set&lt;InstanceSpecification&gt; instances = null;
+//	
+//		try {
+//			IModelManager modelManager = new ModelManager(false);
+//			modelManager.getResourceSet().getResources().add(model.eResource());
+//			ModelQuery modelQuery = new ModelQuery(modelManager, model.eResource());
+//			InstanceOfInstanceSpecificationLinkMatcher matcher = 
+//					(InstanceOfInstanceSpecificationLinkMatcher) modelQuery.queryMatcher(InstanceOfInstanceSpecificationLinkQuerySpecification.instance());
+//			instances = matcher.getAllValuesOfinstance(instance);
+//			//Filtering out instances that do not belong to target model
+//			for (InstanceSpecification instanceSpecification: instances){
+//				if (!ModelAdapterUtilities.modelContainsElement(instanceSpecification, model)){
+//					instances.remove(instanceSpecification); //FIXME instances are unmutable so this won't work
+//				}
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		return instances;
+//	}
+
+	public static List&lt;Association&gt; getAssociationsOfClass(Class clazz) {
+<span class="nc" id="L846">		List&lt;Association&gt; associations = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L847" title="All 2 branches missed.">		for (Property property : clazz.getAttributes()) {</span>
+<span class="nc bnc" id="L848" title="All 2 branches missed.">			if (property.getAssociation() != null) {</span>
+<span class="nc" id="L849">				associations.add (property.getAssociation());</span>
+			}
+<span class="nc" id="L851">		}</span>
+<span class="nc" id="L852">		return associations;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
