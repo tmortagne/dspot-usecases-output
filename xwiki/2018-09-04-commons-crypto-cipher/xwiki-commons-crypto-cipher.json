@@ -1,0 +1,13 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "org.xwiki.crypto.cipher.internal.asymmetric.factory.BcRsaOaepCipherFactoryTest",
+      "timeInMs": 16477
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.cipher.internal.symmetric.factory.BcRc2CbcPaddedCipherFactoryTest",
+      "timeInMs": 17943
+    }
+  ],
+  "projectName": "xwiki-commons-crypto-cipher"
+}

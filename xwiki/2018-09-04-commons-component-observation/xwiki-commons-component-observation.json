@@ -1,0 +1,13 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "org.xwiki.component.event.ComponentDescriptorAddedEventTest",
+      "timeInMs": 398
+    },
+    {
+      "fullQualifiedName": "org.xwiki.component.event.ComponentDescriptorRemovedEventTest",
+      "timeInMs": 209
+    }
+  ],
+  "projectName": "xwiki-commons-component-observation"
+}

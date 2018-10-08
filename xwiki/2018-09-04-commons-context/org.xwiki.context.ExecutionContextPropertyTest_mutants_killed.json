@@ -1,0 +1,86 @@
+{
+  "nbMutantKilledOriginally": 81,
+  "name": "org.xwiki.context.ExecutionContextPropertyTest",
+  "nbOriginalTestCases": 6,
+  "testCases": [
+    {
+      "name": "cloningNonPublicCloneMethod_failAssert0",
+      "nbAssertionAdded": 1,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 5,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator",
+          "lineNumber": 162,
+          "locationMethod": "clone"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 162,
+          "locationMethod": "clone"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator",
+          "lineNumber": 164,
+          "locationMethod": "clone"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 164,
+          "locationMethod": "clone"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator",
+          "lineNumber": 162,
+          "locationMethod": "clone"
+        }
+      ]
+    },
+    {
+      "name": "typeCheckingMismatch_failAssert2",
+      "nbAssertionAdded": 1,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 4,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator",
+          "lineNumber": 102,
+          "locationMethod": "checkValue"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 104,
+          "locationMethod": "checkValue"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 103,
+          "locationMethod": "checkValue"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator",
+          "lineNumber": 103,
+          "locationMethod": "checkValue"
+        }
+      ]
+    },
+    {
+      "name": "nonNullCheck_failAssert1",
+      "nbAssertionAdded": 1,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 2,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 99,
+          "locationMethod": "checkValue"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator",
+          "lineNumber": 99,
+          "locationMethod": "checkValue"
+        }
+      ]
+    }
+  ]
+}

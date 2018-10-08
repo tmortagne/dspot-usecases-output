@@ -1,0 +1,49 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.adaptation.proxies.test.AdaptationConfigurationProxyTest",
+      "timeInMs": 126121
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.analysis.proxies.test.DataProviderProxyTest",
+      "timeInMs": 2032486
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.optimizer.proxies.test.ReplanOptimizerProxyTest",
+      "timeInMs": 24775454
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.replan.optimizer.proxies.test.ReplanOptimizerV2ProxyTest",
+      "timeInMs": 22801120
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.dm.proxies.test.DecisionMakingSystemProxyTest",
+      "timeInMs": 16372954
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.fe.test.FrontendAuthenticationTest",
+      "timeInMs": 14626311
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.monitoring.proxies.test.AppStoreMonitorProxyTest",
+      "timeInMs": 29500887
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.monitoring.proxies.test.ConfigurationFileHttpMonitorProxyTest",
+      "timeInMs": 50229345
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.monitoring.proxies.test.DiskMonitorProxyTest",
+      "timeInMs": 43802706
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.monitoring.proxies.test.GooglePlayMonitorProxyTest",
+      "timeInMs": 28414897
+    },
+    {
+      "fullQualifiedName": "eu.supersede.integration.api.monitoring.proxies.test.HttpMonitorProxyTest",
+      "timeInMs": 8197898
+    }
+  ],
+  "projectName": "."
+}

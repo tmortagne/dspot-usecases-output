@@ -1,0 +1,6 @@
+{
+  "nbMutantKilledOriginally": 17,
+  "name": "org.xwiki.crypto.cipher.internal.symmetric.factory.BcRc2CbcPaddedCipherFactoryTest",
+  "nbOriginalTestCases": 2,
+  "testCases": []
+}

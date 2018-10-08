@@ -1,0 +1,25 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "org.xwiki.context.ExecutionContextPropertyTest",
+      "timeInMs": 11487
+    },
+    {
+      "fullQualifiedName": "org.xwiki.context.ExecutionContextTest",
+      "timeInMs": 10270
+    },
+    {
+      "fullQualifiedName": "org.xwiki.context.concurrent.ExecutionContextRunnableTest",
+      "timeInMs": 2674
+    },
+    {
+      "fullQualifiedName": "org.xwiki.context.internal.DefaultExecutionContextManagerTest",
+      "timeInMs": 10948
+    },
+    {
+      "fullQualifiedName": "org.xwiki.context.internal.DefaultExecutionTest",
+      "timeInMs": 8136
+    }
+  ],
+  "projectName": "xwiki-commons-context"
+}

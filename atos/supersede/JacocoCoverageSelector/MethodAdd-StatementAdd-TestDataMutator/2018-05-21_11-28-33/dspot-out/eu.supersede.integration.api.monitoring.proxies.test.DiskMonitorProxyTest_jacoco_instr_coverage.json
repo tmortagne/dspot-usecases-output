@@ -1,0 +1,11 @@
+{
+  "name": "eu.supersede.integration.api.monitoring.proxies.test.DiskMonitorProxyTest",
+  "nbOriginalTestCases": 4,
+  "initialInstructionCovered": 184,
+  "initialInstructionTotal": 33335,
+  "percentageinitialInstructionCovered": 0.551972401379931,
+  "amplifiedInstructionCovered": 193,
+  "amplifiedInstructionTotal": 33335,
+  "percentageamplifiedInstructionCovered": 0.5789710514474277,
+  "testCases": []
+}

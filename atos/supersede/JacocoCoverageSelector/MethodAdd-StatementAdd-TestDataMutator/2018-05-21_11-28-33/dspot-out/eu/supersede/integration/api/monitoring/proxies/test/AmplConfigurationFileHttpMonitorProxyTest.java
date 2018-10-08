@@ -1,0 +1,445 @@
+package eu.supersede.integration.api.monitoring.proxies.test;
+
+
+import eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile;
+import eu.supersede.integration.api.monitoring.monitors.proxies.ConfigurationFileHttpMonitorProxy;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import static org.springframework.util.Assert.notNull;
+
+
+public class AmplConfigurationFileHttpMonitorProxyTest {
+    private static ConfigurationFileHttpMonitorProxy<?, ?> proxy;
+
+    @BeforeClass
+    public static void setup() throws Exception {
+        AmplConfigurationFileHttpMonitorProxyTest.proxy = new ConfigurationFileHttpMonitorProxy<Object, Object>();
+    }
+
+    private HttpMonitorConfigurationFile createMonitorConfiguration() throws MalformedURLException {
+        HttpMonitorConfigurationFile conf = new HttpMonitorConfigurationFile();
+        conf.setToolName("HTMLMonitor");
+        conf.setKafkaEndpoint(new URL("http://localhost:9092"));
+        conf.setKafkaTopic("http");
+        conf.setServer("production");
+        conf.setProtocol("HTTPS");
+        conf.setTextContentSize(150);
+        conf.setListOfEvents(Arrays.asList("change", "input", "submit"));
+        return conf;
+    }
+
+    @Test(timeout = 120000)
+    public void testCreateMonitorConfiguration_add1() throws Exception {
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1__1 = createMonitorConfiguration();
+        Assert.assertEquals("http", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaTopic());
+        Assert.assertEquals(0, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getReadTimeout())));
+        Assert.assertEquals("http", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getScheme());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toString());
+        Assert.assertEquals("//localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getSchemeSpecificPart());
+        Assert.assertEquals(-1L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getContentLengthLong())));
+        Assert.assertEquals(80, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getDefaultPort())));
+        Assert.assertEquals("sun.net.www.protocol.http.HttpURLConnection:http://localhost:9092", ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).toString());
+        Assert.assertEquals("", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getRawPath());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty());
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getQuery());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getDefaultUseCaches());
+        Assert.assertEquals("HTMLMonitor", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getToolName());
+        Assert.assertFalse(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getDoOutput());
+        Assert.assertFalse(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getAllowUserInteraction());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).toASCIIString());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getLastModified())));
+        Assert.assertEquals("//localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getRawSchemeSpecificPart());
+        Assert.assertEquals(9092, ((int) (((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getPort())));
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getUserInfo());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getFragment());
+        Assert.assertEquals(9092, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getPort())));
+        Assert.assertEquals(150, ((int) (((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getTextContentSize())));
+        Assert.assertEquals(-1110591729, ((int) (((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).hashCode())));
+        Assert.assertEquals(-1, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getContentLength())));
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getQuery());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getDoInput());
+        Assert.assertNull(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getTimeSlot());
+        Assert.assertEquals("http", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getProtocol());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getUseCaches());
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getRef());
+        Assert.assertEquals("localhost", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getHost());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getExpiration())));
+        Assert.assertEquals("localhost", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getHost());
+        Assert.assertEquals(2133928973, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).hashCode())));
+        Assert.assertNull(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getId());
+        Assert.assertEquals("production", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getServer());
+        Assert.assertFalse(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).isOpaque());
+        Assert.assertNull(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getContentEncoding());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getIfModifiedSince())));
+        Assert.assertEquals("http://localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).toString());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getDate())));
+        Assert.assertEquals("", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getFile());
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change"));
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input"));
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit"));
+        Assert.assertEquals(0, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getConnectTimeout())));
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getUserInfo());
+        Assert.assertEquals("", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getPath());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getRawUserInfo());
+        Assert.assertEquals("", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getPath());
+        Assert.assertEquals("localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).getAuthority());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getRawQuery());
+        Assert.assertEquals("localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getRawAuthority());
+        Assert.assertEquals("HTTPS", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getProtocol());
+        Assert.assertTrue(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).isAbsolute());
+        Assert.assertEquals("localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getAuthority());
+        Assert.assertNull(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getContentType());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toExternalForm());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).toURI()).getRawFragment());
+        notNull(AmplConfigurationFileHttpMonitorProxyTest.proxy.createHTMLMonitorConfigurationFile(createMonitorConfiguration()));
+    }
+
+    @Test(timeout = 120000)
+    public void testCreateMonitorConfiguration_sd14() throws Exception {
+        HttpMonitorConfigurationFile result = AmplConfigurationFileHttpMonitorProxyTest.proxy.createHTMLMonitorConfigurationFile(createMonitorConfiguration());
+        notNull(result);
+        List<String> o_testCreateMonitorConfiguration_sd14__6 = result.getListOfEvents();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_sd14__6.contains("change"));
+        Assert.assertTrue(o_testCreateMonitorConfiguration_sd14__6.contains("input"));
+        Assert.assertTrue(o_testCreateMonitorConfiguration_sd14__6.contains("submit"));
+    }
+
+    @Test(timeout = 120000)
+    public void testCreateMonitorConfiguration_add1_add95() throws Exception {
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1_add95__1 = createMonitorConfiguration();
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getRef());
+        Assert.assertEquals(9092, ((int) (((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getPort())));
+        Assert.assertEquals("http", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaTopic());
+        Assert.assertEquals(0, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getReadTimeout())));
+        Assert.assertEquals("", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getFile());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getIfModifiedSince())));
+        Assert.assertEquals(150, ((int) (((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getTextContentSize())));
+        Assert.assertEquals("localhost", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getHost());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getDate())));
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getUserInfo());
+        Assert.assertEquals(80, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getDefaultPort())));
+        Assert.assertEquals("HTMLMonitor", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getToolName());
+        Assert.assertEquals("", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getPath());
+        Assert.assertEquals("localhost", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getHost());
+        Assert.assertEquals(0, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getConnectTimeout())));
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getLastModified())));
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getRawUserInfo());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).toASCIIString());
+        Assert.assertEquals("production", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getServer());
+        Assert.assertFalse(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).isOpaque());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getDoInput());
+        Assert.assertEquals("HTTPS", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getProtocol());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).toString());
+        Assert.assertEquals("localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getAuthority());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getExpiration())));
+        Assert.assertEquals(-1L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getContentLengthLong())));
+        Assert.assertNull(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getId());
+        Assert.assertEquals(2133928973, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).hashCode())));
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getRawFragment());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty());
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getQuery());
+        Assert.assertEquals(-1, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getContentLength())));
+        Assert.assertTrue(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).isAbsolute());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getFragment());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getUserInfo());
+        Assert.assertEquals("sun.net.www.protocol.http.HttpURLConnection:http://localhost:9092", ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).toString());
+        Assert.assertEquals("//localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getSchemeSpecificPart());
+        Assert.assertEquals("", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getPath());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getDefaultUseCaches());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toExternalForm());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getUseCaches());
+        Assert.assertEquals("localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getAuthority());
+        Assert.assertEquals("http", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getScheme());
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("change"));
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("input"));
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("submit"));
+        Assert.assertEquals("localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getRawAuthority());
+        Assert.assertFalse(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getDoOutput());
+        Assert.assertEquals("//localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getRawSchemeSpecificPart());
+        Assert.assertNull(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getContentEncoding());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toString());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getRawQuery());
+        Assert.assertNull(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getContentType());
+        Assert.assertEquals("http", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getProtocol());
+        Assert.assertEquals(9092, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).getPort())));
+        Assert.assertFalse(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getAllowUserInteraction());
+        Assert.assertEquals("", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getRawPath());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).getQuery());
+        Assert.assertEquals(-1110591729, ((int) (((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).toURI()).hashCode())));
+        Assert.assertNull(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getTimeSlot());
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1__1 = createMonitorConfiguration();
+        boolean o_testCreateMonitorConfiguration_add1_add95__5 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__5);
+        boolean o_testCreateMonitorConfiguration_add1_add95__6 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__6);
+        boolean o_testCreateMonitorConfiguration_add1_add95__7 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__7);
+        boolean o_testCreateMonitorConfiguration_add1_add95__8 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__8);
+        boolean o_testCreateMonitorConfiguration_add1_add95__9 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__9);
+        notNull(AmplConfigurationFileHttpMonitorProxyTest.proxy.createHTMLMonitorConfigurationFile(createMonitorConfiguration()));
+        boolean o_testCreateMonitorConfiguration_add1_add95__15 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__15);
+        boolean o_testCreateMonitorConfiguration_add1_add95__16 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__16);
+        boolean o_testCreateMonitorConfiguration_add1_add95__17 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__17);
+        boolean o_testCreateMonitorConfiguration_add1_add95__18 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__18);
+        boolean o_testCreateMonitorConfiguration_add1_add95__19 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__19);
+        boolean o_testCreateMonitorConfiguration_add1_add95__20 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__20);
+        boolean o_testCreateMonitorConfiguration_add1_add95__21 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__21);
+        boolean o_testCreateMonitorConfiguration_add1_add95__22 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__22);
+        boolean o_testCreateMonitorConfiguration_add1_add95__23 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__23);
+        boolean o_testCreateMonitorConfiguration_add1_add95__24 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95__24);
+    }
+
+    @Test(timeout = 120000)
+    public void testCreateMonitorConfiguration_add1_add100() throws Exception {
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1__1 = createMonitorConfiguration();
+        boolean o_testCreateMonitorConfiguration_add1_add100__4 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add100__4);
+        boolean o_testCreateMonitorConfiguration_add1_add100__5 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add100__5);
+        boolean o_testCreateMonitorConfiguration_add1_add100__6 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add100__6);
+        boolean o_testCreateMonitorConfiguration_add1_add100__7 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add100__7);
+        boolean o_testCreateMonitorConfiguration_add1_add100__8 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add100__8);
+        boolean o_testCreateMonitorConfiguration_add1_add100__9 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add100__9);
+        notNull(AmplConfigurationFileHttpMonitorProxyTest.proxy.createHTMLMonitorConfigurationFile(createMonitorConfiguration()));
+        ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+    }
+
+    @Test(timeout = 120000)
+    public void testCreateMonitorConfiguration_add1_sd161() throws Exception {
+        boolean o_testCreateMonitorConfiguration_add1_sd161__5 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__5);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__6 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__6);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__7 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__7);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__8 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__8);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__9 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__9);
+        notNull(AmplConfigurationFileHttpMonitorProxyTest.proxy.createHTMLMonitorConfigurationFile(createMonitorConfiguration()));
+        boolean o_testCreateMonitorConfiguration_add1_sd161__15 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__15);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__16 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__16);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__17 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__17);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__18 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__18);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__19 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__19);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__20 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__20);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__21 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__21);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__22 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__22);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__23 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__23);
+        boolean o_testCreateMonitorConfiguration_add1_sd161__24 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_sd161__24);
+        createMonitorConfiguration().setTimeSlot(1605040354);
+    }
+
+    @Test(timeout = 120000)
+    public void testCreateMonitorConfiguration_add1_add95_add505() throws Exception {
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1_add95__1 = createMonitorConfiguration();
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__4 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__4);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__5 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__5);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__6 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__6);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__7 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__7);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__8 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__8);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__9 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__9);
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1__1 = createMonitorConfiguration();
+        boolean o_testCreateMonitorConfiguration_add1_add95__5 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__6 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__7 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        boolean o_testCreateMonitorConfiguration_add1_add95__8 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        boolean o_testCreateMonitorConfiguration_add1_add95__9 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        notNull(AmplConfigurationFileHttpMonitorProxyTest.proxy.createHTMLMonitorConfigurationFile(createMonitorConfiguration()));
+        boolean o_testCreateMonitorConfiguration_add1_add95__15 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__16 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__17 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__18 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__19 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        boolean o_testCreateMonitorConfiguration_add1_add95__20 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        boolean o_testCreateMonitorConfiguration_add1_add95__21 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        boolean o_testCreateMonitorConfiguration_add1_add95__22 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        boolean o_testCreateMonitorConfiguration_add1_add95__23 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        boolean o_testCreateMonitorConfiguration_add1_add95__24 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__63 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__63);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__64 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__64);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__65 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__65);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__66 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__66);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__67 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__67);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__68 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__68);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__69 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__69);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__70 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__70);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__71 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__71);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add505__72 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add505__72);
+    }
+
+    @Test(timeout = 120000)
+    public void testCreateMonitorConfiguration_add1_add95_add497() throws Exception {
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1_add95_add497__1 = createMonitorConfiguration();
+        Assert.assertEquals("localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getRawAuthority());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).toString());
+        Assert.assertTrue(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).isAbsolute());
+        Assert.assertEquals("", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getRawPath());
+        Assert.assertEquals(9092, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getPort())));
+        Assert.assertFalse(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).isOpaque());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getRawUserInfo());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getRawQuery());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getDoInput());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getUserInfo());
+        Assert.assertEquals("localhost", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getHost());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).toASCIIString());
+        Assert.assertEquals("sun.net.www.protocol.http.HttpURLConnection:http://localhost:9092", ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).toString());
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getRawFragment());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getUseCaches());
+        Assert.assertEquals("", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getPath());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getIfModifiedSince())));
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getUserInfo());
+        Assert.assertEquals("localhost", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getHost());
+        Assert.assertEquals("HTTPS", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getProtocol());
+        Assert.assertEquals("localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getAuthority());
+        Assert.assertEquals(-1110591729, ((int) (((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).hashCode())));
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getQuery());
+        Assert.assertEquals("production", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getServer());
+        Assert.assertEquals(150, ((int) (((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getTextContentSize())));
+        Assert.assertEquals(0, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getReadTimeout())));
+        Assert.assertNull(((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getFragment());
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getListOfEvents().contains("change"));
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getListOfEvents().contains("input"));
+        Assert.assertTrue(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getListOfEvents().contains("submit"));
+        Assert.assertNull(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getContentType());
+        Assert.assertFalse(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getDoOutput());
+        Assert.assertEquals("http", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaTopic());
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getQuery());
+        Assert.assertNull(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getId());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getDefaultUseCaches());
+        Assert.assertEquals(-1, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getContentLength())));
+        Assert.assertNull(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getContentEncoding());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getDate())));
+        Assert.assertEquals("http://localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toExternalForm());
+        Assert.assertEquals("//localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getSchemeSpecificPart());
+        Assert.assertEquals(2133928973, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).hashCode())));
+        Assert.assertNull(((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getRef());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty());
+        Assert.assertFalse(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getAllowUserInteraction());
+        Assert.assertEquals("http", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getProtocol());
+        Assert.assertEquals("HTMLMonitor", ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getToolName());
+        Assert.assertEquals("http", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getScheme());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getExpiration())));
+        Assert.assertEquals(0, ((int) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getConnectTimeout())));
+        Assert.assertEquals(80, ((int) (((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getDefaultPort())));
+        Assert.assertEquals(-1L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getContentLengthLong())));
+        Assert.assertEquals("localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getAuthority());
+        Assert.assertTrue(((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty());
+        Assert.assertEquals("http://localhost:9092", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toString());
+        Assert.assertEquals("//localhost:9092", ((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getRawSchemeSpecificPart());
+        Assert.assertEquals(9092, ((int) (((java.net.URI)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).toURI()).getPort())));
+        Assert.assertEquals("", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getPath());
+        Assert.assertEquals("", ((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).getFile());
+        Assert.assertNull(((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getTimeSlot());
+        Assert.assertEquals(0L, ((long) (((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95_add497__1).getKafkaEndpoint()).openConnection()).getLastModified())));
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1_add95__1 = createMonitorConfiguration();
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__5 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__5);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__6 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__6);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__7 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__7);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__8 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__8);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__9 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__9);
+        HttpMonitorConfigurationFile o_testCreateMonitorConfiguration_add1__1 = createMonitorConfiguration();
+        boolean o_testCreateMonitorConfiguration_add1_add95__5 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__6 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__7 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        boolean o_testCreateMonitorConfiguration_add1_add95__8 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        boolean o_testCreateMonitorConfiguration_add1_add95__9 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        notNull(AmplConfigurationFileHttpMonitorProxyTest.proxy.createHTMLMonitorConfigurationFile(createMonitorConfiguration()));
+        boolean o_testCreateMonitorConfiguration_add1_add95__15 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__16 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__17 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__18 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        boolean o_testCreateMonitorConfiguration_add1_add95__19 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        boolean o_testCreateMonitorConfiguration_add1_add95__20 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("change");
+        boolean o_testCreateMonitorConfiguration_add1_add95__21 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        boolean o_testCreateMonitorConfiguration_add1_add95__22 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("input");
+        boolean o_testCreateMonitorConfiguration_add1_add95__23 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        boolean o_testCreateMonitorConfiguration_add1_add95__24 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1__1).getListOfEvents().contains("submit");
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__63 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__63);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__64 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getRequestProperties().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__64);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__65 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__65);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__66 = ((java.net.URLConnection)((java.net.URL)((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getKafkaEndpoint()).openConnection()).getHeaderFields().isEmpty();
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__66);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__67 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__67);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__68 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("change");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__68);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__69 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__69);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__70 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("input");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__70);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__71 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__71);
+        boolean o_testCreateMonitorConfiguration_add1_add95_add497__72 = ((eu.supersede.integration.api.monitoring.manager.types.HttpMonitorConfigurationFile)o_testCreateMonitorConfiguration_add1_add95__1).getListOfEvents().contains("submit");
+        Assert.assertTrue(o_testCreateMonitorConfiguration_add1_add95_add497__72);
+    }
+}
+

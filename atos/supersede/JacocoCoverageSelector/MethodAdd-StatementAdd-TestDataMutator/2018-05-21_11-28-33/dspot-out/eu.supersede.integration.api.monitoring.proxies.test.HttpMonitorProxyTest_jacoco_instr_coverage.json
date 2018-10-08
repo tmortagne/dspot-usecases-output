@@ -1,0 +1,11 @@
+{
+  "name": "eu.supersede.integration.api.monitoring.proxies.test.HttpMonitorProxyTest",
+  "nbOriginalTestCases": 6,
+  "initialInstructionCovered": 710,
+  "initialInstructionTotal": 33335,
+  "percentageinitialInstructionCovered": 2.1298935053247336,
+  "amplifiedInstructionCovered": 377,
+  "amplifiedInstructionTotal": 33335,
+  "percentageamplifiedInstructionCovered": 1.1309434528273588,
+  "testCases": []
+}

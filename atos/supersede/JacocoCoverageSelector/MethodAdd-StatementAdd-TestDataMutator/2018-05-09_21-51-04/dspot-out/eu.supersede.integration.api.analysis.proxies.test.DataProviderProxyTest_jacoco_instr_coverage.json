@@ -1,0 +1,11 @@
+{
+  "name": "eu.supersede.integration.api.analysis.proxies.test.DataProviderProxyTest",
+  "nbOriginalTestCases": 8,
+  "initialInstructionCovered": 303,
+  "initialInstructionTotal": 33335,
+  "percentageinitialInstructionCovered": 0.9089545522723863,
+  "amplifiedInstructionCovered": 303,
+  "amplifiedInstructionTotal": 33335,
+  "percentageamplifiedInstructionCovered": 0.9089545522723863,
+  "testCases": []
+}
