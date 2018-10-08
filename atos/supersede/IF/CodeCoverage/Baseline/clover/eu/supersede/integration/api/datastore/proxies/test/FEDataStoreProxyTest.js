@@ -1,0 +1,10 @@
+var clover = new Object();
+
+// JSON: {classes : [{name, id, sl, el,  methods : [{sl, el}, ...]}, ...]}
+clover.pageData = {"classes":[{"el":119,"id":7864,"methods":[{"el":51,"sc":5,"sl":44},{"el":58,"sc":5,"sl":53},{"el":65,"sc":5,"sl":60},{"el":73,"sc":5,"sl":67},{"el":81,"sc":5,"sl":75},{"el":88,"sc":5,"sl":83},{"el":96,"sc":5,"sl":90},{"el":103,"sc":5,"sl":98},{"el":111,"sc":5,"sl":105}],"name":"FEDataStoreProxyTest","sl":38}]}
+
+// JSON: {test_ID : {"methods": [ID1, ID2, ID3...], "name" : "testXXX() void"}, ...};
+clover.testTargets = {"test_102":{"methods":[{"sl":90}],"name":"testGetNotification","pass":true,"statements":[{"sl":92},{"sl":93},{"sl":94}]},"test_110":{"methods":[{"sl":67}],"name":"testGetUserLazy","pass":true,"statements":[{"sl":69},{"sl":70},{"sl":71},{"sl":72}]},"test_125":{"methods":[{"sl":105}],"name":"testGetProfile","pass":true,"statements":[{"sl":107},{"sl":108},{"sl":109},{"sl":110}]},"test_130":{"methods":[{"sl":53}],"name":"testGetUsersLazy","pass":true,"statements":[{"sl":55},{"sl":56},{"sl":57}]},"test_7":{"methods":[{"sl":60}],"name":"testGetUsers","pass":true,"statements":[{"sl":62},{"sl":63},{"sl":64}]},"test_84":{"methods":[{"sl":83}],"name":"testGetNotifications","pass":true,"statements":[{"sl":85},{"sl":86}]},"test_94":{"methods":[{"sl":98}],"name":"testGetProfiles","pass":true,"statements":[{"sl":100},{"sl":101},{"sl":102}]},"test_96":{"methods":[{"sl":75}],"name":"testGetUser","pass":true,"statements":[{"sl":77},{"sl":78},{"sl":79},{"sl":80}]}}
+
+// JSON: { lines : [{tests : [testid1, testid2, testid3, ...]}, ...]};
+clover.srcFileLines = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [130], [], [130], [130], [130], [], [], [7], [], [7], [7], [7], [], [], [110], [], [110], [110], [110], [110], [], [], [96], [], [96], [96], [96], [96], [], [], [84], [], [84], [84], [], [], [], [102], [], [102], [102], [102], [], [], [], [94], [], [94], [94], [94], [], [], [125], [], [125], [125], [125], [125], [], [], [], [], [], [], [], [], []]
