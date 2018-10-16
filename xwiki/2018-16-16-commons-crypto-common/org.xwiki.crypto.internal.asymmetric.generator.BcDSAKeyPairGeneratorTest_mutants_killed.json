@@ -1,0 +1,6 @@
+{
+  "nbMutantKilledOriginally": 122,
+  "name": "org.xwiki.crypto.internal.asymmetric.generator.BcDSAKeyPairGeneratorTest",
+  "nbOriginalTestCases": 3,
+  "testCases": []
+}

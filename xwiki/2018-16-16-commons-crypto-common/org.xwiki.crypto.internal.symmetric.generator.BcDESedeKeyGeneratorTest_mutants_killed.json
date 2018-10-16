@@ -1,0 +1,6 @@
+{
+  "nbMutantKilledOriginally": 12,
+  "name": "org.xwiki.crypto.internal.symmetric.generator.BcDESedeKeyGeneratorTest",
+  "nbOriginalTestCases": 2,
+  "testCases": []
+}

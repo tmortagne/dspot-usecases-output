@@ -1,0 +1,49 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.FindEntropyForSecureRandomProvider",
+      "timeInMs": 11229
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.LineWrapperOutputStreamTest",
+      "timeInMs": 9012
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.asymmetric.generator.BcDHKeyPairGeneratorTest",
+      "timeInMs": 534
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.asymmetric.generator.BcDSAKeyPairGeneratorTest",
+      "timeInMs": 34996
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.asymmetric.generator.BcRSAKeyPairGeneratorTest",
+      "timeInMs": 5964
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.asymmetric.keyfactory.BcDSAKeyFactoryTest",
+      "timeInMs": 22061
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.asymmetric.keyfactory.BcRSAKeyFactoryTest",
+      "timeInMs": 22017
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.digest.factory.DefaultDigestFactoryTest",
+      "timeInMs": 22145
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.symmetric.generator.BcDESKeyGeneratorTest",
+      "timeInMs": 11194
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.symmetric.generator.BcDESedeKeyGeneratorTest",
+      "timeInMs": 10843
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.internal.symmetric.generator.DefaultKeyGeneratorTest",
+      "timeInMs": 10268
+    }
+  ],
+  "projectName": "xwiki-commons-crypto-common"
+}

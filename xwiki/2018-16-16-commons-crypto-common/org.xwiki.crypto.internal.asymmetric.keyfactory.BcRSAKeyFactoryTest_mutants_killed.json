@@ -1,0 +1,6 @@
+{
+  "nbMutantKilledOriginally": 102,
+  "name": "org.xwiki.crypto.internal.asymmetric.keyfactory.BcRSAKeyFactoryTest",
+  "nbOriginalTestCases": 4,
+  "testCases": []
+}
