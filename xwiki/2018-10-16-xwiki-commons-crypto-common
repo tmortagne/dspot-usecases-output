@@ -1,0 +1,2 @@
+* Reported https://github.com/STAMP-project/dspot/issues/573
+* Command line: mvn clean eu.stamp-project:dspot-maven:1.1.1-SNAPSHOT:amplify-unit-tests -e -Dverbose=true
