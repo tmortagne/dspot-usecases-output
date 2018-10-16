@@ -10,8 +10,8 @@
 * Commit: not committed before it was decreasing the mutation score
 * Command line: `java -jar ~/.m2/repository/eu/stamp-project/dspot/1.1.1-SNAPSHOT/dspot-1.1.1-SNAPSHOT-jar-with-dependencies.jar --path-to-properties dspot.properties`
 * DSpot version: built from sources caba4a708b387f8dca2211f44242a7fa90026a08
-* Code coverage: from 62% to %
-* Mutation score (descartes): unchanged from 70% to %
+* Code coverage: from 62% to 65%
+* Mutation score (descartes): decreased from 70% to 69%
 * DSpot execution: 
 * Session test time: 1 hour
 
