@@ -1,0 +1,6 @@
+{
+  "nbMutantKilledOriginally": 191,
+  "name": "org.xwiki.crypto.pkix.internal.BcX509CertificateFactoryTest",
+  "nbOriginalTestCases": 5,
+  "testCases": []
+}

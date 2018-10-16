@@ -1,0 +1,25 @@
+{
+  "classTimes": [
+    {
+      "fullQualifiedName": "org.xwiki.crypto.pkix.internal.BcX509CertificateChainBuilderTest",
+      "timeInMs": 73765
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.pkix.internal.BcX509CertificateFactoryTest",
+      "timeInMs": 9377
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.pkix.internal.BcX509CertificateGeneratorFactoryTest",
+      "timeInMs": 34376
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.pkix.params.x509certificate.DistinguishedNameTest",
+      "timeInMs": 7147
+    },
+    {
+      "fullQualifiedName": "org.xwiki.crypto.signer.internal.cms.DefaultCMSSignedDataTest",
+      "timeInMs": 53620
+    }
+  ],
+  "projectName": "xwiki-commons-crypto-pkix"
+}

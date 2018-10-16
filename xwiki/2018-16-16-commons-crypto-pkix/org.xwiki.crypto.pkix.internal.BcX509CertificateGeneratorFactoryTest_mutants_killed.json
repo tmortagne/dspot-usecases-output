@@ -1,0 +1,113 @@
+{
+  "nbMutantKilledOriginally": 551,
+  "name": "org.xwiki.crypto.pkix.internal.BcX509CertificateGeneratorFactoryTest",
+  "nbOriginalTestCases": 6,
+  "testCases": [
+    {
+      "name": "testGenerateSelfSignedCertificateVersion1",
+      "nbAssertionAdded": 170,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 17,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator",
+          "lineNumber": 150,
+          "locationMethod": "addValidityDates"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 55,
+          "locationMethod": "getEncoded"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NullReturnValsMutator",
+          "lineNumber": 55,
+          "locationMethod": "getEncoded"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 133,
+          "locationMethod": "getAuthorityKeyIdentifier"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE",
+          "lineNumber": 142,
+          "locationMethod": "getSubjectKeyIdentifier"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator",
+          "lineNumber": 148,
+          "locationMethod": "addValidityDates"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator",
+          "lineNumber": 149,
+          "locationMethod": "addValidityDates"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 95,
+          "locationMethod": "hashCode"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator",
+          "lineNumber": 149,
+          "locationMethod": "addValidityDates"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator",
+          "lineNumber": 148,
+          "locationMethod": "addValidityDates"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator",
+          "lineNumber": 150,
+          "locationMethod": "addValidityDates"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator",
+          "lineNumber": 70,
+          "locationMethod": "\u003cinit\u003e"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 143,
+          "locationMethod": "getSubjectKeyIdentifier"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 55,
+          "locationMethod": "getEncoded"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE",
+          "lineNumber": 132,
+          "locationMethod": "getAuthorityKeyIdentifier"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 95,
+          "locationMethod": "hashCode"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.PrimitiveReturnsMutator",
+          "lineNumber": 95,
+          "locationMethod": "hashCode"
+        }
+      ]
+    },
+    {
+      "name": "testGenerateSelfSignedCertificateVersion3WithoutExtension",
+      "nbAssertionAdded": 170,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 1,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator",
+          "lineNumber": 84,
+          "locationMethod": "\u003cinit\u003e"
+        }
+      ]
+    }
+  ]
+}

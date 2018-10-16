@@ -1,0 +1,6 @@
+
+======= REPORT =======
+PitMutantScoreSelector: 
+The original test suite kills 1180 mutants
+The amplification results with 2 new tests
+it kills 18 more mutants

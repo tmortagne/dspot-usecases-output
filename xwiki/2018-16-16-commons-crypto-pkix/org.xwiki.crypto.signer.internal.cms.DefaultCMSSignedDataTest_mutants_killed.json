@@ -1,0 +1,20 @@
+{
+  "nbMutantKilledOriginally": 270,
+  "name": "org.xwiki.crypto.signer.internal.cms.DefaultCMSSignedDataTest",
+  "nbOriginalTestCases": 7,
+  "testCases": [
+    {
+      "name": "testDSADetachedSignatureWithEmbeddedCerts",
+      "nbAssertionAdded": 24,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 1,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE",
+          "lineNumber": 63,
+          "locationMethod": "convert"
+        }
+      ]
+    }
+  ]
+}

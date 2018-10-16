@@ -1,0 +1,45 @@
+{
+  "nbMutantKilledOriginally": 29,
+  "name": "org.xwiki.crypto.pkix.params.x509certificate.DistinguishedNameTest",
+  "nbOriginalTestCases": 1,
+  "testCases": [
+    {
+      "name": "testEquality",
+      "nbAssertionAdded": 48,
+      "nbInputAdded": 0,
+      "nbMutantKilled": 6,
+      "mutantsKilled": [
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 55,
+          "locationMethod": "getEncoded"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NullReturnValsMutator",
+          "lineNumber": 55,
+          "locationMethod": "getEncoded"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 55,
+          "locationMethod": "getEncoded"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator",
+          "lineNumber": 95,
+          "locationMethod": "hashCode"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator",
+          "lineNumber": 95,
+          "locationMethod": "hashCode"
+        },
+        {
+          "ID": "org.pitest.mutationtest.engine.gregor.mutators.PrimitiveReturnsMutator",
+          "lineNumber": 95,
+          "locationMethod": "hashCode"
+        }
+      ]
+    }
+  ]
+}
